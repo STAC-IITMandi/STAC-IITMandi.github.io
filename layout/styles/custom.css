@@ -9,3 +9,8 @@
 	height: 190pt;
 	padding: 10pt 0;
 }
+
+/* To unset the typesetting for somefonts */
+.unset_text_transform{
+	text-transform: unset !important;
+}
