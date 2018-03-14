@@ -10,7 +10,7 @@ How to Contribute
 5) Stage the changes.
     ``git add path/to/changed-files``
 6) Commit your changes.
-    ``git commit -m "Appropriate Commit Message"
+    ``git commit -m "Appropriate Commit Message"``
 7) Push your Changes
     ``git push origin NewBranchName``
 8) Create a Pull request
