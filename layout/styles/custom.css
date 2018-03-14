@@ -3,3 +3,9 @@
 	background: #474747;
     border-color: #474747
 }
+
+/* Design modification in homepage slider */
+.flexslider{
+	height: 190pt;
+	padding: 10pt 0;
+}
