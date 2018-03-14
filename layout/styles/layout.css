@@ -3,6 +3,11 @@
 @import url("custom.flexslider.css");
 @import url("framework.css");
 
+body, html {
+	margin:0;
+	height:100%;
+}
+
 /* Rows
 --------------------------------------------------------------------------------------------------------------- */
 .row1, .row1 a{}
@@ -14,12 +19,21 @@
 
 /* Header + Pageintro Wrapping Spacer
 --------------------------------------------------------------------------------------------------------------- */
-.topspacer{padding:80px 0 0;}
+.banner {
+	background-image:url('../../images/demo/backgrounds/01.jpg');
+	background-image: cover; background-attachment: fixed; margin: 0;
+}
+.banner > .banner-tint{
+	z-index: 99;
+	background-color: rgba(255,255,255,0.44)
+	background-image: cover;+ height: 100%; background-attachment: fixed; margin: 0;;
+}
+.topspacer{padding-top: 50px;}
 
 
 /* Header
 --------------------------------------------------------------------------------------------------------------- */
-#header{padding:0 15px;}
+#header{padding:0 15px; top: 15%;}
 
 #header #logo{margin:28px 0 0 0;}
 #header #logo h1{margin:0; padding:0; font-size:22px; text-transform:uppercase;}
@@ -27,7 +41,7 @@
 
 /* Page Intro
 --------------------------------------------------------------------------------------------------------------- */
-#pageintro{padding:180px 0;}
+#pageintro{ padding-top: 80px; padding-bottom: 120px;}
 
 #pageintro article{max-width:65%; margin:0 auto; text-align:center;}
 #pageintro article *{text-transform:uppercase;}
