@@ -331,33 +331,6 @@ tr, #comments li, #comments input[type="submit"], #comments input[type="reset"]{
 tr:nth-child(even), #comments li:nth-child(even){color:inherit; background-color:#F7F7F7;}
 table a, #comments a{background-color:inherit;}
 
-/* event page card css */
-
-.card-body-event h1 {
-margin-left :200px;
-}
-
-
-
-.card-body-event h2{
-margin-left :200px;
-}
-
-
-.card-body-event p {
-	margin-left:300px;
-}
-
-.card-body-event a {
-	
-	float: right;
-	margin-bottom: 15px;
-}
-
-.card-body-event {
-	margin-bottom: 20px;
-	line-height: 0.5;
-}
 
 
 /* ------------------------------------------------------------------------------------------------------------ */
