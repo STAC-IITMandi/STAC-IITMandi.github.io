@@ -1,24 +1,36 @@
-
-
-  <!DOCTYPE html>
+<!DOCTYPE html>
 
 <html lang="eng_US">
-<!-- To declare your language - read more here: https://www.w3.org/International/questions/qa-html-language-declarations -->
-
 <head>
-  <title>STAC- IIT Mandi| Details</title>
+  <title>STAC- IIT Mandi| Events</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <link href="../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+  <link rel="stylesheet" type="text/css" href="../layout/styles/event.css">
+
+
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+<script>
+ function  handleImageClick(c){
+   var modal = document.getElementById('myModal');
+   var modalImg = document.getElementById("modalImage");
+   var captionText = document.getElementById("caption");
+    modal.style.display = "block";
+    modalImg.src = c.src;
+    captionText.innerHTML = c.alt;
+}
+</script>
+
+
+	
 </head>
 
 <body id="top">
-  <!-- ################################################################################################ -->
-  <!-- ################################################################################################ -->
-  <!-- ################################################################################################ -->
-  <!-- Top Background Image Wrapper -->
+  
   <div class="topspacer bgded overlay" style="background-image:url('../images/demo/backgrounds/01.jpg');">
-    <!-- ################################################################################################ -->
     <div class="wrapper row1">
       <header id="header" class="hoc clear">
         <!-- ################################################################################################ -->
@@ -37,8 +49,6 @@
             <li class="active">
               <a class="drop" href="#">Details</a>
               <ul>
-                <!--<li><a href="pages/full-width.html">Full Width</a></li>-->
-                <!--<li><a href="pages/sidebar-left.html">Sidebar Left</a></li>-->
                 <li>
                   <a class="drop" href="../pages/vision.html">Vision</a>
                 </li>
@@ -46,7 +56,7 @@
                   <a class="drop" href="../pages/vision.html">Inventory</a>
                 </li>
                 <li>
-                  <a class="drop" href="../pages/coordinator.html">Co-ordinators</a>
+                    <a class="drop" href="../pages/coordinator.html">Co-ordinators</a>
                   <ul>
                     <li>
                       <a href="#">Shreyas Bapat</a>
@@ -61,7 +71,7 @@
                 </li>
 
                 <li>
-                  <a class="drop" href="../pages/adviser.html">Advisors</a>
+                    <a class="drop" href="../pages/adviser.html">Advisers</a>
                 </li>
                 <li>
                   <a class="drop" href="../pages/vision.html">Telescopes@STAC</a>
@@ -86,66 +96,113 @@
                 <li>
                   <a class="drop" href="../pages/alumni.html">Notable Alumni</a>
                 </li>
-                <!--<li><a href="pages/sidebar-right.html">Sidebar Right</a></li>-->
-                <!--<li><a href="pages/basic-grid.html">Basic Grid</a></li>-->
               </ul>
             </li>
-           
             <li>
-              <a href ="../pages/event.html" > Events</a>
-          </li>
+                <a href ="../pages/event.html" > Events</a>
+            </li>
             <li>
               <a href="../pages/gallery.html">Gallery</a>
             </li>
-              <li>
-                <a href="../pages/exodia.html">Exodia</a>
-            </li>
+            <li>
+                  <a class="drop" href="../pages/exodia.html">Exodia</a>
+                </li>
 
           </ul>
         </nav>
       </header>
       <!-- ################################################################################################ -->
     </div>
-    <!-- ################################################################################################ -->
-    <!-- ################################################################################################ -->
-    <!-- ################################################################################################ -->
-    <div id="breadcrumb" class="hoc clear">
-      <!-- ################################################################################################ -->
-      <!-- <h1 class="heading">STAC-IIT Mandi</h6> -->
-
-      <!-- ################################################################################################ -->
-    </div>
-    <!-- ################################################################################################ -->
-  </div>
-  <!-- End Top Background Image Wrapper -->
-  <!-- ################################################################################################ -->
-  <!-- ################################################################################################ -->
-  <!-- ################################################################################################ -->
-  <div class="wrapper row3">
-    <main class="hoc container clear">
-      <!-- main body -->
-      <!-- ################################################################################################ -->
-      <div class="content">
-        <!-- ################################################################################################ -->
-        <div id="alumni">
-            <header class="heading">Notable Alumni</header>
-            <ul>
-              <li>Chandan Satyarthi(2011-2015)</li>
-              <li>Subhash Kumar(2012-2016)</li>
-              <li>Ayush Yadav(2013-2017)</li>
-              <li>Gopal Krishan Aggarwal(2013-2017)</li>
-              <li>Chandan Purbia(2013-2017)</li>
-            </ul>
+     <div id="breadcrumb" class="hoc clear">
+         </div>
           </div>
-       
+    <main class="hoc container clear">
+       <div class="content">
+
+        <h1> Upcoming Events </h1>
+        <hr>
+
+<!-- Event 1 Starts here --> 
+
+  <div class="card-body-event">
+  	<h1 class="card-title" align="center">Bennu's Journey</h1>
+    <img id="myImg"   onClick="handleImageClick(this);" src="../images/test.jpeg" alt="Caption1" width="auto;" height="auto;">
+
+<div class ="event-details"      
+     <br>
+     <h1 align="left" margin: 50px > Details</h1>
+    <p class="card-text" align="left">This event will help you better to understand about topic</p>
+     <h1 align="left" > Event Prize</h1>
+     <p class="card-text" align="left">The prize for attending this event is 1000 dollars </p>
      
+
+     <h1 align="left" > When and Where? </h1>
+     <p class="card-text" align="left">St John Court at 12:00 PM</p>
+ 
+    
+     <a href="#" class="btn btn-primary" id="btn"> Click here for registration</a>
+      <br>
+     <hr>
+ </div>
+  </div>
+<!--event 1 ends here --> 
+
+<!-- Modal starts here -->
+  
+  <div id="myModal" class="modal">
+        <!-- The Close Button -->
+        <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+
+        <!-- Modal Content (The Image) -->
+        <img class="modal-content" id="modalImage" src="">
+
+        <!-- Modal Caption (Image Text) -->
+        <div id="caption"></div>
+ </div>
+
+<!--- Modal ends here --> 
+
+<!-- Event 2 starts here -->
+
+  <div class="card-body-event">
+  	<h1 class="card-title" align="center">Bennu's Journey</h1>
+    <img id="myImg"   onClick="handleImageClick(this);" src="../images/test2.jpeg" alt="Caption1" width="auto;" height="auto;">
+
+<div class ="event-details"      
+     <br>
+     <h1 align="left" margin: 50px > Details</h1>
+    <p class="card-text" align="left">This event will help you better to understand about topic</p>
+     <h1 align="left" > Event Prize</h1>
+     <p class="card-text" align="left">The prize for attending this event is 1000 dollars </p>
+     
+
+     <h1 align="left" > When and Where? </h1>
+     <p class="card-text" align="left">St John Court at 12:00 PM</p>
+ 
+    
+     <a href="#" class="btn btn-primary" id="btn"> Click here for registration</a>
+      <br>
+     <hr>
+ </div>
+  </div>
+<!-- Event 2 ends here  -->
+
+
+
+
+
+
+
+
+
+
+
+    
       <div class="clear"></div>
     </main>
   </div>
-  
-  <div class="wrapper row4 bgded overlay" style="background-image:url('../images/demo/backgrounds/main3.jpg');">
+   <div class="wrapper row4 bgded overlay" style="background-image:url('../images/demo/backgrounds/main3.jpg');">
     <footer id="footer" class="hoc clear">
-      <!-- ################################################################################################ -->
       <div class="one_quarter first">
         <h6 class="heading">About Us</h6>
         <p class="btmspace-30">STAC is the hobby club under SnTC which deals in Astronomy, Astrophysics, Astrophotography, Space Technology etc.</p>
@@ -165,11 +222,7 @@
           </ul>
         </nav>
         <ul class="faico clear">
-          <!--  <li><a class="faicon-facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-        <li><a class="faicon-twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-        <li><a class="faicon-dribble" href="#"><i class="fa fa-dribbble"></i></a></li>
-        <li><a class="faicon-linkedin" href="#"><i class="fa fa-linkedin"></i></a></li> -->
-          <li>
+            <li>
             <a class="faicon-facebook" href="http://facebook.com/stacIITMandi/">
               <i class="fa fa-facebook"></i>
             </a>
@@ -217,22 +270,11 @@
         <h6 class="heading">Important Notice</h6>
         <p class="btmspace-30">All the Activities of STAC are open for each and every person living in the campusof IIT Mandi. We declareourselves
           an open club and we strongly believe that each and every person in the campus is a member of STAC. </p>
-        <!--<form method="post" action="#">
-        <fieldset>
-          <legend>Newsletter:</legend>
-          <input class="btmspace-15" type="text" value="" placeholder="Name">
-          <input class="btmspace-15" type="text" value="" placeholder="Email">
-          <button type="submit" value="submit">Submit</button>
-        </fieldset>
-      </form>-->
+        
       </div>
-      <!-- ################################################################################################ -->
-    </footer>
+       </footer>
   </div>
-  <!-- ################################################################################################ -->
-  <!-- ################################################################################################ -->
-  <!-- ################################################################################################ -->
-  <div class="wrapper row5">
+ <div class="wrapper row5">
     <div id="copyright" class="hoc clear">
       <!-- ################################################################################################ -->
       <p class="fl_left">Developed by Web-Development Team - STAC</p>
@@ -240,10 +282,7 @@
       <!-- ################################################################################################ -->
     </div>
   </div>
-  <!-- ################################################################################################ -->
-  <!-- ################################################################################################ -->
-  <!-- ################################################################################################ -->
-  <a id="backtotop" href="#top">
+   <a id="backtotop" href="#top">
     <i class="fa fa-chevron-up"></i>
   </a>
 
