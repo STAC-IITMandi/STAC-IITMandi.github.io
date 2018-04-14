@@ -20,15 +20,26 @@ body, html {
 /* Header + Pageintro Wrapping Spacer
 --------------------------------------------------------------------------------------------------------------- */
 .banner {
-	background-image:url('../../images/demo/backgrounds/01.jpg');
-	background-image: cover; background-attachment: fixed; margin: 0;
-}
-.banner > .banner-tint{
-	z-index: 99;
-	background-color: rgba(255,255,255,0.44)
-	background-image: cover;+ height: 100%; background-attachment: fixed; margin: 0;;
+	//background-image:url('../../images/demo/backgrounds/04.jpg');
+	background-color: rgb(5, 5, 5);
+	background-size: 100% 100%; background-repeat: no-repeat; background-attachment: fixed; margin: 0;
 }
 .topspacer{padding-top: 50px;}
+
+/* particles-js */
+canvas {
+  display: block;
+  vertical-align: bottom;
+}
+
+
+/* ---- particles.js container ---- */
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
 
 
 /* Header
