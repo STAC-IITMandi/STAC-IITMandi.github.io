@@ -676,62 +676,13 @@ td {
   margin-bottom: 30px;
 }
 
-/* Font Awesome Social Icons
---------------------------------------------------------------------------------------------------------------- */
+/* Social Icons */
 
-.faico {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+.social-icon {
+  padding: 5px;
 }
-
-.faico li {
-  display: inline-block;
-  margin: 8px 5px 0 0;
-  padding: 0;
-  line-height: normal;
-}
-
-.faico li:last-child {
-  margin-right: 0;
-}
-
-.faico a {
-  display: inline-block;
-  width: 36px;
-  height: 36px;
-  line-height: 36px;
-  font-size: 18px;
-  text-align: center;
-}
-
-.faico a {
-  color: #FFFFFF;
-  background-color: #272727;
-}
-
-.faicon-dribble:hover {
-  background-color: #EA4C89;
-}
-
-.faicon-facebook:hover {
-  background-color: #3B5998;
-}
-
-.faicon-google-plus:hover {
-  background-color: #DB4A39;
-}
-
-.faicon-linkedin:hover {
-  background-color: #0E76A8;
-}
-
-.faicon-twitter:hover {
-  background-color: #00ACEE;
-}
-
-.faicon-vk:hover {
-  background-color: #4E658E;
+.social-icon > a:hover {
+  color: grey;
 }
 
 /* Colours
@@ -743,7 +694,7 @@ body {
 }
 
 a {
-  color: #00CCBD;
+  color: #ffab40;
 }
 
 a:active, a:focus {
@@ -762,7 +713,7 @@ label span {
 }
 
 input:focus, textarea:focus, *:required:focus {
-  border-color: #00CCBD;
+  border-color: #ffab40;
 }
 
 .overlay {
@@ -777,8 +728,8 @@ input:focus, textarea:focus, *:required:focus {
 
 .btn, .btn.inverse:hover, a .icon.fa, a.inverse:hover .icon.fa {
   color: #FFFFFF;
-  background-color: #00CCBD;
-  border-color: #00CCBD;
+  background-color: #ffab40;
+  border-color: #ffab40;
 }
 
 .btn:hover, .btn.inverse, a:hover .icon.fa, a.inverse .icon.fa {
@@ -824,7 +775,7 @@ input:focus, textarea:focus, *:required:focus {
 
 #introblocks {
   color: #FFFFFF;
-  background: #00CCBD;
+  background: #ffab40;
 }
 
 #introblocks ul, #introblocks ul li {
@@ -839,6 +790,9 @@ input:focus, textarea:focus, *:required:focus {
 }
 
 /* Footer */
+.col-padding {
+  padding: 1  0px;
+}
 
 .page-footer, .footer-copyright {
   z-index: 20;
@@ -856,7 +810,7 @@ input:focus, textarea:focus, *:required:focus {
 }
 
 #breadcrumb li:last-child a {
-  color: #00CCBD;
+  color: #ffab40;
 }
 
 .container .sidebar nav a {
@@ -865,7 +819,7 @@ input:focus, textarea:focus, *:required:focus {
 }
 
 .container .sidebar nav a:hover {
-  color: #00CCBD;
+  color: #ffab40;
 }
 
 .pagination a, .pagination strong {
@@ -874,7 +828,7 @@ input:focus, textarea:focus, *:required:focus {
 
 .pagination .current * {
   color: #FFFFFF;
-  background-color: #00CCBD;
+  background-color: #ffab40;
 }
 
 #backtotop {
@@ -889,7 +843,7 @@ table, th, td, #comments .avatar, #comments input, #comments textarea {
 }
 
 #comments input:focus, #comments textarea:focus, #comments *:required:focus {
-  border-color: #00CCBD;
+  border-color: #ffab40;
 }
 
 th {
