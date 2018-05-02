@@ -39,6 +39,13 @@ h1, h2, h3, h4, h5, h6 {
   min-height: 300px;
   height: 100%;
 }
+.banner > img {
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+}
 
 .sidenav-overlay {
   background-color: rgba(0, 0, 0, 0.1);
@@ -344,7 +351,7 @@ Delete it completely to stop fading
 --------------------------------------------------------------------------------------------------------------- */
 
 *, *::before, *::after {
-  transition: all .3s ease-in-out;
+  transition: all 0.1s ease-in-out;
 }
 
 #mainav form * {
@@ -680,9 +687,10 @@ td {
 
 .social-icon {
   padding: 5px;
+  color: #333;
 }
-.social-icon > a:hover {
-  color: grey;
+a.social-icon:hover {
+  color: #000;
 }
 
 /* Colours
@@ -791,7 +799,7 @@ input:focus, textarea:focus, *:required:focus {
 
 /* Footer */
 .col-padding {
-  padding: 1  0px;
+  padding-bottom: 10px;
 }
 
 .page-footer, .footer-copyright {
