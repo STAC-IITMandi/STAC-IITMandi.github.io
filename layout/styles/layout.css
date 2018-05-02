@@ -351,7 +351,7 @@ Delete it completely to stop fading
 --------------------------------------------------------------------------------------------------------------- */
 
 *, *::before, *::after {
-  transition: all .3s ease-in-out;
+  transition: all 0.1s ease-in-out;
 }
 
 #mainav form * {
@@ -687,9 +687,10 @@ td {
 
 .social-icon {
   padding: 5px;
+  color: #333;
 }
-.social-icon > a:hover {
-  color: grey;
+a.social-icon:hover {
+  color: #000;
 }
 
 /* Colours
@@ -798,7 +799,7 @@ input:focus, textarea:focus, *:required:focus {
 
 /* Footer */
 .col-padding {
-  padding: 1  0px;
+  padding-bottom: 10px;
 }
 
 .page-footer, .footer-copyright {
