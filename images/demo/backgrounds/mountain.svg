@@ -25,9 +25,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="8"
-     inkscape:cx="814.42432"
-     inkscape:cy="80.424565"
+     inkscape:zoom="1"
+     inkscape:cx="569.46932"
+     inkscape:cy="147.34612"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -46,7 +46,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -141,7 +141,7 @@
        style="fill:#e6e6e6" />
     <g
        id="g3391"
-       transform="matrix(0.05943168,0,0,0.05943168,162.26961,928.62394)">
+       transform="matrix(-0.06076071,0,0,0.06076071,820.42207,965.53371)">
       <rect
          id="rect3345"
          height="65.614998"
@@ -160,7 +160,7 @@
          x="100.816" />
       <polygon
          id="polygon3349"
-         points="398.664,147.168 398.664,45.226 356.439,45.226 325.755,57.936 367.981,159.877 "
+         points="398.664,45.226 356.439,45.226 325.755,57.936 367.981,159.877 398.664,147.168 "
          style="fill:#8fd9c2" />
       <rect
          id="rect3351"
@@ -208,7 +208,7 @@
     </g>
     <g
        id="g3470"
-       transform="matrix(-0.10689871,0,0,0.10689871,836.90135,943.16471)">
+       transform="matrix(0.08585932,0,0,0.08585932,163.05529,919.55079)">
       <path
          id="path3414"
          d="m 62.479,244.235 -50.308,0 C 12.171,109.563 121.734,0 256.406,0 l 0,50.307 -193.927,193.928 z"
@@ -216,7 +216,7 @@
          inkscape:connector-curvature="0" />
       <polygon
          id="polygon3416"
-         points="450.769,126.832 485.196,92.41 416.346,23.56 381.921,57.983 399.134,75.197 329.671,144.658 364.096,179.083 433.559,109.622 "
+         points="381.921,57.983 399.134,75.197 329.671,144.658 364.096,179.083 433.559,109.622 450.769,126.832 485.196,92.41 416.346,23.56 "
          style="fill:#1e2e3b" />
       <path
          id="path3418"
