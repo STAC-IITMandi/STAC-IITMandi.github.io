@@ -48,12 +48,22 @@ h1, h2, h3, h4, h5, h6 {
   background: transparent;
 }
 
+.main-heading {
+  position: absolute;
+  font-size: 2rem;
+  padding: 64px;
+  text-align: center;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
 .sidenav-overlay {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
 .brand-logo {
-  background-image: url("../../images/demo/stac.png");
+  background-image: url("../../images/staclogo.png");
   background-size: contain;
   background-repeat: no-repeat;
   height: 90%;
