@@ -53,9 +53,28 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 2rem;
   padding: 64px;
   text-align: center;
+  width: 100%;
+}
+
+.about-text {
+  position: absolute;
+  /* font-size: 2rem; */
+  padding: 64px;
+  text-align: center;
   width: 80%;
+  margin-top: 140px;
   margin-left: 10%;
   margin-right: 10%;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width:480px) {
+  .main-heading {
+    font-size: 1.5rem;
+  }
+  .about-text {
+    font-size: 80%;
+  }
 }
 
 .sidenav-overlay {
@@ -100,8 +119,6 @@ canvas {
   margin-right: auto;
   padding-top: 20px;
 }
-
-@@media max-width(480px) {}
 
 img {
   display: inline-block;
