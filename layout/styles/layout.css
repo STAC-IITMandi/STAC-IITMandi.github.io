@@ -36,9 +36,20 @@ h1, h2, h3, h4, h5, h6 {
   background-repeat: no-repeat;
   background-attachment: fixed;
   margin: 0;
-  min-height: 300px;
+  min-height: 600px;
   height: 100%;
 }
+
+.banner-template {
+  background-color: rgb(3, 3, 3);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0;
+  min-height: 300px;
+  height: 300px;
+}
+
 .banner > embed {
   position: absolute;
   width: 100%;
@@ -717,6 +728,7 @@ td {
   padding: 5px;
   color: #333;
 }
+
 a.social-icon:hover {
   color: #000;
 }
@@ -826,11 +838,13 @@ input:focus, textarea:focus, *:required:focus {
 }
 
 /* Final quote */
-.before-footer > .container {
+
+.before-footer>.container {
   height: 100%;
   padding: 70px;
   text-align: center;
 }
+
 .last-quote {
   display: flex;
   font-size: 1.8rem;
@@ -842,6 +856,7 @@ input:focus, textarea:focus, *:required:focus {
 }
 
 /* Footer */
+
 .col-padding {
   padding-bottom: 10px;
 }
