@@ -82,9 +82,11 @@ h1, h2, h3, h4, h5, h6 {
 @media screen and (max-width:480px) {
   .main-heading {
     font-size: 1.5rem;
+    padding: 48px;
   }
   .about-text {
     font-size: 80%;
+    margin-top: 100px;
   }
 }
 
