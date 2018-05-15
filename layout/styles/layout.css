@@ -72,8 +72,8 @@ h1, h2, h3, h4, h5, h6 {
   /* font-size: 2rem; */
   padding: 64px;
   text-align: center;
-  width: 80%;
   margin-top: 140px;
+  width: 80%;
   margin-left: 10%;
   margin-right: 10%;
   text-transform: uppercase;
@@ -86,7 +86,24 @@ h1, h2, h3, h4, h5, h6 {
   }
   .about-text {
     font-size: 80%;
-    margin-top: 100px;
+    margin-top: 80px;
+    width: 88%;
+    margin-left: 6%;
+    margin-right: 6%;
+  }
+}
+
+@media screen and (max-width:360px) {
+  .main-heading {
+    font-size: 1.2rem;
+    padding: 48px;
+  }
+  .about-text {
+    font-size: 72%;
+    margin-top: 68px;
+    width: 92%;
+    margin-left: 4%;
+    margin-right: 4%;
   }
 }
 
