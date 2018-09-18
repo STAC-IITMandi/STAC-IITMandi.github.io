@@ -89,16 +89,22 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
 }
 
+.logo {
+  position: relative;
+  text-align: center;
+}
+
 .event-logo {
   position: absolute;
-  /* font-size: 2rem; */
-  padding: 60px;
+  top: 320%; left: 50%;
+  transform: translate(-50%,-50%);
+  width: 40rem;
+  height: 40rem;
+  display: inline-block;
   padding-top: 0;
+  padding-bottom: 0;
   text-align: center;
-  margin-top: 0px;
-  width: 45%;
-  margin-left: 28%;
-  margin-right: auto;
+  vertical-align: center;
 }
 
 @media screen and (max-width:480px) {
