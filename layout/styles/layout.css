@@ -6,7 +6,6 @@ body, html {
   margin: 0;
   height: 100%;
   font-family: 'Raleway', sans-serif;
-  font-weight: ;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -31,6 +30,7 @@ h1, h2, h3, h4, h5, h6 {
 --------------------------------------------------------------------------------------------------------------- */
 
 .banner {
+  position: relative;
   background-color: rgb(3, 3, 3);
   background-size: 100% 100%;
   background-repeat: no-repeat;
@@ -90,15 +90,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .event-logo {
+  position: relative;
+  width: 100%;
+  height: calc(100% - 56px);
+}
+
+.event-logo img {
   position: absolute;
-  /* font-size: 2rem; */
-  padding: 60px;
-  padding-top: 0;
-  text-align: center;
-  margin-top: 0px;
-  width: 45%;
-  margin-left: 28%;
-  margin-right: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  max-width: 530px;
 }
 
 @media screen and (max-width:480px) {
@@ -106,6 +110,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1.5rem;
     padding: 48px;
   }
+
   .about-text {
     font-size: 80%;
     margin-top: 80px;
@@ -120,12 +125,19 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1.2rem;
     padding: 48px;
   }
+
   .about-text {
     font-size: 72%;
     margin-top: 68px;
     width: 92%;
     margin-left: 4%;
     margin-right: 4%;
+  }
+}
+
+@media only screen and (min-width: 601px) {
+  .event-logo {
+    height: calc(100% - 64px);
   }
 }
 
@@ -157,6 +169,8 @@ canvas {
   position: fixed;
   width: 100%;
   height: 100%;
+  top: 0;
+  left: 0;
 }
 
 /* Header
