@@ -60,13 +60,22 @@ h1, h2, h3, h4, h5, h6 {
   height: 300px;
 }
 
-.banner > embed {
+.banner embed {
   position: absolute;
   width: 100%;
   bottom: 0;
   margin: 0;
   padding: 0;
   background: transparent;
+}
+
+.front-banner {
+  position: relative;
+  height: calc(100% - 64px)
+}
+.carousel.carousel-slider {
+  top: 140px;
+  height: 450px;
 }
 
 .main-heading {
