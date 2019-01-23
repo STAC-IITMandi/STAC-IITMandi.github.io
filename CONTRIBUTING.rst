@@ -7,12 +7,14 @@ How to Contribute
 3) Create a new branch.
     ``git checkout -b NewBranchName``
 4) Make your changes.
-5) Stage the changes.
+5) Check what has changed
+    ``git status``
+6) Stage the changes.
     ``git add path/to/changed-files``
-6) Commit your changes.
+7) Commit your changes.
     ``git commit -m "Appropriate Commit Message"``
-7) Push your Changes
+8) Push your Changes
     ``git push origin NewBranchName``
-8) Create a Pull request
-9) Mention someone to review it.
-10) Celebrate your Contribution :rocket:
+9) Create a Pull request
+10) Mention someone to review it.
+11) Celebrate your Contribution :rocket:
