@@ -15,6 +15,17 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
   <link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+
+  <script src="https://d3js.org/d3.v3.min.js"></script>
+  <!-- Google fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+
+  <link type="text/css" rel="stylesheet" href="css/style.css" />
+  <link type="text/css" rel="stylesheet" href="css/tooltip.css" />
+  <link type="text/css" rel="stylesheet" href="css/infoBox.css" />
+
 </head>
 
 <body id="top">
@@ -29,7 +40,7 @@
             <li><a class="black-text" href="#home">HOME</a></li>
             <li><a class="black-text" href="https://AstraX.stac-iitmandi.org/">ASTRAX</a></li>
             <li><a class="black-text" href="zenith.html">ZENITH</a></li>
-            <li><a class="black-text" href="activities.html">ACTIVITIES</a></li>
+            <li><a class="black-text" href="achievements.html">PROJECTS</a></li>
             <li><a class="black-text" href="team.html">TEAM</a></li>
             <li><a class="black-text" href="#contact">CONTACT</a></li>
           </ul>
@@ -40,22 +51,41 @@
       <li><a class="black-text" href="#home">HOME</a></li>
       <li><a class="black-text" href="https://stac-iitmandi.org/AstraX">ASTRAX</a></li>
       <li><a class="black-text" href="zenith.html">ZENITH</a></li>
-      <li><a class="black-text" href="activities.html">ACTIVITIES</a></li>
+      <li><a class="black-text" href="achievements.html">PROJECTS</a></li>
       <li><a class="black-text" href="team.html">TEAM</a></li>
       <li><a class="black-text sidenav-close" href="#contact">CONTACT</a></li>
     </ul>
 
     <!-- particles.js container -->
-    <embed src="images/backgrounds/mountain.svg"></embed>
+    <!-- <embed src="images/backgrounds/mountain.svg"></embed> -->
     <div class="main-heading">
         <div class="white-text">SPACE TECHNOLOGY AND ASTRONOMY CELL, IIT MANDI</div>
+        <p class="moto">#Andhera_Kayam_Rahe</p>
     </div>
-    <div class="about-text">
-        <img src="images/blackhole.png" alt="black hole" style="width:400px;height:auto;">
-        <p class="white-text">#Andhera_Kayam_Rahe!</p>
-        <a class="waves-effect waves-light blue btn-small" href="achievements.html" target="_blank">We Achieve!</a>
+    
+    <div id="particles">
+
+      <!-- Chart -->
+      <div id="planetarium"></div>
+
+      <!-- Show how to close tooltip -->
+      <div id="tooltipInfo"><span>Click anywhere in the screen to close tooltips</span></div>
+
+      <!-- Create div structure for Tooltip -->
+      <div id="tooltip">
+        <div id="tooltip-Container">
+          <div class="tooltip-planet"></div>
+          <div class="tooltip-rule"></div>
+          <div class="tooltip-year"></div>
+          <div id="tooltip-radius" class="tooltip-info"></div>
+          <div id="tooltip-dist" class="tooltip-info"></div>
+          <div id="tooltip-period" class="tooltip-info"></div>
+          <div id="tooltip-eccen" class="tooltip-info"></div>
+          <div id="tooltip-class" class="tooltip-info"></div>
+          <div class="tooltip-tail"></div>
+        </div>
+      </div>
     </div>
-    <div id="particles-js"></div>
 
 </div>
   <!-- End Top Background Image Wrapper -->
@@ -395,6 +425,17 @@
   <script src="layout/scripts/particles.js"></script>
   <script src="layout/scripts/smoothscroll.js"></script>
   <script src="layout/scripts/sidenav-init.js"></script>
+
+  <!-- Separate functions that became too big for the main script -->
+  <script src="js/helperFunctions.js"></script>
+  <script src="js/exoplanets.js"></script> <!-- data -->
+  <script src="js/showTooltip.js"></script>
+  <script src="js/gradients.js"></script>
+  <script src="js/legend.js"></script>
+  <script src="js/progressCircle.js"></script>
+
+  <script src="js/mainCode.js"></script>
+
 </body>
 
 </html>
