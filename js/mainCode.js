@@ -122,6 +122,30 @@ d3.select("svg")
 ///////////////////////////////////////////////////////////////////////////
 //////////////////////////// Explanation Texts ////////////////////////////
 ///////////////////////////////////////////////////////////////////////////
+//Intro Text Wrapper
+var introText = svg.append("g").attr("class", "introWrapper");
+					//.attr("transform", "translate(" + -x/2 + "," + -y/2 + ")");
+//Title				
+var Title = introText.append("text")
+	.attr("class", "title")
+	.attr("x", 10 + "px")
+	.attr("y", 10 + "px")
+	.attr("dy", "1em")
+	.style("fill","white")
+	.attr("opacity", 1)
+	.text("EXOPLANETS");
+	
+//Intro text	
+var TextIntro = introText.append("text")
+	.attr("class", "intro")
+	.attr("x", 10 + "px")
+	.attr("y", 40 + "px")
+	.attr("dy", "1em")
+	.style("fill","white")
+	.attr("opacity", 1)
+	.text("Here you see 288 exoplanets from exoplanets.org for which we know the eccentricity and " +
+		  "semi-major axis of the orbit, radius of the planet and (effective) temperature of the star which it orbits.")
+	.call(wrap, 300);
 
 
 
