@@ -6,7 +6,7 @@ body {
 	vertical-align: middle;
 	background: url(../img/galaxy.jpg);
 	cursor: default;
-}		
+}
 
 .bigButton {
   font-family: Oswald;
@@ -17,7 +17,7 @@ body {
   vertical-align: middle;
   border: 1px solid;
   border-color: white;
-  cursor: pointer;	
+  cursor: pointer;
   visibility: auto;
 }
 
@@ -39,9 +39,9 @@ body {
   opacity: 0;
 }
 
-span { 
-	display:inline-block; 
-	vertical-align:middle 
+span {
+	display:inline-block;
+	vertical-align:middle
 }
 
 #buttonWrapper{
@@ -55,14 +55,14 @@ span {
   left: 18px;
   bottom: 18px;
   width: 640px;
-  text-align: center;	
-  overflow: hidden;	
-  visibility: auto;			  
+  text-align: center;
+  overflow: hidden;
+  visibility: auto;
 }
 
 .sideButton {
-  float: left;	
-  cursor: pointer;	
+  float: left;
+  cursor: pointer;
   width: 80px;
 }
 
@@ -72,19 +72,19 @@ span {
 }
 
 .sideButtonInv {
-  float: left;	
-  cursor: pointer;	
+  float: left;
+  cursor: pointer;
   width: 80px;
   opacity: 0;
-  cursor: pointer;	
+  cursor: pointer;
 }
 
 .bar {
-	float: left;	
+	float: left;
 	width: 15px;
 }
 
-#color {  
+#color {
 	visibility: hidden;
 }
 
@@ -108,20 +108,20 @@ span {
 	text-decoration: none;
 	color: #CCCCCC;
 }
-	
+
 .title {
   font-family: Oswald;
   font-size: 20px;
   font-weight: 300;
   color: white;
-  text-align: left;	
+  text-align: left;
 }
 
 .intro {
   font-size: 12px;
   font-weight: 300;
   color: white;
-  text-align: left;	
+  text-align: left;
 }
 
 .explanation {
@@ -129,7 +129,7 @@ span {
   font-weight: 300;
   color: white;
   text-align: center;
-  text-anchor: middle;	
+  text-anchor: middle;
 }
 
 .legend {
@@ -150,4 +150,55 @@ span {
 .progressWrapper {
 	cursor: pointer;
 	z-index: 1;
+}
+
+.popup {
+  opacity: 1;
+  position: relative;
+  text-align: center;
+}
+
+.popup::after,
+.popup::before {
+  left: 50%;
+  opacity: 0;
+  position: absolute;
+  transform: translateX(-50%) translateY(-2px);
+  transition: all 0.2s cubic-bezier(0.64, 0.09, 0.08, 1), transform 0.2s cubic-bezier(0.64, 0.09, 0.08, 1);
+  visibility: hidden;
+}
+
+.popup::after {
+  background: #000;
+  border-radius: 5px;
+  box-shadow: 1px 1px 10px rgba(9, 9, 9, 0.55);
+  color: #FFF;
+  content: attr(data-popup);
+  font-size: 12px;
+  font-weight: bold;
+  min-height: 38px;
+  min-width: 60px;
+  padding: 10px;
+  top: -52px;
+  white-space: nowrap;
+  z-index: 1004;
+}
+
+.popup::before {
+  height: 0px;
+  width: 0px;
+  border-left: solid 7px transparent;
+  border-right: solid 7px transparent;
+  border-top: solid 7px #000;
+  content: '';
+  top: -10px;
+  z-index: 1005;
+}
+
+.popup:hover::after,
+.popup:hover::before {
+  display: block;
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+  visibility: visible;
 }
