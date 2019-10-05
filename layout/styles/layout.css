@@ -59,11 +59,16 @@ h1, h2, h3, h4, h5, h6 {
   min-height: 300px;
   height: 300px;
 }
+
 .mountain{
   position: absolute;
   width: 100%;
   bottom: 0;
   left: 0;
+}
+
+.container-fluid .mountain {
+  position: relative;
 }
 
 .main-heading {
@@ -947,6 +952,10 @@ input:focus, textarea:focus, *:required:focus {
 }
 
 /* Footer */
+
+.footer-mountain {
+  background-color: #fff;
+}
 
 .col-padding {
   padding-bottom: 10px;
