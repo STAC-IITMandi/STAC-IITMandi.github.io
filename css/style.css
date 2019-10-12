@@ -1,11 +1,11 @@
 body {
-	font-size: 14px;
-	font-weight: 400;
-	font-family: 'Open Sans', sans-serif;
-	text-align: center;
-	vertical-align: middle;
-	background: url(../img/galaxy.jpg);
-	cursor: default;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  vertical-align: middle;
+  background: url(../img/galaxy.jpg);
+  cursor: default;
 }
 
 .bigButton {
@@ -40,8 +40,8 @@ body {
 }
 
 span {
-	display:inline-block;
-	vertical-align:middle
+  display:inline-block;
+  vertical-align:middle;
 }
 
 #buttonWrapper{
@@ -67,8 +67,8 @@ span {
 }
 
 .sideButton a {
-	text-decoration: none;
-	color: white;
+  text-decoration: none;
+  color: white;
 }
 
 .sideButtonInv {
@@ -80,8 +80,8 @@ span {
 }
 
 .bar {
-	float: left;
-	width: 15px;
+  float: left;
+  width: 15px;
 }
 
 #color {
@@ -174,12 +174,12 @@ span {
   box-shadow: 1px 1px 10px rgba(9, 9, 9, 0.55);
   color: #FFF;
   content: attr(data-popup);
-  font-size: 12px;
+  font-size: 11px;
   font-weight: bold;
-  min-height: 38px;
+  min-height: 30px;
   min-width: 60px;
-  padding: 10px;
-  top: -52px;
+  padding: 4px 8px;
+  top: -34px;
   white-space: nowrap;
   z-index: 1004;
 }
@@ -191,7 +191,7 @@ span {
   border-right: solid 7px transparent;
   border-top: solid 7px #000;
   content: '';
-  top: -10px;
+  top: -6px;
   z-index: 1005;
 }
 
