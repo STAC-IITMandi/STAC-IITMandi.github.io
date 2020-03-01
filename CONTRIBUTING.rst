@@ -2,7 +2,7 @@ How to Contribute
 =================
 
 1) Fork this repository to your github account.
-2) Clone the forked repository. 
+2) Clone the forked repository.
     ``git clone https://github.com/username/STAC-IITMandi.github.io.git``
 3) Create a new branch.
     ``git checkout -b NewBranchName``
