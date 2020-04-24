@@ -2,444 +2,443 @@
 <html lang="en_US">
 
 <head>
-    <title>STAC|IIT Mandi</title>
+  <title>STAC|IIT Mandi</title>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="description" content="Website of STAC, Space Technology and Astronomy Cell - IIT Mandi.">
-    <meta name="author" content="STAC Web-Development Team">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="description" content="Website of STAC, Space Technology and Astronomy Cell - IIT Mandi.">
+  <meta name="author" content="STAC Web-Development Team">
 
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Raleway|Roboto" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
-    <link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Raleway|Roboto" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+  <link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
 
-    <script src="https://d3js.org/d3.v3.min.js"></script>
-    <!-- Google fonts -->
-    <link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+  <script src="https://d3js.org/d3.v3.min.js"></script>
+  <!-- Google fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
 
-    <link type="text/css" rel="stylesheet" href="css/style.css" />
-    <link type="text/css" rel="stylesheet" href="css/tooltip.css" />
-    <link type="text/css" rel="stylesheet" href="css/infoBox.css" />
+  <link type="text/css" rel="stylesheet" href="css/style.css" />
+  <link type="text/css" rel="stylesheet" href="css/tooltip.css" />
+  <link type="text/css" rel="stylesheet" href="css/infoBox.css" />
 
 </head>
 
 <body id="top">
-    <!-- Top Background Image Wrapper -->
-    <div id="home" class="banner">
-        <div class="navbar-fixed">
-            <nav>
-                <div class="nav-wrapper grey lighten-5">
-                    <a href="#" class="brand-logo black-text"></a>
-                    <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons black-text">menu</i></a>
-                    <ul class="right hide-on-med-and-down">
-                        <li><a class="black-text" href="#home">HOME</a></li>
-                        <li><a class="black-text" href="https://blog.stac-iitmandi.org/">BLOG</a></li>
-                        <li><a class="black-text" href="https://astrax.in/">ASTRAX</a></li>
-                        <li><a class="black-text" href="zenith.html">ZENITH</a></li>
-                        <li><a class="black-text" href="achievements.html">PROJECTS</a></li>
-                        <li><a class="black-text" href="team.html">TEAM</a></li>
-                        <li><a class="black-text" href="#contact">CONTACT</a></li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
-        <ul class="sidenav" id="slide-out">
+  <!-- Top Background Image Wrapper -->
+  <div id="home" class="banner">
+    <div class="navbar-fixed">
+      <nav>
+        <div class="nav-wrapper grey lighten-5">
+          <a href="#" class="brand-logo black-text"></a>
+          <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons black-text">menu</i></a>
+          <ul class="right hide-on-med-and-down">
             <li><a class="black-text" href="#home">HOME</a></li>
-            <li><a class="black-text" href="https://blog.stac-iitmandi.org/">BLOG</a></li>
-            <li><a class="black-text" href="https://stac-iitmandi.org/AstraX">ASTRAX</a></li>
+            <li><a class="black-text" href="https://blog.stac-iitmandi.org">BLOG</a></li>
+            <li><a class="black-text" href="https://astrax.in/">ASTRAX</a></li>
             <li><a class="black-text" href="zenith.html">ZENITH</a></li>
             <li><a class="black-text" href="achievements.html">PROJECTS</a></li>
             <li><a class="black-text" href="team.html">TEAM</a></li>
-            <li><a class="black-text sidenav-close" href="#contact">CONTACT</a></li>
-        </ul>
-
-        <!-- particles.js container -->
-        <img class="mountain" src="images/backgrounds/mnt.svg"></img>
-        <div class="main-heading">
-            <div class="white-text">SPACE TECHNOLOGY AND ASTRONOMY CELL, IIT MANDI</div>
-            <!-- <p class="moto">#Andhera_Kayam_Rahe</p> -->
+            <li><a class="black-text" href="#contact">CONTACT</a></li>
+          </ul>
         </div>
-
-        <div id="particles">
-
-            <!-- Chart -->
-            <div id="planetarium"></div>
-
-            <!-- Show how to close tooltip -->
-            <div id="tooltipInfo"><span>Click anywhere in the screen to close tooltips</span></div>
-
-            <!-- Create div structure for Tooltip -->
-            <div id="tooltip">
-                <div id="tooltip-Container">
-                    <div class="tooltip-planet"></div>
-                    <div class="tooltip-rule"></div>
-                    <div class="tooltip-year"></div>
-                    <div id="tooltip-radius" class="tooltip-info"></div>
-                    <div id="tooltip-dist" class="tooltip-info"></div>
-                    <div id="tooltip-period" class="tooltip-info"></div>
-                    <div id="tooltip-eccen" class="tooltip-info"></div>
-                    <div id="tooltip-class" class="tooltip-info"></div>
-                    <div class="tooltip-tail"></div>
-                </div>
-            </div>
-        </div>
-
+      </nav>
     </div>
-    <!-- End Top Background Image Wrapper -->
+    <ul class="sidenav" id="slide-out">
+      <li><a class="black-text" href="#home">HOME</a></li>
+      <li><a class="black-text" href="https://blog.stac-iitmandi.org">BLOG</a></li>
+      <li><a class="black-text" href="https://stac-iitmandi.org/AstraX">ASTRAX</a></li>
+      <li><a class="black-text" href="zenith.html">ZENITH</a></li>
+      <li><a class="black-text" href="achievements.html">PROJECTS</a></li>
+      <li><a class="black-text" href="team.html">TEAM</a></li>
+      <li><a class="black-text sidenav-close" href="#contact">CONTACT</a></li>
+    </ul>
 
-    <!-- Content comes here -->
-    <div class="wrapper row2">
-        <section class="container clear">
-            <div class="sectiontitle">
-                <h4 class="center">Competitions held at STAC</h4>
-                <p class="center">
-                    <br> Numerous competetions are organised by STAC covering varied aspects of knowledge. Winners of various competitions held under STAC and event details are featured here. Note there are many other events too! You will discover many
-                    of them this year. </p>
-            </div>
-
-            <div class="row">
-                <div class="card col s12 m3">
-                    <div class="hoverable card grey lighten-5 card-image ">
-                        <img src="images/aurora.jpg">
-                        <span class="card-title">Aurora</span>
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4"><i class="material-icons left">more_vert</i>Read More</span>
-                    </div>
-                    <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">Aurora<i class="material-icons right">close</i></span>
-                        <p>A paper presentation event held in the annual intra-college tech fest of IIT Mandi, Zenith. Shikha Suman(in photo) was the winner of this event. She gave nice presentation on fermi paradox.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="card col s12 m3">
-                    <div class="hoverable card grey lighten-5 card-image">
-                        <img src="images/whatsup.png">
-                        <span class="card-title">WhatsUp</span>
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4"><i class="material-icons left">more_vert</i>Read More</span>
-                    </div>
-                    <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">WhatsUp<i class="material-icons right">close</i></span>
-                        <p>A successful event on a clear sky. Shreya Lanjewar was the winner followed by Arshita Kalra and Karthik Kathuria. They were supposed to locate as many messier objects as possible.
-                        </p>
-                    </div>
-                </div>
-                <div class="card col s12 m3">
-                    <div class="hoverable card grey lighten-5 card-image">
-                        <img src="images/kplhack.jpg">
-                        <span class="card-title">Hackathons</span>
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4"><i class="material-icons left">more_vert</i>Read More</span>
-                    </div>
-                    <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">KPL Hackaton<i class="material-icons right">close</i></span>
-                        <p> STAC organised hackathon in which we were supposed to extract astronomical data and make an interface for data analysis and results. Photo featuring the winning team, lead by Shreyas Bapat.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="card col s12 m3">
-                    <div class="hoverable card grey lighten-5 card-image">
-                        <img src="images/pandora.jpg">
-                        <span class="card-title">Pandora's Box</span>
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4"><i class="material-icons left">more_vert</i>Read More</span>
-                    </div>
-                    <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">Pandora's Box<i class="material-icons right">close</i></span>
-                        <p>The second edition of Zenith observed a participation of 80. It was a written quiz focussing on Astrophysics covering the topic of Relativity too. Photo featuring the winner, Abhijeet.</p>
-                    </div>
-                </div>
-
-        </section>
-        </div>
+    <!-- particles.js container -->
+     <img class="mountain" src="images/backgrounds/mnt.svg"></img> 
+    <div class="main-heading">
+        <div class="white-text">SPACE TECHNOLOGY AND ASTRONOMY CELL, IIT MANDI</div>
+        <!-- <p class="moto">#Andhera_Kayam_Rahe</p> -->
     </div>
-    <div class="wrapper row3 white black-text">
-        <div class="container">
-            <div class="sectiontitle">
-                <h3 class="center"> <strong>What we do as a Club?</strong></h3>
-                <p>
-                    <br>STAC is a club where one can explore every corner of the technical knowledge he/she has! Have a look towards what we do! You are encouraged to knock our doors anytime. :) If you feel like taking a session on Astrophysics/Robotics/Programming/Star-Gazing
-                    or anything related to STAC (Which is in fact everything ;) ), just write a mail to stac@students.iitmandi.ac.in.
-                </p>
-            </div>
-            <div class="row">
-                <div class="col s12 m3">
-                    <div class="card">
-                        <div class="card-image">
-                            <img src="images/depts/astrophysics.jpg">
-                            <span class="card-title">Astrophysics</span>
-                        </div>
-                        <div class="card-content">
-                            <p>
-                                Core Astrophyisics and related Mathematics, from Black holes to String Theory, from Expanding Universe to BigCrunch, we discuss everything here!
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s12 m3">
-                    <div class="card">
-                        <div class="card-image">
-                            <img src="images/depts/astronomy.png">
-                            <span class="card-title">Astronomy</span>
-                        </div>
-                        <div class="card-content">
-                            <p>Sky gazing, Messier Hunts, Sky Reading and what not! From studying Stellar evolution to operating telescopes (Even building one)!
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s12 m3">
-                    <div class="card">
-                        <div class="card-image">
-                            <img src="images/depts/spacetech.jpeg">
-                            <span class="card-title">Space Technology</span>
-                        </div>
-                        <div class="card-content">
-                            <p>
-                                Working on Radio Telescope, making our own balloon-sats and cube-sats, applying ML/DL algorithms for analysing the data collected by telescopes
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s12 m3">
-                    <div class="card">
-                        <div class="card-image">
-                            <img src="images/depts/astrophoto.png">
-                            <span class="card-title">Astro-photography</span>
-                        </div>
-                        <div class="card-content">
-                            <p>
-                                Having the privilege of living in a very serene place with amazing sky, some members are over-enthusiastic for capturing the night sky in the cameras..
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    
+    <div id="particles">
+
+      <!-- Chart -->
+      <div id="planetarium"></div>
+
+      <!-- Show how to close tooltip -->
+      <div id="tooltipInfo"><span>Click anywhere in the screen to close tooltips</span></div>
+
+      <!-- Create div structure for Tooltip -->
+      <div id="tooltip">
+        <div id="tooltip-Container">
+          <div class="tooltip-planet"></div>
+          <div class="tooltip-rule"></div>
+          <div class="tooltip-year"></div>
+          <div id="tooltip-radius" class="tooltip-info"></div>
+          <div id="tooltip-dist" class="tooltip-info"></div>
+          <div id="tooltip-period" class="tooltip-info"></div>
+          <div id="tooltip-eccen" class="tooltip-info"></div>
+          <div id="tooltip-class" class="tooltip-info"></div>
+          <div class="tooltip-tail"></div>
         </div>
+      </div>
     </div>
 
-    <div class="wrapper row3">
-        <div class="container">
-            <div class="row">
-                <div class="col s12">
-                    <div class="col s12 m3">
-                        <img src="images/zenith2.png" alt="Zenith logo">
-                    </div>
-                    <div class="sectiontitle">
-                        <h4 class="center">Zenith'19 - The Annual Intra-College Astrofest</h4>
-                        <p>Zenith is the annual intra-college Astrofest organised by the club. The astrofest saw a large participation with enthusiastic astrophysicists talking about various amazing topics ranging from Black Holes to Galaxies in "Aurora".
-                            Some Computer Science Enthusiasts did a week long hacking to create amazing applications. On the other side of campus of IIT Mandi, some students were participating in "Pandora's Box" to win cool prizes. This all was flavoured
-                            by some amazing talks by Bhavya Bhatt, Abhijeet Manhas and Shreyas Bapat. </p>
-                    </div>
-                </div>
-                <div class="col s12 m6 xl3">
-                    <div class="hoverable card-panel" align='center'>
-                        <h6>Prizes Worth:</h6>
-                        <h3>₹ 8000</h3>
-                    </div>
-                </div>
-                <div class="col s12 m6 xl3">
-                    <div class="hoverable card-panel" align='center'>
-                        <h6>Participants:</h6>
-                        <h3>120</h3>
-                    </div>
-                </div>
-                <div class="col s12 m6 xl3">
-                    <div class="hoverable card-panel" align='center'>
-                        <h6>Days:</h6>
-                        <h3>7</h3>
-                    </div>
-                </div>
-                <div class="col s12 m6 xl3">
-                    <div class="hoverable card-panel" align='center'>
-                        <h6>Talks:</h6>
-                        <h3>3</h3>
-                    </div>
-                </div>
-            </div>
+</div>
+  <!-- End Top Background Image Wrapper -->
+
+  <!-- Content comes here -->
+  <div class="wrapper row2">
+    <section class="container clear">
+        <div class="sectiontitle">
+            <h4 class="center">Competitions held at STAC</h4>
+            <p class="center">
+                <br> Numerous competetions are organised by STAC covering varied aspects of knowledge. Winners of various competitions held under STAC and event details are featured here. Note there are many other events too! You will discover many of them this year. </p>
         </div>
-    </div>
 
-    <div class="wrapper row4">
-        <section class="container">
-            <div class="sectiontitle">
-                <h4 class="center">Future Prospects and Ongoing Projects</h4>
-                <p>
-                    <br> A brief about our ongoing projects and what we plan to do in the future. We invite you to collaborate with us or/and sponsor our projects.
-                    <br> Click on the images to Know More.
-                </p>
+        <div class="row">
+            <div class="card col s12 m3">
+                <div class="hoverable card grey lighten-5 card-image ">
+                    <img src="images/aurora.jpg">
+                    <span class="card-title">Aurora</span>
+                </div>
+                <div class="card-content">
+                    <span class="card-title activator grey-text text-darken-4"><i class="material-icons left">more_vert</i>Read More</span>
+                </div>
+                <div class="card-reveal">
+                    <span class="card-title grey-text text-darken-4">Aurora<i class="material-icons right">close</i></span>
+                    <p>A paper presentation event held in the annual intra-college tech fest of IIT Mandi, Zenith. Shikha Suman(in photo) was the winner of this event. She gave nice presentation on fermi paradox.
+                    </p>
+                </div>
             </div>
-            <div class="row ">
-                <div class="col s12 m4">
-                    <div class="card">
-                        <div class="card-image waves-effect waves-block waves-light">
-                            <img class="activator" src="images/telescope.jpg">
-                        </div>
-                        <div class="card-reveal  grey lighten-5">
-                            <span class="card-title grey-text text-darken-4">12" Telescope<i class="material-icons right">close</i></span>
-                            <p>A 12" Telescope is under construction. We have already made it's body and we are about to start with mount!
-                                <br>The challenge is to make it automatic!</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s12 m4">
-                    <div class="card">
-                        <div class="card-image waves-effect waves-block waves-light">
-                            <img class="activator" src="images/observatory.png">
-                        </div>
-                        <div class="card-reveal  grey lighten-5">
-                            <span class="card-title grey-text text-darken-4">Astronomical Observatory<i class="material-icons right">close</i></span>
-                            <p>3-day visit to Dongla Observatory and get permission to remotely access it
-                                <br> We are also planning to have one at our campus!!
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s12 m4">
-                    <div class="card">
-                        <div class="card-image waves-effect waves-block waves-light">
-                            <img class="activator" src="images/rocket.png">
-                        </div>
-                        <div class="card-reveal  grey lighten-5">
-                            <span class="card-title grey-text text-darken-4">Rocket making workshop<i class="material-icons right">close</i></span>
-                            <p>We will organise a rocket making and launching workshop. This would surely be a great learning experience for us and thrilling too!
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s12 m4">
-                    <div class="card">
-                        <div class="card-image waves-effect waves-block waves-light">
-                            <img class="activator" src="images/rover.jpeg">
-                        </div>
-                        <div class="card-reveal  grey lighten-5">
-                            <span class="card-title grey-text text-darken-4">Extraterrestrial Rover<i class="material-icons right">close</i></span>
-                            <p>
-                                We will try to build a rover which can be used for extraterrestrial data collection. It would be first tested on hills of kamand!
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s12 m4">
-                    <div class="card">
-                        <div class="card-image waves-effect waves-block waves-light">
-                            <img class="activator" src="images/swan.jpg">
-                        </div>
-                        <div class="card-reveal  grey lighten-5">
-                            <span class="card-title grey-text text-darken-4">SWAN<i class="material-icons right">close</i></span>
-                            <p>
-                                Becoming part of SWAN project and install radio telescopes to initiate radio astronomy related research in our as well as nearby institutes.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s12 m4">
-                    <div class="card">
-                        <div class="card-image waves-effect waves-block waves-light">
-                            <img class="activator" src="images/satlabs.jpg">
-                        </div>
-                        <div class="card-reveal  grey lighten-5">
-                            <span class="card-title grey-text text-darken-4">SATLABS<i class="material-icons right">close</i></span>
-                            <p>An ambitous plan to make own blimp satellite which can send various observational data of atleast Mandi district, do image processing, DL, etc. on that data.
-                            </p>
-                        </div>
-                    </div>
-                </div>
 
+            <div class="card col s12 m3">
+                <div class="hoverable card grey lighten-5 card-image">
+                    <img src="images/whatsup.png">
+                    <span class="card-title">WhatsUp</span>
+                </div>
+                <div class="card-content">
+                    <span class="card-title activator grey-text text-darken-4"><i class="material-icons left">more_vert</i>Read More</span>
+                </div>
+                <div class="card-reveal">
+                    <span class="card-title grey-text text-darken-4">WhatsUp<i class="material-icons right">close</i></span>
+                    <p>A successful event on a clear sky. Shreya Lanjewar was the winner followed by Arshita Kalra and Karthik Kathuria. They were supposed to locate as many messier objects as possible.
+                    </p>
+                </div>
             </div>
-        </section>
+            <div class="card col s12 m3">
+                <div class="hoverable card grey lighten-5 card-image">
+                    <img src="images/kplhack.jpg">
+                    <span class="card-title">Hackathons</span>
+                </div>
+                <div class="card-content">
+                    <span class="card-title activator grey-text text-darken-4"><i class="material-icons left">more_vert</i>Read More</span>
+                </div>
+                <div class="card-reveal">
+                    <span class="card-title grey-text text-darken-4">KPL Hackaton<i class="material-icons right">close</i></span>
+                    <p> STAC organised hackathon in which we were supposed to extract astronomical data and make an interface for data analysis and results. Photo featuring the winning team, lead by Shreyas Bapat.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card col s12 m3">
+                <div class="hoverable card grey lighten-5 card-image">
+                    <img src="images/pandora.jpg">
+                    <span class="card-title">Pandora's Box</span>
+                </div>
+                <div class="card-content">
+                    <span class="card-title activator grey-text text-darken-4"><i class="material-icons left">more_vert</i>Read More</span>
+                </div>
+                <div class="card-reveal">
+                    <span class="card-title grey-text text-darken-4">Pandora's Box<i class="material-icons right">close</i></span>
+                    <p>The second edition of Zenith observed a participation of 80. It was a written quiz focussing on Astrophysics covering the topic of Relativity too. Photo featuring the winner, Abhijeet.</p>
+                </div>
+            </div>
+
+    </section>
     </div>
-    <!-- End quote -->
+</div>
+<div class="wrapper row3 white black-text">
+  <div class="container">
+      <div class="sectiontitle">
+          <h3 class="center"> <strong>What we do as a Club?</strong></h3>
+          <p>
+              <br>STAC is a club where one can explore every corner of the technical knowledge he/she has! Have a look towards what we do! You are encouraged to knock our doors anytime. :) If you feel like taking a session on Astrophysics/Robotics/Programming/Star-Gazing or anything related to STAC (Which is in fact everything ;) ), just write a mail to stac@students.iitmandi.ac.in.
+          </p>
+      </div>
+      <div class="row">
+          <div class="col s12 m3">
+              <div class="card">
+                  <div class="card-image">
+                      <img src="images/depts/astrophysics.jpg">
+                      <span class="card-title">Astrophysics</span>
+                  </div>
+                  <div class="card-content">
+                      <p>
+                          Core Astrophyisics and related Mathematics, from Black holes to String Theory, from Expanding Universe to BigCrunch, we discuss everything here!
+                      </p>
+                  </div>
+              </div>
+          </div>
+          <div class="col s12 m3">
+              <div class="card">
+                  <div class="card-image">
+                      <img src="images/depts/astronomy.png">
+                      <span class="card-title">Astronomy</span>
+                  </div>
+                  <div class="card-content">
+                      <p>Sky gazing, Messier Hunts, Sky Reading and what not! From studying Stellar evolution to operating telescopes (Even building one)!
+                      </p>
+                  </div>
+              </div>
+          </div>
+          <div class="col s12 m3">
+              <div class="card">
+                  <div class="card-image">
+                      <img src="images/depts/spacetech.jpeg">
+                      <span class="card-title">Space Technology</span>
+                  </div>
+                  <div class="card-content">
+                      <p>
+                          Working on Radio Telescope, making our own balloon-sats and cube-sats, applying ML/DL algorithms for analysing the data collected by telescopes
+                      </p>
+                  </div>
+              </div>
+          </div>
+          <div class="col s12 m3">
+              <div class="card">
+                  <div class="card-image">
+                      <img src="images/depts/astrophoto.png">
+                      <span class="card-title">Astro-photography</span>
+                  </div>
+                  <div class="card-content">
+                      <p>
+                          Having the privilege of living in a very serene place with amazing sky, some members are over-enthusiastic for capturing the night sky in the cameras..
+                      </p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+  <div class="wrapper row3">
     <div class="container">
-        <div class="last-quote">
-            <p class="white-text">Bronze Medal in Star Cluster Identifier hackathon, Inter IIT Tech Meet 2018</p>
-            <a class="waves-effect waves-light btn-small" href="https://github.com/STAC-IITMandi/Star-Cluster-Identifier" target="_blank">Click here</a>
+      <div class="row">
+        <div class="col s12">
+          <div class="col s12 m3">
+            <img src="images/zenith2.png" alt="Zenith logo">
+          </div>
+          <div class="sectiontitle">
+              <h4 class="center">Zenith'19 - The Annual Intra-College Astrofest</h4>
+              <p>Zenith is the annual intra-college Astrofest organised by the club. The astrofest saw a large participation with enthusiastic astrophysicists
+                talking about various amazing topics ranging from Black Holes to Galaxies in "Aurora". Some Computer Science Enthusiasts
+                did a week long hacking to create amazing applications. On the other side of campus of IIT Mandi, some students were participating
+                in "Pandora's Box" to win cool prizes. This all was flavoured by some amazing talks by Bhavya Bhatt, Abhijeet Manhas and Shreyas Bapat. </p>
+          </div>
         </div>
+        <div class="col s12 m6 xl3">
+          <div class="hoverable card-panel" align='center'>
+            <h6>Prizes Worth:</h6>
+            <h3>₹ 8000</h3>
+          </div>
+        </div>
+        <div class="col s12 m6 xl3">
+          <div class="hoverable card-panel" align='center'>
+            <h6>Participants:</h6>
+            <h3>120</h3>
+          </div>
+        </div>
+        <div class="col s12 m6 xl3">
+          <div class="hoverable card-panel" align='center'>
+            <h6>Days:</h6>
+            <h3>7</h3>
+          </div>
+        </div>
+        <div class="col s12 m6 xl3">
+          <div class="hoverable card-panel" align='center'>
+            <h6>Talks:</h6>
+            <h3>3</h3>
+          </div>
+        </div>
+      </div>
     </div>
-    <!-- Footer -->
-    <div class="wrapper">
-        <footer id="contact" class="page-footer grey lighten-5">
-            <div class="container">
-                <div class="row" style="text-align:center">
-                    <div class="col l4 s12">
-                        <ul class="col-padding nospace linklist black-text">
-                            <h5 class="black-text">Address</h5>
-                            <li>
-                                <i class="fa fa-map-marker"></i> Gravity, SAC-001,<br>North Campus, IIT Mandi,<br>Kamand (H.P.) - 175005
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col l4 s12">
-                        <ul class="nospace black-text text-lighten-4">
-                            <h5 class="black-text">Contact Us</h5>
-                            <li><a class="black-text" href="tel:+918628963924"><i class="fa fa-phone"></i> +91 8628963924</a></li>
-                            <li><a class="black-text" href="tel:+919816789676"><i class="fa fa-phone"></i> +91 9816789676 </a></li>
-                            <li><a class="black-text" href="mailto:stac@students.iitmandi.ac.in"><i class="fa fa-envelope-o"></i> stac@students.iitmandi.ac.in</a></li>
-                            <li><a class="black-text" href="https://stac-iitmandi.slack.com"><i class="fab fa-slack"></i>
+  </div>
+
+  <div class="wrapper row4">
+      <section class="container">
+          <div class="sectiontitle">
+              <h4 class="center">Future Prospects and Ongoing Projects</h4>
+              <p>
+                  <br> A brief about our ongoing projects and what we plan to do in the future. We invite you to collaborate with us or/and sponsor our projects.
+                  <br> Click on the images to Know More.
+              </p>
+          </div>
+          <div class="row ">
+              <div class="col s12 m4">
+                  <div class="card">
+                      <div class="card-image waves-effect waves-block waves-light">
+                          <img class="activator" src="images/telescope.jpg">
+                      </div>
+                      <div class="card-reveal  grey lighten-5">
+                          <span class="card-title grey-text text-darken-4">12" Telescope<i class="material-icons right">close</i></span>
+                          <p>A 12" Telescope is under construction. We have already made it's body and we are about to start with mount!
+                              <br>The challenge is to make it automatic!</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="col s12 m4">
+                  <div class="card">
+                      <div class="card-image waves-effect waves-block waves-light">
+                          <img class="activator" src="images/observatory.png">
+                      </div>
+                      <div class="card-reveal  grey lighten-5">
+                          <span class="card-title grey-text text-darken-4">Astronomical Observatory<i class="material-icons right">close</i></span>
+                          <p>3-day visit to Dongla Observatory and get permission to remotely access it
+                              <br> We are also planning to have one at our campus!!
+                          </p>
+                      </div>
+                  </div>
+              </div>
+              <div class="col s12 m4">
+                  <div class="card">
+                      <div class="card-image waves-effect waves-block waves-light">
+                          <img class="activator" src="images/rocket.png">
+                      </div>
+                      <div class="card-reveal  grey lighten-5">
+                          <span class="card-title grey-text text-darken-4">Rocket making workshop<i class="material-icons right">close</i></span>
+                          <p>We will organise a rocket making and launching workshop. This would surely be a great learning experience for us and thrilling too!
+                          </p>
+                      </div>
+                  </div>
+              </div>
+              <div class="col s12 m4">
+                  <div class="card">
+                      <div class="card-image waves-effect waves-block waves-light">
+                          <img class="activator" src="images/rover.jpeg">
+                      </div>
+                      <div class="card-reveal  grey lighten-5">
+                          <span class="card-title grey-text text-darken-4">Extraterrestrial Rover<i class="material-icons right">close</i></span>
+                          <p>
+                              We will try to build a rover which can be used for extraterrestrial data collection. It would be first tested on hills of kamand!
+                          </p>
+                      </div>
+                  </div>
+              </div>
+              <div class="col s12 m4">
+                  <div class="card">
+                      <div class="card-image waves-effect waves-block waves-light">
+                          <img class="activator" src="images/swan.jpg">
+                      </div>
+                      <div class="card-reveal  grey lighten-5">
+                          <span class="card-title grey-text text-darken-4">SWAN<i class="material-icons right">close</i></span>
+                          <p>
+                              Becoming part of SWAN project and install radio telescopes to initiate radio astronomy related research in our as well as nearby institutes.
+                          </p>
+                      </div>
+                  </div>
+              </div>
+              <div class="col s12 m4">
+                  <div class="card">
+                      <div class="card-image waves-effect waves-block waves-light">
+                          <img class="activator" src="images/satlabs.jpg">
+                      </div>
+                      <div class="card-reveal  grey lighten-5">
+                          <span class="card-title grey-text text-darken-4">SATLABS<i class="material-icons right">close</i></span>
+                          <p>An ambitous plan to make own blimp satellite which can send various observational data of atleast Mandi district, do image processing, DL, etc. on that data.
+                          </p>
+                      </div>
+                  </div>
+              </div>
+
+          </div>
+      </section>
+  </div>
+<!-- End quote -->
+<div class="container">
+    <div class="last-quote">
+      <p class="white-text">Bronze Medal in Star Cluster Identifier hackathon, Inter IIT Tech Meet 2018</p>
+      <a class="waves-effect waves-light btn-small" href="https://github.com/STAC-IITMandi/Star-Cluster-Identifier" target="_blank">Click here</a>
+    </div>
+  </div>
+  <!-- Footer -->
+  <div class="wrapper">
+    <footer id="contact" class="page-footer grey lighten-5">
+      <div class="container">
+        <div class="row" style="text-align:center">
+          <div class="col l4 s12">
+            <ul class="col-padding nospace linklist black-text">
+              <h5 class="black-text">Address</h5>
+              <li>
+                <i class="fa fa-map-marker"></i> Gravity, SAC-001,<br>North Campus, IIT Mandi,<br>Kamand (H.P.) - 175005
+              </li>
+            </ul>
+          </div>
+          <div class="col l4 s12">
+            <ul class="nospace black-text text-lighten-4">
+              <h5 class="black-text">Contact Us</h5>
+              <li><a class="black-text" href="tel:+918628963924"><i class="fa fa-phone"></i> +91 8628963924</a></li>
+              <li><a class="black-text" href="tel:+919816789676"><i class="fa fa-phone"></i> +91 9816789676 </a></li>
+              <li><a class="black-text" href="mailto:stac@students.iitmandi.ac.in"><i class="fa fa-envelope-o"></i> stac@students.iitmandi.ac.in</a></li>
+              <li><a class="black-text" href="https://stac-iitmandi.slack.com"><i class="fab fa-slack"></i>
               Slack Workspace</a></li>
-                        </ul>
-                    </div>
-                    <div class="col l4 s12">
-                        <ul class="nospace black-text text-lighten-4">
-                            <h5 class="black-text">More Links</h5>
-                            <li><a class="black-text" href="#!">Archives</a></li>
-                            <li><a class="black-text" href="#!">Alumni</a></li>
-                            <li><a class="black-text" href="#!">Administer</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="row center">
-                <a class="social-icon" target="_blank" href="https://www.facebook.com/stacIITMandi/"><i class="fab fa-facebook-f small"></i></a>
-                <a class="social-icon" target="_blank" href="https://github.com/STAC-IITMandi"><i class="fab fa-github small"></i></a>
-                <a class="social-icon" target="_blank" href="https://instagram.com/stac_iitmandi"><i class="fab fa-instagram small"></i></a>
-                <a class="social-icon" target="_blank" href="https://www.youtube.com/channel/UCnmH6Nadt91VEkoeN_lK-rA"><i class="fab fa-youtube small"></i></a>
-                <a class="social-icon" target="_blank" href="https://twitter.com/stac_iitmandi"><i class="fab fa-twitter small"></i></a>
-            </div>
-            <div class="footer-copyright black-text center">
-                <div class="container">
-                    &copy; 2020. STAC Web-Development Team. All Rights Reserved.
-                </div>
-            </div>
-        </footer>
-    </div>
+            </ul>
+          </div>
+          <div class="col l4 s12">
+            <ul class="nospace black-text text-lighten-4">
+              <h5 class="black-text">More Links</h5>
+              <li><a class="black-text" href="#!">Archives</a></li>
+              <li><a class="black-text" href="#!">Alumni</a></li>
+              <li><a class="black-text" href="#!">Administer</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="row center">
+        <a class="social-icon" target="_blank" href="https://www.facebook.com/stacIITMandi/"><i class="fab fa-facebook-f small"></i></a>
+        <a class="social-icon" target="_blank" href="https://github.com/STAC-IITMandi"><i class="fab fa-github small"></i></a>
+        <a class="social-icon" target="_blank" href="https://instagram.com/stac_iitmandi"><i class="fab fa-instagram small"></i></a>
+        <a class="social-icon" target="_blank" href="https://www.youtube.com/channel/UCnmH6Nadt91VEkoeN_lK-rA"><i class="fab fa-youtube small"></i></a>
+        <a class="social-icon" target="_blank" href="https://twitter.com/stac_iitmandi"><i class="fab fa-twitter small"></i></a>
+      </div>
+      <div class="footer-copyright black-text center">
+        <div class="container">
+          &copy; 2020. STAC Web-Development Team. All Rights Reserved.
+        </div>
+      </div>
+    </footer>
+  </div>
 
-    <a id="backtotop" href="#">
-        <i class="fa fa-chevron-up"></i>
-    </a>
-    <!-- JAVASCRIPTS -->
-    <script src="layout/scripts/jquery.min.js"></script>
-    <script src="layout/scripts/jquery.backtotop.js"></script>
-    <script src="layout/scripts/jquery.mobilemenu.js"></script>
-    <script src="layout/scripts/jquery.flexslider-min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="layout/scripts/particles.js"></script>
-    <script src="layout/scripts/smoothscroll.js"></script>
-    <script src="layout/scripts/sidenav-init.js"></script>
+  <a id="backtotop" href="#">
+    <i class="fa fa-chevron-up"></i>
+  </a>
+  <!-- JAVASCRIPTS -->
+  <script src="layout/scripts/jquery.min.js"></script>
+  <script src="layout/scripts/jquery.backtotop.js"></script>
+  <script src="layout/scripts/jquery.mobilemenu.js"></script>
+  <script src="layout/scripts/jquery.flexslider-min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="layout/scripts/particles.js"></script>
+  <script src="layout/scripts/smoothscroll.js"></script>
+  <script src="layout/scripts/sidenav-init.js"></script>
 
-    <!-- Separate functions that became too big for the main script -->
-    <script src="js/helperFunctions.js"></script>
-    <script src="js/exoplanets.js"></script>
-    <!-- data -->
-    <script src="js/showTooltip.js"></script>
-    <script src="js/gradients.js"></script>
-    <script src="js/legend.js"></script>
-    <script src="js/progressCircle.js"></script>
+  <!-- Separate functions that became too big for the main script -->
+  <script src="js/helperFunctions.js"></script>
+  <script src="js/exoplanets.js"></script> <!-- data -->
+  <script src="js/showTooltip.js"></script>
+  <script src="js/gradients.js"></script>
+  <script src="js/legend.js"></script>
+  <script src="js/progressCircle.js"></script>
 
-    <script src="js/mainCode.js"></script>
+  <script src="js/mainCode.js"></script>
 
 </body>
 
 </html>
+
