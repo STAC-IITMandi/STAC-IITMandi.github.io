@@ -102,6 +102,12 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 530px;
 }
 
+@media screen and (max-width:992px) {
+  .main-heading {
+    font-size: 1.8rem;
+    padding: 48px;
+  }
+}
 @media screen and (max-width:480px) {
   .main-heading {
     font-size: 1.5rem;
