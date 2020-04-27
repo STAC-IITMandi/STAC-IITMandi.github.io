@@ -146,6 +146,16 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+.sidenav{
+  padding-top: 50px;
+}
+
+a.sidenav-cross{
+  position: absolute;
+  right:20px;
+  top: 20px;
+  color:black  
+}
 .sidenav-overlay {
   background-color: rgba(0, 0, 0, 0.1);
 }
