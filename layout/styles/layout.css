@@ -174,7 +174,7 @@ h1, h2, h3, h4, h5, h6 {
 
 p.moto{
   color: white;
-  
+
   font-size: 26px;
 }
 
@@ -1054,7 +1054,7 @@ table a, #comments a {
 
 .tooltip-right {
   top: -5px;
-  left: 125%;  
+  left: 125%;
 }
 
 .tooltip-right::after {
@@ -1079,6 +1079,39 @@ table a, #comments a {
 .name h4 {
   font-size: 22.5px;
   margin-top: 10px;
+}
+/* ---------------------------------------------Alunmi---------------------------------------- */
+.alumni {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.alumni-name {
+  display: none;
+}
+.alumni-msg {
+  text-align: justify;
+  text-transform: none;
+}
+
+.alumni-heading {
+  padding-bottom: 2rem;
+}
+.collage {
+  margin: auto;
+  margin-bottom: 5rem;
+}
+@media screen and (max-width:900px) {
+  .alumni-name {
+    display: block;
+  }
+  .alumni {
+    display: block;
+  }
+  .alumni-name-on-large-screen {
+    display: none;
+  }
 }
 /* ------------------------------------------------------------------------------------------------------------ */
 
