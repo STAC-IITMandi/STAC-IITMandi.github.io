@@ -30,19 +30,15 @@
 
     3. Install required modules `pip install -r requirements.txt`
 
-5. Open web_main/settings.py and fill in your postgres credentials.
-    ```  
-    DATABASES = {
-     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': <database-name>,
-        'USER': <db-username>,
-        'PASSWORD': <db-password>,
-        'HOST': 'localhost',
-        'PORT': '',
-     }
-    }
+5.  Store your secrets by adding them at the end of `env/bin/activate`. They will be set whenever you run the virtual environment.
+
+    ```bash
+    export SECRET_KEY=''
+    export DB_NAME=''
+    export DB_USER=''
+    export DB_PASS=''
     ```
+
 6.  Change directory to web_main
     
     `cd web_main`
@@ -51,7 +47,7 @@
     
     `python manage.py runserver`
     
-    The application will be running at localhost:8000.
+    The application will be running at `localhost:8000`.
 
 8.  Make the changes in the repo.
 
