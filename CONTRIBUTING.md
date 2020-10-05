@@ -14,15 +14,11 @@
         `sudo apt install postgresql postgresql-contrib`  
 
       **On Windows** -     
-            Install -     
-                  1. PostgreSQL - `https://www.postgresql.org/download/windows/`. 
-   
-                        **( Note :- Remeber Password entered here.)**.  
-                                 
-                  2. pgAdmin - `https://www.pgadmin.org/download/pgadmin-4-windows/`  
+         Install -     
+            1. PostgreSQL - `https://www.postgresql.org/download/windows/`   
+                        **( Note :- Remeber Password entered here.)**  
+            2. pgAdmin - `https://www.pgadmin.org/download/pgadmin-4-windows/`   
                             
-
-
    2. Create a local postgres database. Keep the credentials handy, you'll need them to link the database to django.  
     **Steps to create a postgresql db on your system**  
       **On linux** -  
@@ -38,7 +34,7 @@
       
         1. Open pgAdmin , by default the user is `postgres`.     
         2. Type your Server Password. (Asked during installation.)    
-        3. TO create, head on to the Databases Right click and create. By Default owner set to `postgres`. Click 'Save'.  
+        3. To create, head on to the Databases Right click and create. By Default owner set to `postgres`. Click 'Save'.  
         4. Database created.  
 
 4. You can have the project running in a virtual environment or otherwise. Virtual environment is a preffered option.  
