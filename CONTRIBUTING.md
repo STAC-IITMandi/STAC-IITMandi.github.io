@@ -54,7 +54,7 @@
    3. Install required modules  
       `pip install -r requirements.txt`  
 
-5.  Store your secrets by adding them at the end of `env/bin/activate`. They will be set whenever you run the virtual environment.
+5.  Store your secrets by adding them at the end of `venv/bin/activate`. They will be set whenever you run the virtual environment.
 
         ```bash
         export SECRET_KEY=''
