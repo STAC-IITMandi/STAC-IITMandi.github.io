@@ -54,13 +54,11 @@
         ```   
 6.  Change directory to src      
     `cd src`  
-    
 7.  First check for errors       
     `python manage.py check`      
     Run the server on your machine.        
     `python manage.py runserver`      
     The application will be running at `localhost:8000`.   
-
 8.  Make the changes in the repo.  
 9.  Stage the changes.      
     `git add path/to/changed-files`   
