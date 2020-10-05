@@ -10,13 +10,15 @@
    1. You should have postgresql installed on your system. If not, run
    
       **On Linux** -
+      
         `sudo apt update`
 
         `sudo apt install postgresql postgresql-contrib`
 
       **On Windows** - 
+      
             Install - 
-                   1. PostgreSQL - `https://www.postgresql.org/download/windows/`.
+                   `1. PostgreSQL - ``https://www.postgresql.org/download/windows/`.
    
                                **( Note :- Remeber Password entered here.)**.
                                  
@@ -26,6 +28,7 @@
     2. Create a local postgres database. Keep the credentials handy, you'll need them to link the database to django.
         **Steps to create a postgresql db on your system**
         **On linux** -
+        
         1. `sudo su - postgres`
         2. `psql`
         3. CREATE DATABASE <db-name>;
@@ -34,15 +37,21 @@
         6. GRANT ALL PRIVILEGES ON DATABASE <db-name> TO <db-username>;
 
         **On windows**:-
+        
             1. Open pgAdmin , by default the user is `postgres`. 
+            
             2. Type your Server Password. (Asked during installation.)
+            
             3. TO create, head on to the Databases Right click and create. By Default owner set to `postgres`. Click 'Save'.
+            
             4. Db created.
 
 4. You can have the project running in a virtual environment or otherwise. Virtual environment is a preffered option.
 
    **Steps to set up a virtual environment for this project**
+   
    1. `python3 -m venv myenv`
+   
    2. **On Linux** - Activate the virtual environment
          `source myvenv/bin/activate`
 
