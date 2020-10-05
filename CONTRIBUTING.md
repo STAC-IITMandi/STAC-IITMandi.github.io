@@ -20,10 +20,10 @@
       **On linux** -  
        1. `sudo su - postgres`  
        2. `psql`  
-       3. CREATE DATABASE <db-name>;  
-       4. CREATE USER <db-username> WITH PASSWORD '<db-password>';  
-       5. ALTER ROLE <DB-USERNAME> SET client_encoding TO 'utf-8';  
-       6. GRANT ALL PRIVILEGES ON DATABASE <db-name> TO <db-username>;    
+       3. `CREATE DATABASE <db-name>`;  
+       4. `CREATE USER <db-username> WITH PASSWORD '<db-password>';`  
+       5. `ALTER ROLE <DB-USERNAME> SET client_encoding TO 'utf-8';`  
+       6. `GRANT ALL PRIVILEGES ON DATABASE <db-name> TO <db-username>;`      
    
       **On windows**:-       
         1. Open pgAdmin , by default the user is `postgres`.       
