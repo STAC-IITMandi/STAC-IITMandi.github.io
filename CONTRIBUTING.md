@@ -8,6 +8,7 @@
     ```
 3. Database Setup
    1. You should have postgresql installed on your system. If not, run
+   
       **On Linux** -
         `sudo apt update`
 
