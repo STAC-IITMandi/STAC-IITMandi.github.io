@@ -22,6 +22,7 @@
                   2. pgAdmin - `https://www.pgadmin.org/download/pgadmin-4-windows/`  
                             
 
+
    2. Create a local postgres database. Keep the credentials handy, you'll need them to link the database to django.  
     **Steps to create a postgresql db on your system**  
       **On linux** -  
@@ -30,18 +31,19 @@
        3. CREATE DATABASE <db-name>;  
        4. CREATE USER <db-username> WITH PASSWORD <db-password>;  
        5. ALTER ROLE <DB-USERNAME> SET client_encoding TO 'utf-8';  
-       6. GRANT ALL PRIVILEGES ON DATABASE <db-name> TO <db-username>;  
+       6. GRANT ALL PRIVILEGES ON DATABASE <db-name> TO <db-username>;    
 
 
-    **On windows**:-
-        1. Open pgAdmin , by default the user is `postgres`. 
-        2. Type your Server Password. (Asked during installation.)
-        3. TO create, head on to the Databases Right click and create. By Default owner set to `postgres`. Click 'Save'.
-        4. Database created.
+      **On windows**:-  
+      
+        1. Open pgAdmin , by default the user is `postgres`.     
+        2. Type your Server Password. (Asked during installation.)    
+        3. TO create, head on to the Databases Right click and create. By Default owner set to `postgres`. Click 'Save'.  
+        4. Database created.  
 
-4. You can have the project running in a virtual environment or otherwise. Virtual environment is a preffered option.
+4. You can have the project running in a virtual environment or otherwise. Virtual environment is a preffered option.  
 
-   **Steps to set up a virtual environment for this project**   
+   **Steps to set up a virtual environment for this project**    
    1. `python3 -m venv venv`  
    2. **On Linux** - Activate the virtual environment  
          `source venv/bin/activate`  
@@ -60,7 +62,7 @@
         export DB_USER=''
         export DB_PASS=''
         ```
-    -----------------------------OR------------------------------------------
+    -----------------------------OR------------------------------------------    
      `(Note:- Below method is preferrable if you are on windows,   but works well for both linux/Windows.)  `
     we can use a external file to store all the senstive data ( like `SECRET_KEY`, DB_PASS, DB_USER).   
 
@@ -99,6 +101,7 @@
         7. Since, .env file conatins all of sensitive data. Before uploading, add `.env` file to gitignore to prevent sensitve data uploading on
         github.  
             To add, just open `.gitignore`, add `.env`. Save file.   ( By Default, already present.)  
+
 
 6.  Change directory to src  
     
