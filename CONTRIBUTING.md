@@ -54,7 +54,8 @@
 
 5.  Store your secrets by adding them at the end of `venv/bin/activate`. They will be set whenever you run the virtual environment.
 
-    ```export SECRET_KEY=''
+    ```
+    export SECRET_KEY=''
     export DB_NAME=''
     export DB_USER=''
     export DB_PASS=''
