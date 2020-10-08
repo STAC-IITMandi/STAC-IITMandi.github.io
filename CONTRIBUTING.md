@@ -20,17 +20,18 @@
 
     ```bash
     export SECRET_KEY=''
-    export DB_NAME=''
     ```
-    To learn how to generate a secret key click [here](https://stackoverflow.com/questions/41298963/is-there-a-function-for-generating-settings-secret-key-in-django).
+    To learn how to generate a secret key click [here](https://stackoverflow.com/a/16630719/12350727).
+    Remember to restart your virtual environment if you get an error after doing this.
 
 5.  Change directory to src using `cd src`.
-6.  Run the server on your machine using `python manage.py runserver` and then open [localhost:8000](http://localhost:8000) in your browser.
-7.  Switch to a new branch before making changes `git checkout -b NewBranchName`.
-8.  Make the changes in the repo.
-9.  Stage the changes using `git add path/to/changed-files` ( avoid using `git add .` ).
-10. Commit your changes using `git commit -m "Appropriate Commit Message"`.
-11. Push your changes using `git push origin NewBranchName`.
-12. Create a pull request.
-13. Mention someone to review it.
-14. Celebrate your contribution rocket :rocket:
+6.  Check your changes before running `python manage.py check`.
+7.  Run the server on your machine using `python manage.py runserver` and then open [localhost:8000](http://localhost:8000) in your browser.
+8.  Switch to a new branch before making changes `git checkout -b NewBranchName`.
+9.  Make the changes in the repo.
+10. Stage the changes using `git add path/to/changed-files` ( avoid using `git add .` ).
+11. Commit your changes using `git commit -m "Appropriate Commit Message"`.
+12. Push your changes using `git push origin NewBranchName`.
+13. Create a pull request.
+14. Mention someone to review it.
+15. Celebrate your contribution rocket :rocket:
