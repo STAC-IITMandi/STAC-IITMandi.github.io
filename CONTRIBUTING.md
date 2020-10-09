@@ -47,6 +47,7 @@
     2. Activate virtual environment
 
         **On Linux** `source venv/bin/activate`
+<<<<<<< HEAD
 
         **On Windows** `venv\Scripts\activate`
 
@@ -55,6 +56,17 @@
 5.  Store your secrets by adding them at the end of `venv/bin/activate`. They will be set whenever you run the virtual environment.
 
     ```export SECRET_KEY=''
+=======
+
+        **On Windows** `venv\Scripts\activate`
+
+    3. Install required modules using `pip3 install -r requirements.txt`
+
+5.  Store your secrets by adding them at the end of `venv/bin/activate`. They will be set whenever you run the virtual environment.
+
+    ```
+    export SECRET_KEY=''
+>>>>>>> upstream/main
     export DB_NAME=''
     export DB_USER=''
     export DB_PASS=''
