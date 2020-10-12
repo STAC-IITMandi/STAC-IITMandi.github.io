@@ -19,7 +19,9 @@
 4.  Store your secrets by adding them at the end of `venv/bin/activate`. They will be set whenever you run the virtual environment.
 
     **On Linux** `export SECRET_KEY=''`
+    
     **On Windows** `set SECRET_KEY=''`
+    
     To learn how to generate a secret key click [here](https://stackoverflow.com/a/16630719/12350727).
     Remember to restart your virtual environment if you get an error after doing this.
 
