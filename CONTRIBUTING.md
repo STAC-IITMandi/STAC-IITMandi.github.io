@@ -36,4 +36,4 @@
 13. Create a pull request.
 14. Mention someone to review it.
 15. Celebrate your contribution rocket :rocket:
->>>>>>> upstream/main
+
