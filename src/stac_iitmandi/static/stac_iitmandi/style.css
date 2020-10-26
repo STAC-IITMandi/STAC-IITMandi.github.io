@@ -1,3 +1,7 @@
+body {
+    background-image: url("/static/stac_iitmandi/images/galaxy.jpg");
+}
+
 .bg-custom {
     background-color: white;
 }
@@ -8,4 +12,8 @@
 
 .navbar-brand {
     color: black;
+}
+
+.jumbotron {
+    background-color:white; 
 }
