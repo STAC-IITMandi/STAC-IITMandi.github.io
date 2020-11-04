@@ -50,11 +50,7 @@
             </div>
         </div>
     </div>
-    <footer class="page-footer font-small blue" style="background-color: #d6d8e4;">
-      <!-- Copyright -->
-      <div class="footer-copyright text-center py-3"> &copy; STAC <script>document.write(new Date().getFullYear());</script>. All rights reserved.
-      </div>
-    </footer>    
+    {% block footer %} {% include 'footer.html' %}  {% endblock %}     
     <span>Photo by <a href="https://unsplash.com/@ryan_hutton_?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Ryan Hutton</a> on <a href="https://unsplash.com/images/nature/galaxy?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
     <!-- JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
