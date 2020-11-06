@@ -1,12 +1,20 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
     background-image: url("/static/stac_iitmandi/images/galaxy.jpg");
+}
+
+li {
+    list-style: none;
 }
 
 .bg-custom {
     background-color: white;
 }
 
-.nav-link{
+.nav-link {
     color: black;
 }
 
@@ -15,5 +23,5 @@ body {
 }
 
 .jumbotron {
-    background-color:white; 
+    background-color: white;
 }

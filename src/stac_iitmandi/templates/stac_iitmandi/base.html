@@ -8,6 +8,8 @@
   <title>{% block title %}STAC | IIT Mandi{% endblock %}</title>
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <!-- Font-Awesome CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <!-- Custom CSS -->
   <link rel="stylesheet" type="text/css" href="{% static 'stac_iitmandi/style.css' %}">
 </head>
@@ -18,40 +20,6 @@
     {% include '_navbar.html' %}
     {% endblock %}
     {% block content %}{% endblock %}
-    <!-- Add icons for social media; FB; Insta; Twitter; Youtube; Github -->
-    <div class="container-fluid" style="background-color: orange;">
-      <div class="row justify-content-center">
-        <div class="col" style="background-color: pink;">
-          <div class="row justify-content-center">
-            Address
-          </div>
-          <div class="row justify-content-center">
-            Add the address by rows
-          </div>
-        </div>
-        <div class="col" style="background-color: green;">
-          <div class="row justify-content-center">
-            Social Media
-          </div>
-          <div class="row justify-content-center">
-            <div class="col">Facebook</div>
-            <div class="col">Instagram</div>
-            <div class="col">Github</div>
-          </div>
-        </div>
-        <div class="col" style="background-color: pink;">
-          <!-- Add other links; probably one for iit mandi? -->
-          <div class="row justify-content-center">
-            Other Links?
-          </div>
-          <div class="row justify-content-center">
-            <div class="col">Archive</div>
-            <div class="col">Alumni</div>
-            <div class="col">??</div>
-          </div>
-        </div>
-      </div>
-    </div>
     {% block footer %} {% include 'footer.html' %} {% endblock %}
     <!-- JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
