@@ -16,9 +16,9 @@ def utkarsh(request):
 # rendering Zenith page
 def zenith(request):
     return render(request, 'stac_iitmandi/zenith.html', {'title': 'Zenith'})
-# rendering Alumni's page    
-def alumni_s(request):
-    return render(request, "stac_iitmandi/alumni_s.html", {'title': "Alumni's"})
+# rendering Alumni page    
+def alumni(request):
+    return render(request, "stac_iitmandi/alumni.html", {'title': "Alumni"})
 # rendering About page
 def about(request):
     return render(request, 'stac_iitmandi/about.html', {'title': 'About'})
