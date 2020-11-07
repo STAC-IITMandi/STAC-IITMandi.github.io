@@ -20,6 +20,10 @@ li {
 
 .navbar-brand {
     color: black;
+    position: relative;
+    width: 130px;
+    bottom: 35px;
+    max-height: 10px;
 }
 
 .jumbotron {

@@ -1,17 +1,45 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  {% load static %}
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{% block title %}STAC | IIT Mandi{% endblock %}</title>
+  <!-- Title of Page -->
+  {% if title %}
+    <title > STAC | IIT Mandi - {{title}}</title>
+  {% else %}
+    <title>STAC | IIT Mandi</title>
+  {% endif %}  
+  
+  
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
   <!-- Font-Awesome CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <!-- Custom CSS -->
   <link rel="stylesheet" type="text/css" href="{% static 'stac_iitmandi/style.css' %}">
+  
+  <!-- jQuery  for dropdown hover in Navbar -->
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+
+  <!-- Bootstrap files (jQuery first, then Popper.js, then Bootstrap JS) for dropdown hover in Navbar-->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js" type="text/javascript"></script>
+
+  <style type="text/css">
+  /* ============ desktop view ============ */
+  @media all and (min-width: 992px) {
+      .navbar .nav-item .dropdown-menu{ display: none; }
+      .navbar .nav-item:hover .nav-link{ color: #010101;  }
+      .navbar .nav-item:hover .dropdown-menu{ display: block; }
+      .navbar .nav-item .dropdown-menu{ margin-top:0; }
+  }	
+  /* ============ desktop view .end// ============ */
+  </style>
+
 </head>
 
 <body>
