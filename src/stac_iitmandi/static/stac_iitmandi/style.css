@@ -20,8 +20,21 @@ li {
 
 .navbar-brand {
     color: black;
+    position: relative;
+    width: 130px;
+    bottom: 35px;
+    max-height: 10px;
 }
 
 .jumbotron {
     background-color: white;
 }
+
+  /* ============ desktop view ============  min width set to 100px */
+@media all and (min-width: 100px) {      
+    .navbar .nav-item .dropdown-menu{ display: none; }
+    .navbar .nav-item:hover .nav-link{ color: #010101;  }
+    .navbar .nav-item:hover .dropdown-menu{ display: block; }
+    .navbar .nav-item .dropdown-menu{ margin-top:0; }
+    }	
+/* ============ desktop view .end// ============ */
