@@ -1,6 +1,6 @@
 {% load static %}
-<nav class="navbar navbar-expand-lg sticky-top bg-custom navbar-light mt-5">
-    <a class="navbar-brand" href={% url 'stac-home' %}><img src="{% static 'stac_iitmandi/images/STAClogo.png' %}" class="img-fluid width:1%" alt="STAC"></a>
+<nav class="navbar navbar-expand-lg sticky-top bg-light rounded-sm navbar-light mt-5">
+    <a class="navbar-brand " href={% url 'stac-home' %}><img src="{% static 'stac_iitmandi/images/STAClogo.png' %}" class="img-fluid width:1%" alt="STAC"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_nav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -17,8 +17,8 @@
                     <li><a class="dropdown-item {{utkarsh}}" href={% url 'utkarsh' %}>UTKARSH</a></li>
                 </ul>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#http://blog.pc.iitmandi.co.in/">Blog</a>
+            <li class="nav-item ">
+                <a class="nav-link" href="#blog.stac.iitmandi.co.in/">Blog</a>
               </li>
               <li class="nav-item {{alumni}}">
                 <a class="nav-link" href={% url 'alumni' %}>Alumni</a>

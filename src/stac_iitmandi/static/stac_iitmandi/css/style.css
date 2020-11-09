@@ -10,11 +10,6 @@ li {
     list-style: none;
 }
 
-.bg-custom {
-    background-color: #FFFFFF;
-    border-radius: 10px;
-}
-
 .active{
     background-color: rgba(214, 213, 234, 0.6);
     color: #000000;
