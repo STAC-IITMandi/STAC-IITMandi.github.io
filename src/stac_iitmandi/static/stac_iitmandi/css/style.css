@@ -10,8 +10,11 @@ li {
     list-style: none;
 }
 
-.bg-custom {
-    background-color: white;
+.active{
+    background-color: rgba(214, 213, 234, 0.6);
+    color: #000000;
+    text-decoration: none;
+    border-radius: 5px;
 }
 
 .nav-link {
@@ -30,11 +33,9 @@ li {
     background-color: white;
 }
 
-  /* ============ desktop view ============  min width set to 100px */
 @media all and (min-width: 100px) {      
     .navbar .nav-item .dropdown-menu{ display: none; }
     .navbar .nav-item:hover .nav-link{ color: #010101;  }
     .navbar .nav-item:hover .dropdown-menu{ display: block; }
     .navbar .nav-item .dropdown-menu{ margin-top:0; }
     }	
-/* ============ desktop view .end// ============ */
