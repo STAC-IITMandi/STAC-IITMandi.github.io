@@ -1,26 +1,10 @@
 root = true
 
 [*]
-indent_style = space
-indent_size = 4
-insert_final_newline = true
-trim_trailing_whitespace = true
-end_of_line = lf
 charset = utf-8
-
-[*.py]
 indent_style = space
 indent_size = 4
-max_line_length = 150
-
-# Use 2 spaces for the HTML files
-[*.html]
-indent_size = 4
-
-# Makefiles always use tabs for indentation
-[Makefile]
-indent_style = tab
-
-[docs/**.txt]
+end_of_line = lf
+trim_trailing_whitespace = true
+insert_final_newline = true
 max_line_length = 200
-    
