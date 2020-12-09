@@ -1,0 +1,62 @@
+{% extends 'stac_iitmandi/base.html' %}
+{% load static %}
+{% block content %}
+<!-- ======= Team Section ======= -->
+<div class="container bg-light mt-2">
+  <section id="team" class="team">
+      <div class="container">
+        <div class="section-title">
+          <h3 class="text-center">Co-ordinators</h3>
+          <h5 class="text-center">People who lead the Team!</h5>
+        </div>               
+        <!-- ======= Coordinators ======= -->
+        <div class="row justify-content-md-center"> 
+          {% for coordi in coordinators %}
+            <div class="col-lg-3 col-md-6 d-flex">
+              <div class="member ">
+                <div class="member-img ">
+                  <img src="{{ coordi.image.url}}" class="img-fluid " alt="">
+                  <div class="social">
+                    <a href="{{coordi.fb}}"><i class="fa fa-facebook-f "></i></a>
+                    <a href="{{coordi.insta}}"><i class="fa fa-instagram"></i></a>
+                    <a href="{{coordi.git}}"><i class="fa fa-github"></i></a>
+                    <a href="{{coordi.linkedin}}"><i class="fa fa-linkedin"></i></a>
+                  </div>
+                </div>
+                <div class="member-info">
+                  <h4>{{ coordi.name }}</h4>
+                </div>
+              </div>
+            </div>
+          {% endfor %}  
+        </div>
+        <div style="margin: auto; margin-top: 4em; margin-bottom: 4em;"></div> <!--Gap -->
+        <!-- ======= Core Team  ======= -->
+        <div class = "section-title">
+          <h3 class="text-center">Core Team</h3>
+          <h5 class="text-center">People who make things happen!</h5>
+        </div>      
+        <div class="row justify-content-md-center"> 
+          {% for member in members %}
+            <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+              <div class="member" >
+                <div class="member-img">
+                  <img src="{{ member.image.url}}" class="img-fluid" alt="">
+                  <div class="social">
+                    <a href="{{member.fb}}"><i class="fa fa-facebook-f "></i></a>
+                    <a href="{{member.insta}}"><i class="fa fa-instagram"></i></a>
+                    <a href="{{member.git}}"><i class="fa fa-github"></i></a>
+                    <a href="{{member.linkedin}}"><i class="fa fa-linkedin"></i></a>
+                  </div>
+                </div>
+                <div class="member-info">
+                  <h4>{{ member.name }}</h4>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+  </section><!-- End Team Section -->
+</div>
+{% endblock %}

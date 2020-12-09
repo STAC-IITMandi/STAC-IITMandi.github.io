@@ -1,5 +1,6 @@
 from django.shortcuts import render
-
+from .models import core_team as members
+from .models import coordinators 
 
 # rendering home page 
 def home(request):
@@ -28,3 +29,8 @@ def photogallery(request):
 #rendering videogallery page
 def videogallery(request):
     return render(request, 'stac_iitmandi/videogallery.html', {'title': 'Videos' ,'videos':'active','gallery_':"active"})
+# rendering team page
+def team(request):
+    context_ = {'members': members.objects.all().order_by('batch'), 'coordinators':coordinators.objects.all().order_by('batch'), 'title': 'Team' ,'team':'active'}
+    return render(request, 'stac_iitmandi/team.html', context_ )
+    
