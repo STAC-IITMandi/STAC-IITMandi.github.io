@@ -2,14 +2,26 @@
   box-sizing: border-box;
 }
 
-body {
-    background-image: url("/static/stac_iitmandi/images/galaxy.jpg");
-}
-
 li {
     list-style: none;
 }
 
+/* header */
+header {
+    height:100vh;
+    min-height:400px;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-image:url('../images/galaxy_bg.jpg');
+}
+
+hr {
+    height: 2px;
+    margin-left: 15px;
+    margin-bottom:-3px;
+}
+
+/* navbar */
 .active{
     background-color: rgba(214, 213, 234, 0.6);
     color: #000000;
@@ -17,8 +29,8 @@ li {
     border-radius: 5px;
 }
 
-.nav-link {
-    color: black;
+.navbar-light .navbar-nav .nav-link {
+    color: rgb(251, 245, 245);
 }
 
 .navbar-brand {
@@ -28,7 +40,12 @@ li {
     bottom: 35px;
     max-height: 10px;
 }
+.fixed-top.scrolled {
+    background-color: #fff !important;
+    transition: background-color 200ms linear;
+}
 
+/* others */
 .jumbotron {
     background-color: white;
 }
@@ -42,7 +59,7 @@ li {
 
 @media all and (min-width: 100px) {
     .navbar .nav-item .dropdown-menu{ display: none; }
-    .navbar .nav-item:hover .nav-link{ color: #010101;  }
+    .navbar .nav-item:hover .nav-link{ color: #6d6a6a;  }
     .navbar .nav-item:hover .dropdown-menu{ display: block; }
     .navbar .nav-item .dropdown-menu{ margin-top:0; }
     }
