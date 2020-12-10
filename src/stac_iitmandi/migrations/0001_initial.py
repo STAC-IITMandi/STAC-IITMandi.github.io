@@ -7,34 +7,59 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='coordinators',
+            name="coordinators",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=50, unique=True)),
-                ('fb', models.CharField(default='#', max_length=50)),
-                ('insta', models.CharField(default='#', max_length=50)),
-                ('git', models.CharField(default='#', max_length=50)),
-                ('linkedin', models.CharField(default='#', max_length=50)),
-                ('batch', models.IntegerField(default=2023)),
-                ('image', models.ImageField(default='default.jpg', upload_to='team/coordinators')),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("name", models.CharField(max_length=50, unique=True)),
+                ("fb", models.CharField(default="#", max_length=50)),
+                ("insta", models.CharField(default="#", max_length=50)),
+                ("git", models.CharField(default="#", max_length=50)),
+                ("linkedin", models.CharField(default="#", max_length=50)),
+                ("batch", models.IntegerField(default=2023)),
+                (
+                    "image",
+                    models.ImageField(
+                        default="default.jpg", upload_to="team/coordinators"
+                    ),
+                ),
             ],
         ),
         migrations.CreateModel(
-            name='core_team',
+            name="core_team",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=50, unique=True)),
-                ('fb', models.CharField(default='#', max_length=50)),
-                ('insta', models.CharField(default='#', max_length=50)),
-                ('git', models.CharField(default='#', max_length=50)),
-                ('linkedin', models.CharField(default='#', max_length=50)),
-                ('batch', models.IntegerField(default=2023)),
-                ('image', models.ImageField(default='default.jpg', upload_to='team/core_team')),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("name", models.CharField(max_length=50, unique=True)),
+                ("fb", models.CharField(default="#", max_length=50)),
+                ("insta", models.CharField(default="#", max_length=50)),
+                ("git", models.CharField(default="#", max_length=50)),
+                ("linkedin", models.CharField(default="#", max_length=50)),
+                ("batch", models.IntegerField(default=2023)),
+                (
+                    "image",
+                    models.ImageField(
+                        default="default.jpg", upload_to="team/core_team"
+                    ),
+                ),
             ],
         ),
     ]
