@@ -21,25 +21,6 @@ li {
     }
 }
 
-.overlay-mf {
-    background-color: #0078ff;
-}
-
-.overlay-mf {
-    position: absolute;
-    top: 0;
-    left: 0px;
-    padding: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0.7;
-}
-
-.paralax-mf {
-    position: relative;
-    padding: 8rem 0;
-}
-
 .display-table {
     width: 100%;
     height: 100%;
@@ -62,17 +43,11 @@ li {
     color: rgb(251, 245, 245);
 }
 
-.navbar-brand.navbar-trans {
-    position: absolute;
-    width: 120px;
-    bottom: 75px;
-    max-height: 10px;
-}
-
+.navbar-brand.navbar-trans,
 .navbar-brand.navbar-reduce {
     position: absolute;
-    width: 120px;
-    bottom: 5px;
+    width: 200px;
+    bottom: 90px;
     max-height: 10px;
 }
 
