@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+.shift-d {
+    padding-top: 10%;
+}
+
 li {
     list-style: none;
 }
@@ -43,12 +47,15 @@ li {
     color: rgb(251, 245, 245);
 }
 
-.navbar-brand.navbar-trans,
-.navbar-brand.navbar-reduce {
-    position: absolute;
-    width: 200px;
-    bottom: 90px;
-    max-height: 10px;
+.navbar-brand {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 140px;
+    bottom: 32px;
+    height: 8px;
 }
 
 .navbar-b {
@@ -282,7 +289,6 @@ li {
     }
 
     .navbar-b .dropdown-menu .dropdown-item:hover {
-        background-color: none;
         color: #0078ff;
         transition: all 500ms ease;
     }
@@ -309,8 +315,8 @@ li {
         background-color: #fdd835;
         height: 5px;
         width: 25px;
-        margin-top: 15px;
-        margin-bottom: 10px;
+        margin-top: 0px;
+        margin-bottom: 18px;
         margin-left: 400px;
         transform: rotate(180deg);
         opacity: 1;
