@@ -22,15 +22,11 @@ $(function () {
             if (!$("#navbarDefault").hasClass("show")) {
                 $(".navbar-expand-md").removeClass("bg-light");
                 $(".navbar-expand-md").removeClass("navbar-reduce");
+                $('.dropdown-menu').removeClass('dropdown-reduce');
                 
             }
             $(".navbar-expand-md").addClass("navbar-trans");
             $('.dropdown-menu').addClass('dropdown-trans');
-        }
-        if ($(window).scrollTop() > top) {
-            $(".scrolltop-mf").fadeIn(1000, "easeInOutExpo");
-        } else {
-            $(".scrolltop-mf").fadeOut(1000, "easeInOutExpo");
         }
     });
 });(jQuery);
