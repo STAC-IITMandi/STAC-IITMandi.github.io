@@ -5,6 +5,11 @@ $(function () {
           $('#mainNav').addClass('navbar-reduce');
         }
     });
+
+    // navbar-toggler button
+    $('.toggle-button').on('click', function () {
+        $('.animated-icon').toggleClass('open');
+    });
     
     /*--/ Navbar Menu Reduce /--*/
     $(window).trigger("scroll");
@@ -17,17 +22,14 @@ $(function () {
             $(".navbar-expand-md").removeClass("navbar-trans");
             $('.dropdown-menu').removeClass('dropdown-trans');
             $('.dropdown-menu').addClass('dropdown-reduce');
-
         } else {
             if (!$("#navbarDefault").hasClass("show")) {
                 $(".navbar-expand-md").removeClass("bg-light");
                 $(".navbar-expand-md").removeClass("navbar-reduce");
-                $('.dropdown-menu').removeClass('dropdown-reduce');
-                
+                $('.dropdown-menu').removeClass('dropdown-reduce');               
             }
             $(".navbar-expand-md").addClass("navbar-trans");
             $('.dropdown-menu').addClass('dropdown-trans');
         }
     });
 });(jQuery);
-
