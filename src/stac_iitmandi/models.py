@@ -47,7 +47,7 @@ class coordinators(models.Model):
             img.save(self.image.path)
 
 
-#####  For Homepage ######
+# For Homepage
 class club_activity(models.Model):
     activity = models.CharField(max_length=50, unique=True)
     content = RichTextField(blank=True, null=True)
