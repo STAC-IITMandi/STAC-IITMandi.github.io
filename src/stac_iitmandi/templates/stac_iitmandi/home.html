@@ -1,15 +1,169 @@
 {% extends 'stac_iitmandi/base.html' %}
 {% block content %}
+{% load static %}
 
 {% block header %}
   {% include '_header.html' %}
 {% endblock %}
 
 <div class="container bg-light mt-2">
-  <h1>Heading here</h1>
-  <p>Space Technology and Astronomy Cell (STAC) is a club where one can explore every corner of knowledge they have about Astrophysics/Robotics/Programming/Star-Gazing or anything related to space science and technology. The vision of the club is to
-    become self sufficient so that in the coming future, the club discovers new celestial bodies, publishes research papers, participates and wins inter-college events, becomes a part of the projects by leading organisations in the field of astronomy
-    (NASA, ISRO, ESA etc) and much more.</p>
-</div>
+  <h1 class="text-center">STAC | IIT MANDI</h1>
+  <p>{{introduction|safe}}</p>
 
+<!--Club Activities-->
+<section id="work" >
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="title-box text-center">
+          <h3 class="title-a">
+            What we Do As a Club!
+          </h3>
+          <div class="line-mf"></div>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-md-center">
+      {% for activity in club_activity %}
+      <div class="col-md-4">
+        <div class="work-box">
+          <a href="{{activity.image.url}}" data-gall="portfolioGallery" title="{{activity.activity}}" class="venobox">
+            <div class="work-img">
+              <img src="{{activity.image.url}}" alt="" class="img-fluid">
+            </div>
+          </a>
+          <div class="work-content">
+            <div class="row">
+              <div class="col-sm-8">
+                <h2 class="w-title">{{activity.activity}}</h2>
+                <div class="w-more">
+                  <p>{{activity.content|safe}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+  <!-- Events Intro -->
+  <section id="work" >
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="title-box text-center">
+            <h3 class="title-a">
+              Events
+            </h3>
+            <div class="line-mf"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-md-center">
+        {% for event in events_intro %}
+        <div class="col-md-4">
+          <div class="work-box">
+            <a href="{{event.image.url}}" data-gall="portfolioGallery" title="{{event.topic}}" class="venobox">
+              <div class="work-img">
+                <img src="{{event.image.url}}" alt="" class="img-fluid">
+              </div>
+            </a>
+            <div class="work-content">
+              <div class="row">
+                <div class="col-sm-8">
+                  <h2 class="w-title">{{event.topic}}</h2>
+                  <div class="w-more">
+                    <p>{{event.description|safe}}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!--Competitions -->
+  <section id="work" >
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="title-box text-center">
+            <h3 class="title-a">
+              Competitions held at STAC
+            </h3>
+            <div class="line-mf"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-md-center">
+        {% for competition in competitions %}
+        <div class="col-md-4">
+          <div class="work-box">
+            <a href="{{competition.image.url}}" data-gall="portfolioGallery" title="{{competition.topic}}" class="venobox">
+              <div class="work-img">
+                <img src="{{competition.image.url}}" alt="" class="img-fluid">
+              </div>
+            </a>
+            <div class="work-content">
+              <div class="row">
+                <div class="col-sm-8">
+                  <h2 class="w-title">{{competition.topic}}</h2>
+                  <div class="w-more">
+                    <p>{{competition.description|safe}}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!--Future Projects-->
+  <section id="work" >
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="title-box text-center">
+            <h3 class="title-a">
+              Future Prospects And Ongoing Projects
+            </h3>
+            <div class="line-mf"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-md-center">
+        {% for project in future_projects %}
+        <div class="col-md-4">
+          <div class="work-box">
+            <a href="{{project.image.url}}" data-gall="portfolioGallery" title="{{project.topic}}" class="venobox">
+              <div class="work-img">
+                <img src="{{project.image.url}}" alt="" class="img-fluid">
+              </div>
+            </a>
+            <div class="work-content">
+              <div class="row">
+                <div class="col-sm-8">
+                  <h2 class="w-title">{{project.topic}}</h2>
+                  <div class="w-more">
+                    <p>{{project.description|safe}}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+</div>
 {% endblock content%}

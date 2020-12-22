@@ -1,13 +1,21 @@
 from django.shortcuts import render
 from .models import core_team as members
-from .models import coordinators
+from .models import coordinators, club_activity, homepage
 
 
 # rendering home page
 def home(request):
-    return render(
-        request, "stac_iitmandi/home.html", {"title": "Home", "home": "active"}
-    )
+    introduction = homepage.objects.filter(id__in=(15,))
+    context_ = {
+        "club_activity": club_activity.objects.all(),
+        "competitions": homepage.objects.filter(id__in=(1, 2, 3, 4, 8)),
+        "events_intro": homepage.objects.filter(id__in=(6, 5, 7)),
+        "future_projects": homepage.objects.filter(id__in=(11, 10, 9, 12, 13, 14)),
+        "introduction": introduction[0].description,
+        "title": "Home",
+        "home": "active",
+    }
+    return render(request, "stac_iitmandi/home.html", context_)
 
 
 # rendering template page
@@ -45,18 +53,14 @@ def zenith(request):
 # rendering Alumni page
 def alumni(request):
     return render(
-        request,
-        "stac_iitmandi/alumni.html",
-        {"title": "Alumni", "alumni": "active"}
+        request, "stac_iitmandi/alumni.html", {"title": "Alumni", "alumni": "active"}
     )
 
 
 # rendering About page
 def about(request):
     return render(
-        request,
-        "stac_iitmandi/about.html",
-        {"title": "About", "about": "active"}
+        request, "stac_iitmandi/about.html", {"title": "About", "about": "active"}
     )
 
 
