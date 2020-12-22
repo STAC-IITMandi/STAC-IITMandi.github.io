@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "ckeditor",
 ]
 
 MIDDLEWARE = [
@@ -53,12 +54,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = "web_main.urls"
 
-TEMPLATE_DIR = os.path.join(
-    BASE_DIR,
-    "stac_iitmandi",
-    "templates",
-    "stac_iitmandi/"
-)
+TEMPLATE_DIR = os.path.join(BASE_DIR, "stac_iitmandi", "templates", "stac_iitmandi/")
 
 TEMPLATES = [
     {
@@ -97,24 +93,17 @@ DATABASES = {
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        "NAME":
-        "django.contrib.auth.password_validation"
+        "NAME": "django.contrib.auth.password_validation"
         ".UserAttributeSimilarityValidator",
     },
     {
-        "NAME":
-        "django.contrib.auth.password_validation"
-        ".MinimumLengthValidator",
+        "NAME": "django.contrib.auth.password_validation" ".MinimumLengthValidator",
     },
     {
-        "NAME":
-        "django.contrib.auth.password_validation"
-        ".CommonPasswordValidator",
+        "NAME": "django.contrib.auth.password_validation" ".CommonPasswordValidator",
     },
     {
-        "NAME":
-        "django.contrib.auth.password_validation"
-        ".NumericPasswordValidator",
+        "NAME": "django.contrib.auth.password_validation" ".NumericPasswordValidator",
     },
 ]
 
@@ -138,9 +127,6 @@ USE_TZ = True
 
 STATIC_URL = "/static/"
 
-MEDIA_ROOT = os.path.join(
-    BASE_DIR,
-    "stac_iitmandi/static/stac_iitmandi/images/"
-)
+MEDIA_ROOT = os.path.join(BASE_DIR, "stac_iitmandi/static/stac_iitmandi/images/")
 
 MEDIA_URL = "/stac_iitmandi/static/stac_iitmandi/images/"

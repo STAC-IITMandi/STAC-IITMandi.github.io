@@ -42,4 +42,17 @@ $(function () {
             $('.back-to-top').fadeOut('slow'); 
         }
     });
+    // venobox 
+    $(document).ready(function(){
+        $('.venobox').venobox(); 
+        $('.venobox_custom').venobox({
+            framewidth : '300px',                            
+            frameheight: '200px',                            
+            border     : '10px',                             
+            bgcolor    : '#5dff5e',                         
+            titleattr  : 'data-title',                     
+            numeratio  : true,                             
+            infinigall : true,                     
+        });
+    });
 });(jQuery);
