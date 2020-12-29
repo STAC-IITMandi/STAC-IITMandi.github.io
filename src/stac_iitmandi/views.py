@@ -53,16 +53,14 @@ def zenith(request):
 # rendering Alumni page
 def alumni(request):
     return render(
-        request, "stac_iitmandi/alumni.html", 
-        {"title": "Alumni", "alumni": "active"}
+        request, "stac_iitmandi/alumni.html", {"title": "Alumni", "alumni": "active"}
     )
 
 
 # rendering About page
 def about(request):
     return render(
-        request, "stac_iitmandi/about.html", 
-        {"title": "About", "about": "active"}
+        request, "stac_iitmandi/about.html", {"title": "About", "about": "active"}
     )
 
 
