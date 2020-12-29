@@ -55,4 +55,12 @@ $(function () {
             infinigall : true,                     
         });
     });
+
+  // slider carousel (uses the Owl Carousel library)
+  $(".slider-carousel").owlCarousel({
+    autoplay: true,
+    dots: true,
+    loop: true,
+    items: 2
+  });
 });(jQuery);
