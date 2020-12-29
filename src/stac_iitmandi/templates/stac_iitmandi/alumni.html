@@ -1,8 +1,88 @@
 {% extends 'stac_iitmandi/base.html' %}
+{% load static %}
 
 {% block content %}
-<div class="container bg-light mt-2">
-    <h1>This is Alumni's Page.</h1>
+<div class="about-image" style="color: #FFFF; padding:10%">
 </div>
+<div class="container bg-light mt-2">
+    Alumni Page Info
+</div>
+    
+<section id="slider" class="slider section-bg">
+    <div class="container">
+        <div class="title-box text-center">
+            <h3 class="title-a">
+            Alummi's
+            </h3>
+            <div class="line-mf"></div>
+        </div>
+        <div class="owl-carousel slider-carousel">
+            <div class="col-lg-12 work-item">
+                <div class="work-box">
+                    <!-- <a href="{{alumni.image.url}}" data-gall="work-Gallery" title="{{alumni.name}}" class="venobox"> -->
+                    <a href="{% static 'stac_iitmandi/images/galaxy_bg.jpg' %}" data-gall="work-Gallery" title="" class="venobox">
+                    
+                        <div class="work-img">
+                        <!-- <img src="{{alumni.image.url}}" alt="" class="img-fluid"> -->
+                        <img src="{% static 'stac_iitmandi/images/galaxy_bg.jpg' %}" alt="" class="img-fluid">
+                    </div>
+                    </a>
+                    <div class="work-info text-center">
+                        <h4 class="subtitle-a">AlumniName{{alumni.name}}</h4>
+                        <p class="font-italic">AlumniDesc{{alumni.description|safe}}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12 work-item">
+                <div class="work-box">
+                    <!-- <a href="{{alumni.image.url}}" data-gall="work-Gallery" title="{{alumni.name}}" class="venobox"> -->
+                    <a href="{% static 'stac_iitmandi/images/galaxy_bg.jpg' %}" data-gall="work-Gallery" title="" class="venobox">
+                    
+                        <div class="work-img">
+                        <!-- <img src="{{alumni.image.url}}" alt="" class="img-fluid"> -->
+                        <img src="{% static 'stac_iitmandi/images/galaxy_bg.jpg' %}" alt="" class="img-fluid">
+                    </div>
+                    </a>
+                    <div class="work-info text-center">
+                        <h4 class="subtitle-a">AlumniName{{alumni.name}}</h4>
+                        <p class="font-italic">AlumniDesc{{alumni.description|safe}}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12 work-item">
+                <div class="work-box">
+                    <!-- <a href="{{alumni.image.url}}" data-gall="work-Gallery" title="{{alumni.name}}" class="venobox"> -->
+                    <a href="{% static 'stac_iitmandi/images/galaxy_bg.jpg' %}" data-gall="work-Gallery" title="" class="venobox">
+                    
+                        <div class="work-img">
+                        <!-- <img src="{{alumni.image.url}}" alt="" class="img-fluid"> -->
+                        <img src="{% static 'stac_iitmandi/images/galaxy_bg.jpg' %}" alt="" class="img-fluid">
+                    </div>
+                    </a>
+                    <div class="work-info text-center">
+                        <h4 class="subtitle-a">AlumniName{{alumni.name}}</h4>
+                        <p class="font-italic">AlumniDesc{{alumni.description|safe}}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12 work-item">
+                <div class="work-box">
+                    <!-- <a href="{{alumni.image.url}}" data-gall="work-Gallery" title="{{alumni.name}}" class="venobox"> -->
+                    <a href="{% static 'stac_iitmandi/images/galaxy_bg.jpg' %}" data-gall="work-Gallery" title="" class="venobox">
+                    
+                        <div class="work-img">
+                        <!-- <img src="{{alumni.image.url}}" alt="" class="img-fluid"> -->
+                        <img src="{% static 'stac_iitmandi/images/galaxy_bg.jpg' %}" alt="" class="img-fluid">
+                    </div>
+                    </a>
+                    <div class="work-info text-center">
+                        <h4 class="subtitle-a">AlumniName{{alumni.name}}</h4>
+                        <p class="font-italic">AlumniDesc{{alumni.description|safe}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 {% endblock %}
