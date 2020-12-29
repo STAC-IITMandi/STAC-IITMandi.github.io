@@ -7,80 +7,56 @@
 {% endblock %}
 
 <div class="container bg-light mt-2">
-  <h1 class="text-center">STAC | IIT MANDI</h1>
+  <h1 class="title-a text-center">STAC | IIT MANDI</h1>
   <p>{{introduction|safe}}</p>
 
-<!--Club Activities-->
-<section id="work" >
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12">
-        <div class="title-box text-center">
-          <h3 class="title-a">
-            What we Do As a Club!
-          </h3>
-          <div class="line-mf"></div>
-        </div>
+  <!--Club Activities-->
+  <section id="work" class="work">
+    <div class="container">
+      <div class="title-box text-center">
+        <h3 class="title-a">
+          What we Do As a Club?
+        </h3>
+        <div class="line-mf"></div>
       </div>
-    </div>
-    <div class="row justify-content-md-center">
-      {% for activity in club_activity %}
-      <div class="col-md-4">
-        <div class="work-box">
-          <a href="{{activity.image.url}}" data-gall="portfolioGallery" title="{{activity.activity}}" class="venobox">
-            <div class="work-img">
-              <img src="{{activity.image.url}}" alt="" class="img-fluid">
-            </div>
-          </a>
-          <div class="work-content">
-            <div class="row">
-              <div class="col-sm-8">
-                <h2 class="w-title">{{activity.activity}}</h2>
-                <div class="w-more">
-                  <p>{{activity.content|safe}}</p>
-                </div>
+      <div class="row work-container justify-content-md-center">
+        {% for activity in club_activity %}
+        <div class="col-lg-4 col-md-6 work-item">
+          <div class="work-wrap">
+            <img src="{{activity.image.url}}" class="img-fluid" alt="">
+            <div class="work-info">
+              <h4>{{activity.activity}}</h4>
+              <p>{{activity.content|safe}}</p>
+              <div class="work-links">
+                <a href="{{activity.image.url}}" data-gall="work-Gallery" class="venobox" title="{{activity.activity}}"><i class="fa fa-plus"></i></a>
               </div>
             </div>
           </div>
         </div>
-      </div>
       {% endfor %}
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <!-- Events Intro -->
-  <section id="work" >
+  <section id="work" class="work">
     <div class="container">
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="title-box text-center">
-            <h3 class="title-a">
-              Events
-            </h3>
-            <div class="line-mf"></div>
-          </div>
-        </div>
+      <div class="title-box text-center">
+        <h3 class="title-a">
+          Events
+        </h3>
       </div>
-      <div class="row justify-content-md-center">
+      <div class="row">
         {% for event in events_intro %}
-        <div class="col-md-4">
-          <div class="work-box">
-            <a href="{{event.image.url}}" data-gall="portfolioGallery" title="{{event.topic}}" class="venobox">
-              <div class="work-img">
-                <img src="{{event.image.url}}" alt="" class="img-fluid">
-              </div>
-            </a>
-            <div class="work-content">
-              <div class="row">
-                <div class="col-sm-8">
-                  <h2 class="w-title">{{event.topic}}</h2>
-                  <div class="w-more">
-                    <p>{{event.description|safe}}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+        <div class="col-lg-4" style="padding-bottom: 2rem;">
+          <img src="{{event.image.url}}" class="img-fluid" alt="">
+        </div>
+        <div class="col-lg-6" style="padding-bottom: 2rem;">
+          <h4 class="text-center">{{event.topic}}</h4>
+          <p class="font-italic">{{event.description|safe}}</p>
+          <div class="work-links">
+            <a href="{{event.image.url}}" data-gall="work-Gallery" class="venobox" title="{{event.topic}}"><i class="fa fa-plus"></i></a>
+            <a href="#/" title="More Details"><i class="fa fa-link"></i></a>
           </div>
         </div>
         {% endfor %}
@@ -89,81 +65,65 @@
   </section>
 
   <!--Competitions -->
-  <section id="work" >
+  <section id="work" class="work">
     <div class="container">
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="title-box text-center">
-            <h3 class="title-a">
-              Competitions held at STAC
-            </h3>
-            <div class="line-mf"></div>
-          </div>
-        </div>
+      <div class="title-box text-center">
+        <h3 class="title-a">
+          Competitions held at STAC
+        </h3>
+        <div class="line-mf"></div>
       </div>
-      <div class="row justify-content-md-center">
+      <div class="row work-container justify-content-md-center">
         {% for competition in competitions %}
-        <div class="col-md-4">
-          <div class="work-box">
-            <a href="{{competition.image.url}}" data-gall="portfolioGallery" title="{{competition.topic}}" class="venobox">
-              <div class="work-img">
-                <img src="{{competition.image.url}}" alt="" class="img-fluid">
-              </div>
-            </a>
-            <div class="work-content">
-              <div class="row">
-                <div class="col-sm-8">
-                  <h2 class="w-title">{{competition.topic}}</h2>
-                  <div class="w-more">
-                    <p>{{competition.description|safe}}</p>
-                  </div>
-                </div>
+        <div class="col-lg-4 col-md-6 work-item">
+          <div class="work-wrap">
+            <img src="{{competition.image.url}}" class="img-fluid" alt="">
+            <div class="work-info">
+              <h4>{{competition.topic}}</h4>
+              <p>{{competition.description|safe}}</p>
+              <div class="work-links">
+                <a href="{{competition.image.url}}" data-gall="work-Gallery" class="venobox" title="{{competition.topic}}"><i class="fa fa-plus"></i></a>
               </div>
             </div>
           </div>
         </div>
-        {% endfor %}
+      {% endfor %}
       </div>
     </div>
   </section>
 
   <!--Future Projects-->
-  <section id="work" >
+  <section id="work" class="work">
     <div class="container">
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="title-box text-center">
-            <h3 class="title-a">
-              Future Prospects And Ongoing Projects
-            </h3>
-            <div class="line-mf"></div>
-          </div>
-        </div>
+      <div class="title-box text-center">
+        <h3 class="title-a">
+          Future Prospects And Ongoing Projects
+        </h3>
+        <div class="line-mf"></div>
       </div>
-      <div class="row justify-content-md-center">
+      <div class="row work-container justify-content-md-center">
         {% for project in future_projects %}
-        <div class="col-md-4">
-          <div class="work-box">
-            <a href="{{project.image.url}}" data-gall="portfolioGallery" title="{{project.topic}}" class="venobox">
-              <div class="work-img">
-                <img src="{{project.image.url}}" alt="" class="img-fluid">
-              </div>
-            </a>
-            <div class="work-content">
-              <div class="row">
-                <div class="col-sm-8">
-                  <h2 class="w-title">{{project.topic}}</h2>
-                  <div class="w-more">
-                    <p>{{project.description|safe}}</p>
-                  </div>
-                </div>
+        <div class="col-lg-4 col-md-6 work-item">
+          <div class="work-wrap">
+            <img src="{{project.image.url}}" class="img-fluid" alt="">
+            <div class="work-info">
+              <h4>{{project.topic}}</h4>
+              <p>{{project.description|safe}}</p>
+              <div class="work-links">
+                <a href="{{project.image.url}}" data-gall="work-Gallery" class="venobox" title="{{project.topic}}"><i class="fa fa-plus"></i></a>
               </div>
             </div>
           </div>
         </div>
-        {% endfor %}
+      {% endfor %}
       </div>
     </div>
   </section>
+
+</div>
+<div class="bg-image acre">
+  <h2 class="text-center">Bronze Medal in Star Cluster Identifier hackathon, Inter IIT Tech Meet 2018
+    <a href="https://github.com/STAC-IITMandi/Star-Cluster-Identifier"><i class="fa fa-hand-pointer-o" aria-hidden="true"></i></a>
+  </h2>
 </div>
 {% endblock content%}

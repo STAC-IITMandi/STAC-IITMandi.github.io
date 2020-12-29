@@ -1,7 +1,29 @@
 {% extends 'stac_iitmandi/base.html' %}
+{% load static %}
 
 {% block content %}
-<div class="container bg-light mt-2">
-    <h1>This is Photogallery Page.</h1>
+<div class="container bg-light mt-2 shift-d">
+    <!--Gallery Section-->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <div class="title-a text-center">
+                <h2>Gallery</h2>
+                <div class="line-mf"></div>
+                <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+            </div>
+
+        <div class="row no-gutters">
+            {% for photo in photogallery %}
+            <div class="col-lg-3 col-md-4">
+                <div class="gallery-item">
+                    <a href="{{photo.image.url}}" class="venobox" data-gall="gallery-item">
+                        <img src="{{photo.image.url}}" alt="" class="img-fluid">
+                    </a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
 </div>
+
 {% endblock %}
