@@ -1,7 +1,88 @@
 {% extends 'stac_iitmandi/base.html' %}
+{% load static %}
+
 
 {% block content %}
+<div class="bg-image zenith-logo" style="color: #FFFF; padding:10%">
+    <img src="{% static 'stac_iitmandi/images/white-zenith.png' %}" alt="Zenith logo">
+</div>
+
 <div class="container bg-light mt-2">
-    <h1>This is Zenith Page.</h1>
+    <!--Club Activities-->
+    <section id="work" class="work">
+        <div class="container">
+            <div class="title-box">
+                <h3 class="title-a text-center">
+                    Zenith - The Annual Intra-College Astrofest
+                </h3>
+                <div class="line-mf"></div>
+                <p class="font-italic"><br>Zenith is the annual intra-college Astrofest organised by the club. The astrofest saw a large participation with enthusiastic astrophysicists talking about various amazing topics ranging from Black Holes to Galaxies in "Aurora". Some Computer Science Enthusiasts did a week long hacking to create amazing applications. On the other side of campus of IIT Mandi, some students were participating in "Pandora's Box" to win cool prizes. This all was flavoured by some amazing talks by Bhavya Bhatt, Abhijeet Manhas and Shreyas Bapat.</p>
+            </div>
+            <div class="title-box text-center">
+                <h3 class="title-a">
+                    Competitions in Zenith
+                </h3>
+                <div class="line-mf"></div>
+                <p class="font-italic"><br>STAC presents the first ever edition of its AstroFest, Zenith! Zenith is a week-long fest, from 14 to 20 September with exciting events, talks and prizes to keep you engaged throughout the week. The competitions to be held in Zenith are given below:</p>
+            </div>
+            <div class="row justify-content-md-center">
+                <div class="col-lg-4 col-md-6">
+                    <div class="work-box">
+                        <a href="{% static 'stac_iitmandi/images/galaxy_bg.jpg' %}" data-gall="portfolioGallery" title="{{zenith.title}}" class="venobox">
+                            <div class="work-img">
+                                <img src="{% static 'stac_iitmandi/images/galaxy_bg.jpg' %}" alt="" class="img-fluid">
+                            </div>
+                        </a>
+                        <div class="member-info text-center">
+                            <h4>Aurora</h4>
+                            <p class="font-italic">A Paper Presentation event for participants to take any pre-established idea or concept and present it to the audience.
+                            </p>
+                            <a href="https://docs.google.com/document/d/1O2iuvNIYi_SlXr9ELm7dqOPwN-wudZPywqujoFoZbyU/edit?usp=sharing" target="_blank">Problem Statement</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="work-box">
+                        <a href="{% static 'stac_iitmandi/images/galaxy_bg.jpg' %}" data-gall="portfolioGallery" title="{{zenith.title}}" class="venobox">
+                            <div class="work-img">
+                                <img src="{% static 'stac_iitmandi/images/galaxy_bg.jpg' %}" alt="" class="img-fluid">
+                            </div>
+                        </a>
+                        <div class="member-info text-center">
+                            <h4>Aurora</h4>
+                            <p class="font-italic">A Paper Presentation event for participants to take any pre-established idea or concept and present it to the audience.
+                            </p>
+                            <a href="https://docs.google.com/document/d/1O2iuvNIYi_SlXr9ELm7dqOPwN-wudZPywqujoFoZbyU/edit?usp=sharing" target="_blank">Problem Statement</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="work-box">
+                        <a href="{% static 'stac_iitmandi/images/galaxy_bg.jpg' %}" data-gall="portfolioGallery" title="{{zenith.title}}" class="venobox">
+                            <div class="work-img">
+                                <img src="{% static 'stac_iitmandi/images/galaxy_bg.jpg' %}" alt="" class="img-fluid">
+                            </div>
+                        </a>
+                        <div class="member-info text-center">
+                            <h4>Aurora</h4>
+                            <p class="font-italic">A Paper Presentation event for participants to take any pre-established idea or concept and present it to the audience.
+                            </p>
+                            <a href="https://docs.google.com/document/d/1O2iuvNIYi_SlXr9ELm7dqOPwN-wudZPywqujoFoZbyU/edit?usp=sharing" target="_blank">Problem Statement</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <h4 class="title-a text-center">Schedule of Events</h4>
+    <table class="table table-bordered table-striped">
+        <tr>
+            <td>Day 1</td>
+            <td>Talk: Special Relativity and Geometry in Physics</td>
+            <td>Bhavya Bhatt</td>
+        </tr>
+    </table>
 </div>
 {% endblock %}
+
