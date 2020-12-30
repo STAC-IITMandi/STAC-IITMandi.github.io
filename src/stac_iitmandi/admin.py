@@ -8,4 +8,3 @@ admin.site.register(club_activity)
 admin.site.register(homepage)
 admin.site.register(zenithEvents)
 admin.site.register(utkarshEvents)
-

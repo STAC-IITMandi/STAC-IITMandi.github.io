@@ -65,6 +65,7 @@ class club_activity(models.Model):
             img.thumbnail(output_size)
             img.save(self.image.path)
 
+
 # Zenith
 class zenithEvents(models.Model):
     name = models.CharField(default='', max_length=50, unique=True)
@@ -82,6 +83,7 @@ class zenithEvents(models.Model):
         output_size = (305, 210)
         img.resize(output_size)
         img.save(self.image.path)
+
 
 # Utkarsh
 class utkarshEvents(models.Model):

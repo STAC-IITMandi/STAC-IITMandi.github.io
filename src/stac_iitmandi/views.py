@@ -20,7 +20,6 @@ def home(request):
 
 # rendering template page
 def template(request):
-    
     return render(request, "stac_iitmandi/template.html")
 
 
@@ -36,7 +35,7 @@ def astrax(request):
 # rendering Utkarsh page
 def utkarsh(request):
     context_ = {
-        "events" : utkarshEvents.objects.all(),
+        "events": utkarshEvents.objects.all(),
         "title": "Utkarsh",
         "utkarsh": "active",
         "events_": "active"
@@ -47,7 +46,7 @@ def utkarsh(request):
 # rendering Zenith page
 def zenith(request):
     context_ = {
-        "events" : zenithEvents.objects.all(),
+        "events": zenithEvents.objects.all(),
         "title": "Zenith",
         "zenith": "active",
         "events_": "active"
