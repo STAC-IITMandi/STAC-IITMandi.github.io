@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .models import core_team as members
-from .models import coordinators, club_activity, homepage
+from .models import coordinators, club_activity, homepage, zenithEvents, utkarshEvents
 
 
 # rendering home page
@@ -34,20 +34,24 @@ def astrax(request):
 
 # rendering Utkarsh page
 def utkarsh(request):
-    return render(
-        request,
-        "stac_iitmandi/utkarsh.html",
-        {"title": "Utkarsh", "utkarsh": "active", "events_": "active"},
-    )
+    context_ = {
+        "events": utkarshEvents.objects.all(),
+        "title": "Utkarsh",
+        "utkarsh": "active",
+        "events_": "active"
+    }
+    return render(request, "stac_iitmandi/utkarsh.html", context_)
 
 
 # rendering Zenith page
 def zenith(request):
-    return render(
-        request,
-        "stac_iitmandi/zenith.html",
-        {"title": "Zenith", "zenith": "active", "events_": "active"},
-    )
+    context_ = {
+        "events": zenithEvents.objects.all(),
+        "title": "Zenith",
+        "zenith": "active",
+        "events_": "active"
+    }
+    return render(request, "stac_iitmandi/zenith.html", context_)
 
 
 # rendering Alumni page
