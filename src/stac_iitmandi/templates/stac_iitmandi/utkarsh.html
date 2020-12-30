@@ -1,10 +1,9 @@
 {% extends 'stac_iitmandi/base.html' %}
 {% load static %}
-
-
 {% block content %}
-<div class="bg-image zenith-logo" style="color: #FFFF; padding:10%">
-    <img src="{% static 'stac_iitmandi/images/white-zenith.png' %}" alt="Zenith logo">
+
+<div class="bg-image utkarsh-logo" style="color: #FFFF; padding:10%">
+    <img src="" alt="">
 </div>
 
 <div class="container bg-light mt-2">
@@ -22,36 +21,27 @@
                 <h3 class="title-a">
                     Competitions in Utkarsh
                 </h3>
-                <div class="line-mf"></div>
-                <p class="font-italic"><br>Utkarsh is the intra-college technical fest of IIT Mandi. STAC organizes some events in the fest every year.</p>
             </div>
             <div class="row justify-content-md-center">
+                {% for event in events %}
                 <div class="col-lg-4 col-md-6">
                     <div class="work-box">
-                        <a href="{% static 'stac_iitmandi/images/galaxy_bg.jpg' %}" data-gall="portfolioGallery" title="{{zenith.title}}" class="venobox">
+                        <a href="{{event.image.url}}" data-gall="portfolioGallery" title="{{event.name}}" class="venobox">
                             <div class="work-img">
-                                <img src="{% static 'stac_iitmandi/images/galaxy_bg.jpg' %}" alt="" class="img-fluid">
+                                <img src="{{event.image.url}}" alt="{{event.name}}" class="img-fluid">
                             </div>
                         </a>
                         <div class="member-info text-center">
-                            <h4>Event_name</h4>
-                            <p class="font-italic">Event-info
-                            </p>
+                            <h4>{{ event.name }}</h4>
+                            <div class="font-italic">{{event.description|safe}}</div>
+                            <a href="{{event.problem_statement}}" target="_blank">Problem Statement</a>
                         </div>
                     </div>
                 </div>
+                {% endfor %}
             </div>
         </div>
     </section>
-
-    <h4 class="title-a text-center">Schedule of Events</h4>
-    <table class="table table-bordered table-striped">
-        <tr>
-            <td>Day 1</td>
-            <td>Topic</td>
-            <td>By</td>
-        </tr>
-    </table>
 </div>
 {% endblock %}
 

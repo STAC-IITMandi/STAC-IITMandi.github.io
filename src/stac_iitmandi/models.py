@@ -66,6 +66,44 @@ class club_activity(models.Model):
             img.save(self.image.path)
 
 
+# Zenith
+class zenithEvents(models.Model):
+    name = models.CharField(default='', max_length=50, unique=True)
+    image = models.ImageField(default="default.jpg", upload_to="Zenith/event_image")
+    description = RichTextField(blank=True, null=True)
+    problem_statement = models.URLField(default="", blank=True, null=False)
+
+    def __str__(self):
+        return self.name
+
+    def save(self):
+        super().save()
+
+        img = Image.open(self.image.path)
+        output_size = (305, 210)
+        img.resize(output_size)
+        img.save(self.image.path)
+
+
+# Utkarsh
+class utkarshEvents(models.Model):
+    name = models.CharField(default='', max_length=50, unique=True)
+    image = models.ImageField(default="default.jpg", upload_to="Utkarsh/event_image")
+    description = RichTextField(blank=True, null=True)
+    problem_statement = models.URLField(default="", blank=True, null=False)
+
+    def __str__(self):
+        return self.name
+
+    def save(self):
+        super().save()
+
+        img = Image.open(self.image.path)
+        output_size = (305, 210)
+        img.resize(output_size)
+        img.save(self.image.path)
+
+
 # future projects, competetions and events_intro on homepage in one table #
 class homepage(models.Model):
     topic = models.CharField(max_length=50, unique=True)
