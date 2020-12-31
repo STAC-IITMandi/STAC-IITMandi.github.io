@@ -5,10 +5,10 @@ from ckeditor.fields import RichTextField
 
 class core_team(models.Model):
     name = models.CharField(max_length=50, unique=True)
-    fb = models.CharField(max_length=50, default="#")
-    insta = models.CharField(max_length=50, default="#")
-    git = models.CharField(max_length=50, default="#")
-    linkedin = models.CharField(max_length=50, default="#")
+    fb = models.URLField(default="", blank=True, null=False)
+    insta = models.URLField(default="", blank=True, null=False)
+    git = models.URLField(default="", blank=True, null=False)
+    linkedin = models.URLField(default="", blank=True, null=False)
     batch = models.IntegerField(default=2023)  # positioning batch wise
     image = models.ImageField(default="default.jpg", upload_to="team/core_team")
 
@@ -27,10 +27,10 @@ class core_team(models.Model):
 
 class coordinators(models.Model):
     name = models.CharField(max_length=50, unique=True)
-    fb = models.CharField(max_length=50, default="#")
-    insta = models.CharField(max_length=50, default="#")
-    git = models.CharField(max_length=50, default="#")
-    linkedin = models.CharField(max_length=50, default="#")
+    fb = models.URLField(default="", blank=True, null=False)
+    insta = models.URLField(default="", blank=True, null=False)
+    git = models.URLField(default="", blank=True, null=False)
+    linkedin = models.URLField(default="", blank=True, null=False)
     batch = models.IntegerField(default=2023)
     image = models.ImageField(default="default.jpg", upload_to="team/coordinators")
 
