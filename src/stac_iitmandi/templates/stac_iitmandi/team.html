@@ -37,7 +37,7 @@
           <h5 class="text-center">People who make things happen!</h5>
         </div>      
         <div class="row justify-content-md-center"> 
-          {% for member in members %}
+          {% for member in first %}
             <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
               <div class="member" >
                 <div class="member-img">
@@ -55,6 +55,60 @@
               </div>
             </div>
           {% endfor %}
+          {% for member in second %}
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="member" >
+              <div class="member-img">
+                <img src="{{ member.image.url}}" class="img-fluid" alt="">
+                <div class="social">
+                  <a href="{{member.fb}}"><i class="fa fa-facebook-f "></i></a>
+                  <a href="{{member.insta}}"><i class="fa fa-instagram"></i></a>
+                  <a href="{{member.git}}"><i class="fa fa-github"></i></a>
+                  <a href="{{member.linkedin}}"><i class="fa fa-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>{{ member.name }}</h4>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+        {% for member in third %}
+        <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+          <div class="member" >
+            <div class="member-img">
+              <img src="{{ member.image.url}}" class="img-fluid" alt="">
+              <div class="social">
+                <a href="{{member.fb}}"><i class="fa fa-facebook-f "></i></a>
+                <a href="{{member.insta}}"><i class="fa fa-instagram"></i></a>
+                <a href="{{member.git}}"><i class="fa fa-github"></i></a>
+                <a href="{{member.linkedin}}"><i class="fa fa-linkedin"></i></a>
+              </div>
+            </div>
+            <div class="member-info">
+              <h4>{{ member.name }}</h4>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+        {% for member in last %}
+        <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+          <div class="member" >
+            <div class="member-img">
+              <img src="{{ member.image.url}}" class="img-fluid" alt="">
+              <div class="social">
+                <a href="{{member.fb}}"><i class="fa fa-facebook-f "></i></a>
+                <a href="{{member.insta}}"><i class="fa fa-instagram"></i></a>
+                <a href="{{member.git}}"><i class="fa fa-github"></i></a>
+                <a href="{{member.linkedin}}"><i class="fa fa-linkedin"></i></a>
+              </div>
+            </div>
+            <div class="member-info">
+              <h4>{{ member.name }}</h4>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
         </div>
       </div>
   </section><!-- End Team Section -->

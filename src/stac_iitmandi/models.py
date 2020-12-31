@@ -80,8 +80,8 @@ class zenithEvents(models.Model):
         super().save()
 
         img = Image.open(self.image.path)
-        output_size = (305, 210)
-        img.resize(output_size)
+        output_size = (1280, 720)
+        img.thumbnail(output_size)
         img.save(self.image.path)
 
 
@@ -99,8 +99,8 @@ class utkarshEvents(models.Model):
         super().save()
 
         img = Image.open(self.image.path)
-        output_size = (305, 210)
-        img.resize(output_size)
+        output_size = (1280, 720)
+        img.thumbnail(output_size)
         img.save(self.image.path)
 
 
