@@ -11,18 +11,17 @@
                 <div class="line-mf"></div>
                 <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
             </div>
-
-        <div class="row no-gutters">
-            {% for photo in photogallery %}
-            <div class="col-lg-3 col-md-4">
-                <div class="gallery-item">
-                    <a href="{{photo.image.url}}" class="venobox" data-gall="gallery-item">
-                        <img src="{{photo.image.url}}" alt="" class="img-fluid">
-                    </a>
+            <div class="row no-gutters">
+                {% for photo in photogallery %}
+                <div class="col-lg-3 col-md-4">
+                    <div class="gallery-item">
+                        <a href="{{photo.image.url}}" class="venobox" data-gall="gallery-item">
+                            <img src="{{photo.image.url}}" alt="" class="img-fluid">
+                        </a>
+                    </div>
                 </div>
+                {% endfor %}
             </div>
-            {% endfor %}
-        </div>
     </section>
 </div>
 

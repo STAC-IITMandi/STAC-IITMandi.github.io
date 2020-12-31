@@ -61,6 +61,6 @@ $(function () {
     autoplay: true,
     dots: true,
     loop: true,
-    items: 2
+    items: 1
   });
 });(jQuery);
