@@ -5,10 +5,10 @@ from ckeditor.fields import RichTextField
 
 class core_team(models.Model):
     name = models.CharField(max_length=50, unique=True)
-    fb = models.CharField(max_length=50, default="#")
-    insta = models.CharField(max_length=50, default="#")
-    git = models.CharField(max_length=50, default="#")
-    linkedin = models.CharField(max_length=50, default="#")
+    fb = models.URLField(default="#/", blank=True, null=False)
+    insta = models.URLField(default="#/", blank=True, null=False)
+    git = models.URLField(default="#/", blank=True, null=False)
+    linkedin = models.URLField(default="#/", blank=True, null=False)
     batch = models.IntegerField(default=2023)  # positioning batch wise
     image = models.ImageField(default="default.jpg", upload_to="team/core_team")
 
@@ -27,10 +27,10 @@ class core_team(models.Model):
 
 class coordinators(models.Model):
     name = models.CharField(max_length=50, unique=True)
-    fb = models.CharField(max_length=50, default="#")
-    insta = models.CharField(max_length=50, default="#")
-    git = models.CharField(max_length=50, default="#")
-    linkedin = models.CharField(max_length=50, default="#")
+    fb = models.URLField(default="#/", blank=True, null=False)
+    insta = models.URLField(default="#/", blank=True, null=False)
+    git = models.URLField(default="#/", blank=True, null=False)
+    linkedin = models.URLField(default="#/", blank=True, null=False)
     batch = models.IntegerField(default=2023)
     image = models.ImageField(default="default.jpg", upload_to="team/coordinators")
 
@@ -68,7 +68,7 @@ class club_activity(models.Model):
 
 # Zenith
 class zenithEvents(models.Model):
-    name = models.CharField(default='', max_length=50, unique=True)
+    name = models.CharField(default="", max_length=50, unique=True)
     image = models.ImageField(default="default.jpg", upload_to="Zenith/event_image")
     description = RichTextField(blank=True, null=True)
     problem_statement = models.URLField(default="", blank=True, null=False)
@@ -87,7 +87,7 @@ class zenithEvents(models.Model):
 
 # Utkarsh
 class utkarshEvents(models.Model):
-    name = models.CharField(default='', max_length=50, unique=True)
+    name = models.CharField(default="", max_length=50, unique=True)
     image = models.ImageField(default="default.jpg", upload_to="Utkarsh/event_image")
     description = RichTextField(blank=True, null=True)
     problem_statement = models.URLField(default="", blank=True, null=False)
@@ -121,3 +121,117 @@ class homepage(models.Model):
             output_size = (1280, 720)
             img.thumbnail(output_size)
             img.save(self.image.path)
+
+
+# Astrax
+class Astrax(models.Model):
+    name = models.CharField(default="", max_length=50, unique=True)
+    image = models.ImageField(default="default.jpg", upload_to="Astrax")
+    description = RichTextField(blank=True, null=True)
+
+    def __str__(self):
+        return self.name
+
+    def save(self):
+        super().save()
+
+        img = Image.open(self.image.path)
+        output_size = (1280, 720)
+        img.thumbnail(output_size)
+        img.save(self.image.path)
+
+
+# Pleiades
+class Pleiades(models.Model):
+    name = models.CharField(default="", max_length=50, unique=True)
+    image = models.ImageField(default="default.jpg", upload_to="Pleiades")
+    description = RichTextField(blank=True, null=True)
+    problem_statement = models.URLField(default="", blank=True, null=False)
+
+    def __str__(self):
+        return self.name
+
+    def save(self):
+        super().save()
+
+        img = Image.open(self.image.path)
+        output_size = (1280, 720)
+        img.thumbnail(output_size)
+        img.save(self.image.path)
+
+
+# about
+class About(models.Model):
+    content = models.CharField(default="", max_length=50, unique=True)
+    description = RichTextField(blank=True, null=True)
+    image = models.ImageField(default="default.jpg", upload_to="Astrax")
+
+    def __str__(self):
+        return self.name
+
+    def save(self):
+        super().save()
+
+        img = Image.open(self.image.path)
+        output_size = (1280, 720)
+        img.thumbnail(output_size)
+        img.save(self.image.path)
+
+
+# photogallery
+class photogallery(models.Model):
+    name = models.CharField(default="", max_length=50, unique=True)
+    image = models.ImageField(default="default.jpg", upload_to="Gallery/Photogallery")
+    description = RichTextField(blank=True, null=True)
+
+    def __str__(self):
+        return self.name
+
+    def save(self):
+        super().save()
+
+        img = Image.open(self.image.path)
+        output_size = (1280, 720)
+        img.thumbnail(output_size)
+        img.save(self.image.path)
+
+
+# videogallery
+class videogallery(models.Model):
+    name = models.CharField(default="", max_length=50, unique=True)
+    link = models.URLField(default="#/", blank=True, null=False)
+    description = RichTextField(blank=True, null=True)
+    image = models.ImageField(default="default.jpg", upload_to="Gallery/Videogallery")
+
+    def __str__(self):
+        return self.name
+
+    def save(self):
+        super().save()
+
+        img = Image.open(self.image.path)
+        output_size = (1280, 720)
+        img.thumbnail(output_size)
+        img.save(self.image.path)
+
+
+# Alumni
+class Alumni(models.Model):
+    name = models.CharField(default="", max_length=50, unique=True)
+    description = RichTextField(blank=True, null=True)
+    fb = models.URLField(default="#/", blank=True, null=False)
+    insta = models.URLField(default="#/", blank=True, null=False)
+    git = models.URLField(default="#/", blank=True, null=False)
+    linkedin = models.URLField(default="#/", blank=True, null=False)
+    image = models.ImageField(default="default.jpg", upload_to="Alumni")
+
+    def __str__(self):
+        return self.name
+
+    def save(self):
+        super().save()
+
+        img = Image.open(self.image.path)
+        output_size = (1280, 720)
+        img.thumbnail(output_size)
+        img.save(self.image.path)
