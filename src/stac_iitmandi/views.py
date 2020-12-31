@@ -1,6 +1,18 @@
 from django.shortcuts import render
 from .models import core_team as members
-from .models import coordinators, club_activity, homepage, zenithEvents, utkarshEvents, Astrax, About, photogallery, videogallery, Alumni, Pleiades
+from .models import (
+    coordinators,
+    club_activity,
+    homepage,
+    zenithEvents,
+    utkarshEvents,
+    Astrax,
+    About,
+    photogallery,
+    videogallery,
+    Alumni,
+    Pleiades,
+)
 
 
 # rendering home page
@@ -26,8 +38,7 @@ def astrax(request):
         "astrax": "active",
         "events_": "active",
     }
-    return render(
-        request, "stac_iitmandi/astrax.html", context_)
+    return render(request, "stac_iitmandi/astrax.html", context_)
 
 
 # rendering Utkarsh page
@@ -60,8 +71,7 @@ def pleiades(request):
         "pleiades": "active",
         "events_": "active",
     }
-    return render(
-        request, "stac_iitmandi/alumni.html", context_)
+    return render(request, "stac_iitmandi/alumni.html", context_)
 
 
 # rendering Alumni page
@@ -71,8 +81,7 @@ def alumni(request):
         "title": "Alumni",
         "alumni": "active",
     }
-    return render(
-        request, "stac_iitmandi/alumni.html", context_)
+    return render(request, "stac_iitmandi/alumni.html", context_)
 
 
 # rendering About page
@@ -82,8 +91,7 @@ def about(request):
         "title": "About",
         "about": "active",
     }
-    return render(
-        request, "stac_iitmandi/about.html", context_)
+    return render(request, "stac_iitmandi/about.html", context_)
 
 
 # rendering Photogallery page
@@ -94,8 +102,7 @@ def photogallery(request):
         "photos": "active",
         "gallery_": "active",
     }
-    return render(
-        request, "stac_iitmandi/photogallery.html", context_)
+    return render(request, "stac_iitmandi/photogallery.html", context_)
 
 
 # rendering videogallery page
@@ -106,18 +113,20 @@ def videogallery(request):
         "videos": "active",
         "gallery_": "active",
     }
-    return render(
-        request, "stac_iitmandi/videogallery.html", context_)
+    return render(request, "stac_iitmandi/videogallery.html", context_)
 
 
 # rendering team page
 def team(request):
     context_ = {
         "first": members.objects.filter(id__in=(40, 42, 41)),
-        "second":members.objects.filter(id__in=(3, 1, 7, 4, 5, 10, 6, 12 ,11, 9, 13, 14 ,15, 21, 22)),
-        "third": members.objects.filter(id__in=(20,30, 38, 33, 29, 39, 36, 37, 28, 26, 25, 24, 32, 31, 34, 35)),
-        "last":members.objects.filter(id__in=(16, 8, 17, 18, 27)),
-        
+        "second": members.objects.filter(
+            id__in=(3, 1, 7, 4, 5, 10, 6, 12, 11, 9, 13, 14, 15, 21, 22)
+        ),
+        "third": members.objects.filter(
+            id__in=(20, 30, 38, 33, 29, 39, 36, 37, 28, 26, 25, 24, 32, 31, 34, 35)
+        ),
+        "last": members.objects.filter(id__in=(16, 8, 17, 18, 27)),
         "coordinators": coordinators.objects.all().order_by("batch"),
         "title": "Team",
         "team": "active",
