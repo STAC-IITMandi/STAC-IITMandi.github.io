@@ -89,9 +89,16 @@ def videogallery(request):
 # rendering team page
 def team(request):
     context_ = {
-        "members": members.objects.all().order_by("batch"),
+        "first": members.objects.filter(id__in=(40, 42, 41)),
+        "second":members.objects.filter(id__in=(3, 1, 7, 4, 5, 10, 6, 12 ,11, 9, 13, 14 ,15, 21, 22)),
+        "third": members.objects.filter(id__in=(20,30, 38, 33, 29, 39, 36, 37, 28, 26, 25, 24, 32, 31, 34, 35)),
+        "last":members.objects.filter(id__in=(16, 8,17,18,27)),
+        
         "coordinators": coordinators.objects.all().order_by("batch"),
         "title": "Team",
         "team": "active",
     }
     return render(request, "stac_iitmandi/team.html", context_)
+
+
+"""40, 42, 41, 3, 1, 7, 4, 5, 10, 6, 12 ,11, 9, 13, 14 ,15, 21, 22, 20,30, 38, 33, 29, 39, 36, 37, 28, 26, 25, 24, 32, 31, 34, 35,16, 8,17,18,27"""
