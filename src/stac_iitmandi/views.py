@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .models import core_team as members
-from .models import coordinators, club_activity, homepage, zenithEvents, utkarshEvents
+from .models import coordinators, club_activity, homepage, zenithEvents, utkarshEvents, Astrax, About, photogallery, videogallery, Alumni, Pleiades
 
 
 # rendering home page
@@ -18,18 +18,16 @@ def home(request):
     return render(request, "stac_iitmandi/home.html", context_)
 
 
-# rendering template page
-def template(request):
-    return render(request, "stac_iitmandi/template.html")
-
-
 # rendering ASTRAX page
 def astrax(request):
+    context_ = {
+        # "events": Astrax.objects.all(),
+        "title": "Astrax",
+        "astrax": "active",
+        "events_": "active",
+    }
     return render(
-        request,
-        "stac_iitmandi/astrax.html",
-        {"title": "Astrax", "astrax": "active", "events_": "active"},
-    )
+        request, "stac_iitmandi/astrax.html", context_)
 
 
 # rendering Utkarsh page
@@ -38,7 +36,7 @@ def utkarsh(request):
         "events": utkarshEvents.objects.all(),
         "title": "Utkarsh",
         "utkarsh": "active",
-        "events_": "active"
+        "events_": "active",
     }
     return render(request, "stac_iitmandi/utkarsh.html", context_)
 
@@ -49,41 +47,67 @@ def zenith(request):
         "events": zenithEvents.objects.all(),
         "title": "Zenith",
         "zenith": "active",
-        "events_": "active"
+        "events_": "active",
     }
     return render(request, "stac_iitmandi/zenith.html", context_)
 
 
+# rendering pleiades page
+def pleiades(request):
+    context_ = {
+        "events": Pleiades.objects.all(),
+        "title": "Pleiades",
+        "pleiades": "active",
+        "events_": "active",
+    }
+    return render(
+        request, "stac_iitmandi/alumni.html", context_)
+
+
 # rendering Alumni page
 def alumni(request):
+    context_ = {
+        "Alumni_s": Alumni.objects.all(),
+        "title": "Alumni",
+        "alumni": "active",
+    }
     return render(
-        request, "stac_iitmandi/alumni.html", {"title": "Alumni", "alumni": "active"}
-    )
+        request, "stac_iitmandi/alumni.html", context_)
 
 
 # rendering About page
 def about(request):
+    context_ = {
+        # "about": About.objects.all(),
+        "title": "About",
+        "about": "active",
+    }
     return render(
-        request, "stac_iitmandi/about.html", {"title": "About", "about": "active"}
-    )
+        request, "stac_iitmandi/about.html", context_)
 
 
 # rendering Photogallery page
 def photogallery(request):
+    context_ = {
+        # "photogallery": photogallery.objects.all(),
+        "title": "Photos",
+        "photos": "active",
+        "gallery_": "active",
+    }
     return render(
-        request,
-        "stac_iitmandi/photogallery.html",
-        {"title": "Photos", "photos": "active", "gallery_": "active"},
-    )
+        request, "stac_iitmandi/photogallery.html", context_)
 
 
 # rendering videogallery page
 def videogallery(request):
+    context_ = {
+        # "videogallery": videogallery.objects.all(),
+        "title": "Videos",
+        "videos": "active",
+        "gallery_": "active",
+    }
     return render(
-        request,
-        "stac_iitmandi/videogallery.html",
-        {"title": "Videos", "videos": "active", "gallery_": "active"},
-    )
+        request, "stac_iitmandi/videogallery.html", context_)
 
 
 # rendering team page
@@ -92,13 +116,10 @@ def team(request):
         "first": members.objects.filter(id__in=(40, 42, 41)),
         "second":members.objects.filter(id__in=(3, 1, 7, 4, 5, 10, 6, 12 ,11, 9, 13, 14 ,15, 21, 22)),
         "third": members.objects.filter(id__in=(20,30, 38, 33, 29, 39, 36, 37, 28, 26, 25, 24, 32, 31, 34, 35)),
-        "last":members.objects.filter(id__in=(16, 8,17,18,27)),
+        "last":members.objects.filter(id__in=(16, 8, 17, 18, 27)),
         
         "coordinators": coordinators.objects.all().order_by("batch"),
         "title": "Team",
         "team": "active",
     }
     return render(request, "stac_iitmandi/team.html", context_)
-
-
-"""40, 42, 41, 3, 1, 7, 4, 5, 10, 6, 12 ,11, 9, 13, 14 ,15, 21, 22, 20,30, 38, 33, 29, 39, 36, 37, 28, 26, 25, 24, 32, 31, 34, 35,16, 8,17,18,27"""
