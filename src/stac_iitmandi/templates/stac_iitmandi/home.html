@@ -6,47 +6,56 @@
   {% include '_header.html' %}
 {% endblock %}
 
-<div class="container bg-light mt-2">
-  <h1 class="title-a text-center">STAC | IIT MANDI</h1>
-  <p>{{introduction|safe}}</p>
+<div class="section-bg pt-3 pb-5 px-5">
+  <div class="container mt-2">
+    <h1 class="title-a text-center headingtext">STAC | IIT MANDI</h1>
+    <hr class="titlehr" />
+    <p class="pb-3">{{introduction|safe}}</p>
+  </div>
 </div>
 
   <!--Club Activities-->
-  <section id="slider" class="slider section-bg">
+  <section id="slider" class="slider pt-3 pb-5 px-5">
     <div class="container">
-      <div class="title-box text-center">
-        <h3 class="title-a">
+      <div class="title-box text-center pb-3">
+        <h3 class="title-a headingtext">
           What we Do As a Club?
         </h3>
+        <hr class="titlehr" />
         <div class="line-mf"></div>
       </div>
-      <div class="owl-carousel slider-carousel">
-        {% for activity in club_activity %}
-        <div class="col-lg-12 work-item">
-          <div class="work-box">
-            <a href="{{activity.image.url}}" data-gall="work-Gallery" title="{{activity.activity}}" class="venobox">
-              <div class="work-img">
-                  <img src="{{activity.image.url}}" alt="" class="img-fluid">
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <div class="owl-carousel slider-carousel">
+            {% for activity in club_activity %}
+            <div class="col-lg-12 work-item">
+              <div class="work-box">
+                <a href="{{activity.image.url}}" data-gall="work-Gallery" title="{{activity.activity}}" class="venobox">
+                  <div class="work-img">
+                      <img src="{{activity.image.url}}" alt="" class="img-fluid">
+                  </div>
+                </a>
+                <div class="work-info text-center p-2">
+                  <h4 class="subtitle-a">{{activity.activity}}</h4>
+                  {{activity.content|safe}}
+                </div>
               </div>
-            </a>
-            <div class="work-info text-center">
-              <h4 class="subtitle-a">{{activity.activity}}</h4>
-              <p class="font-italic">{{activity.content|safe}}</p>
             </div>
+            {% endfor %}
           </div>
         </div>
-        {% endfor %}
       </div>
     </div>
   </section>
 
   <!-- Events Intro -->
-  <section id="work" class="work">
+  <section id="work" class="work section-bg pt-3 pb-5 px-5">
     <div class="container">
-      <div class="title-box text-center">
-        <h3 class="title-a">
+      <div class="title-box text-center pb-3">
+        <h3 class="title-a headingtext">
           Events
         </h3>
+        <hr class="titlehr" />
       </div>
       <div class="row">
         {% for event in events_intro %}
@@ -58,11 +67,11 @@
           </a>
         </div>
         <div class="col-lg-6" style="padding-bottom: 2rem;">
-          <h4 class="text-center">{{event.topic}}</h4>
+          <h4 class="text-center p-2" style="font-weight: bold;">{{event.topic}}</h4>
           <p class="font-italic">{{event.description|safe}}</p>
           <div class="work-links">
             <!-- <a href="{{event.image.url}}" data-gall="work-Gallery" class="venobox" title="{{event.topic}}"><i class="fa fa-plus"></i></a> -->
-            <a href="#/" title="More Details"><i class="fa fa-link"></i></a>
+            <a href="#/" title="More Details">Know More <i class="fa fa-link"></i></a>
           </div>
         </div>
         {% endfor %}
@@ -70,38 +79,83 @@
     </div>
   </section>
 
-  <!--Future Projects-->
-  <section id="slider" class="slider section-bg">
+  <!--Competitions -->
+  <section id="work" class="work pt-3 pb-5 px-5">
     <div class="container">
-      <div class="title-box text-center">
-        <h3 class="title-a">
-          Future Prospects And Ongoing Projects
+      <div class="title-box text-center pb-3">
+        <h3 class="title-a headingtext">
+          Competitions held at STAC
         </h3>
+        <hr class="titlehr" />
         <div class="line-mf"></div>
       </div>
-      <div class="owl-carousel slider-carousel">
-        {% for project in future_projects %}
-        <div class="col-lg-12 work-item">
-          <div class="work-box">
-            <a href="{{project.image.url}}" data-gall="work-Gallery" title="{{project.topic}}" class="venobox">
-              <div class="work-img">
-                  <img src="{{project.image.url}}" alt="" class="img-fluid">
+      <div class="row work-container justify-content-md-center">
+        {% for competition in competitions %}
+        <div class="col-lg-4 col-md-6 work-item">
+          <div class="work-wrap">
+            <img src="{{competition.image.url}}" class="img-fluid" alt="">
+            <div class="work-info">
+              <h4>{{competition.topic}}</h4>
+              <p>{{competition.description|safe}}</p>
+              <div class="work-links">
+                <a href="{{competition.image.url}}" data-gall="work-Gallery" class="venobox" title="{{competition.topic}}"><i class="fa fa-plus"></i></a>
               </div>
-            </a>
-            <div class="work-info text-center">
-              <h4 class="subtitle-a">{{project.topic}}</h4>
-              <p class="font-italic">{{project.description|safe}}</p>
             </div>
           </div>
+          <div class="subtitle-a text-center"><h4 class="subtitle-a">{{competition.topic}}</h4></div>
         </div>
       {% endfor %}
       </div>
     </div>
   </section>
 
-<div class="bg-image acre">
-  <h2 class="text-center">Bronze Medal in Star Cluster Identifier hackathon, Inter IIT Tech Meet 2018
-    <a href="https://github.com/STAC-IITMandi/Star-Cluster-Identifier"><i class="fa fa-hand-pointer-o" aria-hidden="true"></i></a>
-  </h2>
+  <!--Future Projects-->
+  <section id="slider" class="slider section-bg pt-3 pb-5 px-5">
+    <div class="container">
+      <div class="title-box text-center pb-3">
+        <h3 class="title-a headingtext">
+          Future Prospects And Ongoing Projects
+        </h3>
+        <hr class="titlehr" />
+        <div class="line-mf"></div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="owl-carousel slider-carousel">
+            {% for project in future_projects %}
+            <div class="col-lg-12 work-item">
+              <div class="work-box">
+                <a href="{{project.image.url}}" data-gall="work-Gallery" title="{{project.topic}}" class="venobox">
+                  <div class="work-img">
+                      <img src="{{project.image.url}}" alt="" class="img-fluid">
+                  </div>
+                </a>
+                <div class="work-info text-center p-2">
+                  <h4 class="subtitle-a">{{project.topic}}</h4>
+                  <p class="font-italic">{{project.description|safe}}</p>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<div class="bg-image acre pb-5 px-3">
+  <div class="title-box text-center pb-3">
+    <h3 class="title-a headingtext">
+      Achievements
+    </h3>
+    <hr class="titlehr" />
+    <div class="line-mf"></div>
+  </div>
+  {% for ach in achievements %}
+    <h2 class="text-center py-2">
+      <i class="fa fa-star pb-2 px-1" aria-hidden="true" style="font-size: 23px;"></i> {{ ach.achievement }} 
+      <a href="{{ ach.link }}" target="_blank"><i class="fa fa-hand-pointer-o fa-sm" aria-hidden="true"></i></a>
+    </h2>
+  {% endfor %}
 </div>
 {% endblock content%}
