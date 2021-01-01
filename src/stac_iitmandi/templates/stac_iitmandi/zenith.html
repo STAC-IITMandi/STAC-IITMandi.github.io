@@ -2,25 +2,29 @@
 {% load static %}
 {% block content %}
 
-<div class="bg-image zenith-logo" style="color: #FFFF; padding:10%">
+<div class="ach-image zenith-logo" style="color: #FFFF; padding:10%">
     <img src="{% static 'stac_iitmandi/images/white-zenith.png' %}" alt="Zenith logo">
 </div>
-
-<div class="container bg-light mt-2">
+<div class="section-bg pt-3 pb-5 px-5">
+    <div class="container">
+        <div class="title-box">
+            <h3 class="title-a text-center">
+                Zenith - The Annual Intra-College Astrofest
+            </h3>
+            <hr class="titlehr" />
+            <div class="line-mf"></div>
+            <p class="font-italic"><br>Zenith is the annual intra-college Astrofest organised by the club. The astrofest saw a large participation with enthusiastic astrophysicists talking about various amazing topics ranging from Black Holes to Galaxies in "Aurora". Some Computer Science Enthusiasts did a week long hacking to create amazing applications. On the other side of campus of IIT Mandi, some students were participating in "Pandora's Box" to win cool prizes. This all was flavoured by some amazing talks by Bhavya Bhatt, Abhijeet Manhas and Shreyas Bapat.</p>
+        </div>
+    </div>
+</div>
     <!--Club Activities-->
     <section id="work" class="work">
         <div class="container">
-            <div class="title-box">
-                <h3 class="title-a text-center">
-                    Zenith - The Annual Intra-College Astrofest
-                </h3>
-                <div class="line-mf"></div>
-                <p class="font-italic"><br>Zenith is the annual intra-college Astrofest organised by the club. The astrofest saw a large participation with enthusiastic astrophysicists talking about various amazing topics ranging from Black Holes to Galaxies in "Aurora". Some Computer Science Enthusiasts did a week long hacking to create amazing applications. On the other side of campus of IIT Mandi, some students were participating in "Pandora's Box" to win cool prizes. This all was flavoured by some amazing talks by Bhavya Bhatt, Abhijeet Manhas and Shreyas Bapat.</p>
-            </div>
             <div class="title-box text-center">
                 <h3 class="title-a">
                     Competitions in Zenith
                 </h3>
+                <hr class="titlehr" />
                 <div class="line-mf"></div>
             </div>
             <div class="row justify-content-md-center">
@@ -32,9 +36,9 @@
                                 <img src="{{event.image.url}}" alt="{{event.name}}" class="img-fluid">
                             </div>
                         </a>
-                        <div class="member-info text-center">
+                        <div class="member-info text-center work-info">
                             <h4>{{ event.name }}</h4>
-                            <div class="font-italic">{{event.description|safe}}</div>
+                            <p class="font-italic">{{event.description|safe}}</p>
                             <!-- <a href="{{event.problem_statement}}" target="_blank">Problem Statement</a> -->
                         </div>
                     </div>
@@ -43,6 +47,7 @@
             </div>
         </div>
     </section>
-</div>
+
 {% endblock %}
+
 

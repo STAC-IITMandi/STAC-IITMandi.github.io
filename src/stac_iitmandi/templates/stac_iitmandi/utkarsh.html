@@ -3,24 +3,31 @@
 {% block content %}
 
 <div class="bg-image utkarsh-logo" style="color: #FFFF; padding:10%">
-    <img src="" alt="">
+    <img src="{% static 'stac_iitmandi/images/utkarsh.png' %}" alt="Utkarsh-logo">
+</div>
+
+<div class="section-bg title-box">
+    <div class="container">
+        <div class="title-box">
+            <h3 class="title-a text-center">
+                Utkarsh - The Intra-College Technical Fest
+            </h3>
+            <hr class="titlehr" />
+            <div class="line-mf"></div>
+            <p class="font-italic"><br>Utkarsh is the intra-college technical fest of IIT Mandi. STAC organizes some events in the fest every year.</p>
+        </div>
+    </div>
 </div>
 
 <div class="container bg-light mt-2">
     <!--Club Activities-->
     <section id="work" class="work">
         <div class="container">
-            <div class="title-box">
-                <h3 class="title-a text-center">
-                    Utkarsh - The Intra-College Technical Fest
-                </h3>
-                <div class="line-mf"></div>
-                <p class="font-italic"><br>Utkarsh is the intra-college technical fest of IIT Mandi. STAC organizes some events in the fest every year.</p>
-            </div>
             <div class="title-box text-center">
                 <h3 class="title-a">
                     Competitions in Utkarsh
                 </h3>
+                <hr class="titlehr" />
             </div>
             <div class="row justify-content-md-center">
                 {% for event in events %}
@@ -44,4 +51,3 @@
     </section>
 </div>
 {% endblock %}
-
