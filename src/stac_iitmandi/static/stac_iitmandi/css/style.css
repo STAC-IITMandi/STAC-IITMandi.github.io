@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
-    font-family: 'Raleway', sans-serif;}
+    font-family: "Raleway", sans-serif;
+}
 
 .shift-d {
     padding-top: 10%;
@@ -11,11 +12,11 @@ li {
 }
 
 .headingtext {
-    font-family: 'Noto Sans JP', sans-serif;
+    font-family: "Noto Sans JP", sans-serif;
 }
 
 .titlehr {
-    background: linear-gradient(to right, #f9c679, #005c95,#92008d, #005c95, #f9c679);
+    background: linear-gradient(to right, #f9c679, #005c95, #92008d, #005c95, #f9c679);
     border-radius: 25%;
     width: 50%;
     height: 2px;
@@ -36,7 +37,23 @@ li {
 }
 
 .about-image {
-    background-image: url(../images/galaxy.jpg);
+    background-image: url(../images/about.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+}
+
+.pleiades-image {
+    background-image: url(../images/pleiades.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+}
+
+.ach-image {
+    background-image: url(../images/ach.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -50,6 +67,21 @@ li {
 }
 
 .zenith-logo img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    max-width: 530px;
+}
+
+.utkarsh-logo {
+    position: relative;
+    width: 100%;
+}
+
+.utkarsh-logo img {
     position: absolute;
     top: 0;
     right: 0;
@@ -715,7 +747,7 @@ li {
 
     /*------------------Navbar-toggle-button------------------------*/
     .navbar-toggler {
-        margin-left: 75%;
+        margin-left: 67%;
     }
 
     .navbar-toggler:hover,
