@@ -4,6 +4,7 @@ from .models import (
     coordinators,
     club_activity,
     homepage,
+    achievements,
     zenithEvents,
     utkarshEvents,
     Astrax,
@@ -24,8 +25,8 @@ def home(request):
         "events_intro": homepage.objects.filter(id__in=(6, 5, 7)),
         "future_projects": homepage.objects.filter(id__in=(11, 10, 9, 12, 13, 14)),
         "introduction": introduction[0].description,
-        "title": "Home",
         "home": "active",
+        "achievements": achievements.objects.all(),
     }
     return render(request, "stac_iitmandi/home.html", context_)
 
