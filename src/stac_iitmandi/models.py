@@ -123,6 +123,15 @@ class homepage(models.Model):
             img.save(self.image.path)
 
 
+# Achievements #
+class achievements(models.Model):
+    achievement = models.CharField(max_length=150, unique=True)
+    link = models.CharField(max_length=150, default="#")
+
+    def __str__(self):
+        return self.achievement
+
+
 # Astrax
 class Astrax(models.Model):
     name = models.CharField(default="", max_length=50, unique=True)

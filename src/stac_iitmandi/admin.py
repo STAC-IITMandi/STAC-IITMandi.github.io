@@ -4,6 +4,7 @@ from .models import (
     coordinators,
     club_activity,
     homepage,
+    achievements,
     zenithEvents,
     utkarshEvents,
     Astrax,
@@ -19,6 +20,7 @@ admin.site.register(core_team)
 admin.site.register(coordinators)
 admin.site.register(club_activity)
 admin.site.register(homepage)
+admin.site.register(achievements)
 admin.site.register(zenithEvents)
 admin.site.register(utkarshEvents)
 admin.site.register(Astrax)
