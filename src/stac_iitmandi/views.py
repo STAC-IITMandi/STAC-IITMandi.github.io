@@ -71,7 +71,7 @@ def pleiades(request):
         "pleiades": "active",
         "events_": "active",
     }
-    return render(request, "stac_iitmandi/alumni.html", context_)
+    return render(request, "stac_iitmandi/pleiades.html", context_)
 
 
 # rendering Alumni page
