@@ -56,11 +56,18 @@ $(function () {
         });
     });
 
-  // slider carousel (uses the Owl Carousel library)
-  $(".slider-carousel").owlCarousel({
-    autoplay: true,
-    dots: true,
-    loop: true,
-    items: 1
-  });
+    // hide icon if href is empty (team page)
+    $("div.social a").each(function() {
+        if ($(this).attr("href") == "") {
+            $(this).hide();
+        }
+    });
+
+    // slider carousel (uses the Owl Carousel library)
+    $(".slider-carousel").owlCarousel({
+        autoplay: true,
+        dots: true,
+        loop: true,
+        items: 1
+    });
 });(jQuery);
