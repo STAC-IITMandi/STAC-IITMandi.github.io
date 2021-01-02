@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 * {
     box-sizing: border-box;
     font-family: "Raleway", sans-serif;
@@ -445,6 +449,20 @@ li {
 }
 
 /*-------------Image overlay text home page--------------*/
+
+.scroll-down {
+    color: white;
+    position: absolute;
+    bottom: 4rem;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.scroll-down:hover {
+    font-size: 1.1rem;
+    text-decoration: none;
+}
+
 .work .work-item {
     margin-bottom: 30px;
 }
