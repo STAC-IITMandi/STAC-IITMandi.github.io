@@ -207,21 +207,11 @@ class photogallery(models.Model):
 
 # videogallery
 class videogallery(models.Model):
-    name = models.CharField(default="", max_length=50, unique=True)
     link = models.URLField(default="#/", blank=True, null=False)
     description = RichTextField(blank=True, null=True)
-    image = models.ImageField(default="default.jpg", upload_to="Gallery/Videogallery")
-
     def __str__(self):
-        return self.name
+        return self.link
 
-    def save(self):
-        super().save()
-
-        img = Image.open(self.image.path)
-        output_size = (1280, 720)
-        img.thumbnail(output_size)
-        img.save(self.image.path)
 
 
 # Alumni
