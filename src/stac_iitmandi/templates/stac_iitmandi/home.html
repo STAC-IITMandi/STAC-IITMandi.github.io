@@ -6,7 +6,7 @@
   {% include '_header.html' %}
 {% endblock %}
 
-<div class="section-bg pt-3 pb-5 px-5" id="introduction">
+<div class="section-bg pt-5 pb-5 px-5" id="introduction">
   <div class="container mt-2">
     <h1 class="title-a text-center headingtext">STAC | IIT MANDI</h1>
     <hr class="titlehr" />
@@ -59,12 +59,8 @@
       </div>
       <div class="row">
         {% for event in events_intro %}
-        <div class="col-lg-4 work-box">
-          <a href="{{event.image.url}}" data-gall="work-Gallery" title="{{project.topic}}" class="venobox">
-            <div class="work-img">
-                <img src="{{event.image.url}}" alt="" class="img-fluid">
-            </div>
-          </a>
+        <div class="col-lg-4">
+          <img src="{{event.image.url}}" alt="" class="img-fluid">
         </div>
         <div class="col-lg-6" style="padding-bottom: 2rem;">
           <h4 class="text-center p-2" style="font-weight: bold;">{{event.topic}}</h4>

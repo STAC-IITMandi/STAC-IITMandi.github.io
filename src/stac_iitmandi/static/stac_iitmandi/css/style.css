@@ -1,5 +1,5 @@
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 * {
@@ -64,28 +64,13 @@ li {
     background-position: center center;
 }
 
-.zenith-logo {
+.size-logo {
     position: relative;
     width: 100%;
     height: calc(100% - 56px);
 }
 
-.zenith-logo img {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: auto;
-    max-width: 530px;
-}
-
-.utkarsh-logo {
-    position: relative;
-    width: 100%;
-}
-
-.utkarsh-logo img {
+.size-logo img {
     position: absolute;
     top: 0;
     right: 0;
@@ -765,7 +750,7 @@ li {
 
     /*------------------Navbar-toggle-button------------------------*/
     .navbar-toggler {
-        margin-left: 67%;
+        margin-left: 75%;
     }
 
     .navbar-toggler:hover,
