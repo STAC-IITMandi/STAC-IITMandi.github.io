@@ -13,6 +13,7 @@ from .models import (
     videogallery,
     Alumni,
     Pleiades,
+    Links,
 )
 
 
@@ -27,50 +28,63 @@ def home(request):
         "introduction": introduction[0].description,
         "home": "active",
         "achievements": achievements.objects.all(),
+        # "astrax": Links.objects.ffilter(linkname="astrax"),
+        # "pleiades": Links.objects.filter(linkname="pleiades"),
+        # "utkarsh": Links.objects.filter(linkname="utkarsh"),
+        # "zenith": Links.objects.filter(linkname="zenith"),
+        "links": Links.objects.all(),
     }
     return render(request, "stac_iitmandi/home.html", context_)
 
 
 # rendering ASTRAX page
 def astrax(request):
+    astrax_intro = homepage.objects.filter(id__in=(6,))
     context_ = {
         # "events": Astrax.objects.all(),
         "title": "Astrax",
         "astrax": "active",
         "events_": "active",
+        "astrax_intro": astrax_intro[0].description,
     }
     return render(request, "stac_iitmandi/astrax.html", context_)
 
 
 # rendering Utkarsh page
 def utkarsh(request):
+    utkarsh_intro = utkarshEvents.objects.filter(id__in=(4,))
     context_ = {
-        "events": utkarshEvents.objects.all(),
+        "events": utkarshEvents.objects.filter(id__in=(1, 2)),
         "title": "Utkarsh",
         "utkarsh": "active",
         "events_": "active",
+        "utkarsh_intro": utkarsh_intro[0].description,
     }
     return render(request, "stac_iitmandi/utkarsh.html", context_)
 
 
 # rendering Zenith page
 def zenith(request):
+    zenith_intro = zenithEvents.objects.filter(id__in=(10,))
     context_ = {
-        "events": zenithEvents.objects.all(),
+        "events": zenithEvents.objects.filter(id__in=(4, 5, 6, 7, 8, 9)),
         "title": "Zenith",
         "zenith": "active",
         "events_": "active",
+        "zenith_intro": zenith_intro[0].description,
     }
     return render(request, "stac_iitmandi/zenith.html", context_)
 
 
 # rendering pleiades page
 def pleiades(request):
+    pleiades_intro = Pleiades.objects.filter(id__in=(1,))
     context_ = {
-        "events": Pleiades.objects.all(),
+        "events": Pleiades.objects.filter(id__in=(2,)),
         "title": "Pleiades",
         "pleiades": "active",
         "events_": "active",
+        "pleiades_intro": pleiades_intro[0].description,
     }
     return render(request, "stac_iitmandi/pleiades.html", context_)
 
@@ -96,9 +110,9 @@ def about(request):
 
 
 # rendering Photogallery page
-def photogallery(request):
+def photogallery_(request):
     context_ = {
-        # "photogallery": photogallery.objects.all(),
+        "photogallery": photogallery.objects.all(),
         "title": "Photos",
         "photos": "active",
         "gallery_": "active",
@@ -107,7 +121,7 @@ def photogallery(request):
 
 
 # rendering videogallery page
-def videogallery(request):
+def videogallery_(request):
     context_ = {
         "videogallery": videogallery.objects.all(),
         "title": "Videos",

@@ -2,18 +2,19 @@
 {% load static %}
 {% block content %}
 
-<div class="pleiades-image size-logo" style="color: #FFFF; padding:10%">
-    <!-- <img src="{% static 'stac_iitmandi/images/pleiades.png' %}" alt=""> -->
+<div class="pleiades-image size-logo" style="color: #FFFF; padding:5%">
+    <div><img src="{% static 'stac_iitmandi/images/Logowhite.png' %}" alt="Zenith logo" style="height:9rem; padding-right: 15rem;"><p class="title-a text-center"style="padding-left: 15rem; color: #1de9b6; padding-top: 2.5rem; font-size: 3rem;"> | PLEIADES</p><hr class="titlehr" /></div>
 </div>
+
 <div class="section-bg title-box">
     <div class="container">
-        <div class="title-box">
-            <h3 class="title-a text-center">
+        <div class="title-box text-center">
+            <h3 class="title-a">
                 Pleiades
             </h3>
             <hr class="titlehr" />
             <div class="line-mf"></div>
-            <p class="font-italic"><br>Pleiades is a series of astrothons organized by STAC through out the year. Each astrothon is named after the seven stars of Pleiades. </p>
+            <p class="font-italic"><br>{{pleiades_intro|safe}}</p>
         </div>
     </div>
 </div>

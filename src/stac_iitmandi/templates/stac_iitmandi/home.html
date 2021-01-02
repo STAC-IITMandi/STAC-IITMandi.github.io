@@ -59,17 +59,20 @@
       </div>
       <div class="row">
         {% for event in events_intro %}
-        <div class="col-lg-4">
-          <img src="{{event.image.url}}" alt="" class="img-fluid">
-        </div>
-        <div class="col-lg-6" style="padding-bottom: 2rem;">
-          <h4 class="text-center p-2" style="font-weight: bold;">{{event.topic}}</h4>
-          <p class="font-italic">{{event.description|safe}}</p>
-          <div class="work-links">
-            <!-- <a href="{{event.image.url}}" data-gall="work-Gallery" class="venobox" title="{{event.topic}}"><i class="fa fa-plus"></i></a> -->
-            <a href="#/" title="More Details">Know More <i class="fa fa-link"></i></a>
-          </div>
-        </div>
+          {% for link in links %}
+            {% if link.linkname == event.topic %}
+            <div class="col-lg-4">
+              <img src="{{event.image.url}}" alt="" class="img-fluid" style="height: 12rem;">
+            </div>
+            <div class="col-lg-6" style="padding-bottom: 2rem;">
+              <a href="{{link.link}}"><h4 class="text-center p-2" style="font-weight: bold; color: black;">{{event.topic}}</h4></a>
+              <p class="font-italic">{{event.description|safe}}</p>
+              <div class="work-links">
+                <a href="{{link.link}}" title="More Details">Know More <i class="fa fa-link"></i></a>
+              </div>
+            </div>
+            {% endif %}
+          {% endfor %}
         {% endfor %}
       </div>
     </div>
