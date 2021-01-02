@@ -5,9 +5,11 @@
         <nav class="navbar navbar-b navbar-trans navbar-expand-md fixed-top" id="mainNav">
             <a class="navbar-brand logo mr-auto" href="{% url 'stac-home' %}"><img src="{% static 'stac_iitmandi/images/STAClogo.png' %}" class="img-fluid" alt="STAC"></a>
             <div class="container">
-                <button class="navbar-toggler toggle-button" type="button" data-toggle="collapse" data-target="#navbarDefault" aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
-                    <div class="animated-icon"><span></span><span></span><span></span></div>
-                </button>
+                <div class="ml-auto mr-5">
+                    <button class="navbar-toggler toggle-button" type="button" data-toggle="collapse" data-target="#navbarDefault" aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
+                        <div class="animated-icon"><span></span><span></span><span></span></div>
+                    </button>
+                </div>
                 <div class="navbar-collapse collapse"  id="navbarDefault">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item {{home}}">
