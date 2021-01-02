@@ -109,7 +109,7 @@ def photogallery(request):
 # rendering videogallery page
 def videogallery(request):
     context_ = {
-        # "videogallery": videogallery.objects.all(),
+        "videogallery": videogallery.objects.all(),
         "title": "Videos",
         "videos": "active",
         "gallery_": "active",
