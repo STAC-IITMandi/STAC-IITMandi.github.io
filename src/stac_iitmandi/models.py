@@ -60,8 +60,8 @@ class club_activity(models.Model):
         super().save()
 
         img = Image.open(self.image.path)
-        if img.height > 1280 or img.width > 720:
-            output_size = (1280, 720)
+        if img.height > 720 or img.width > 1080:
+            output_size = (720, 1080)
             img.thumbnail(output_size)
             img.save(self.image.path)
 
@@ -80,7 +80,7 @@ class zenithEvents(models.Model):
         super().save()
 
         img = Image.open(self.image.path)
-        output_size = (1280, 720)
+        output_size = (720, 1080)
         img.thumbnail(output_size)
         img.save(self.image.path)
 
@@ -99,7 +99,7 @@ class utkarshEvents(models.Model):
         super().save()
 
         img = Image.open(self.image.path)
-        output_size = (1280, 720)
+        output_size = (720, 1080)
         img.thumbnail(output_size)
         img.save(self.image.path)
 
@@ -117,8 +117,8 @@ class homepage(models.Model):
         super().save()
 
         img = Image.open(self.image.path)
-        if img.height > 1280 or img.width > 720:
-            output_size = (1280, 720)
+        if img.height > 720 or img.width > 1080:
+            output_size = (720, 1080)
             img.thumbnail(output_size)
             img.save(self.image.path)
 
@@ -145,7 +145,7 @@ class Astrax(models.Model):
         super().save()
 
         img = Image.open(self.image.path)
-        output_size = (1280, 720)
+        output_size = (720, 1080)
         img.thumbnail(output_size)
         img.save(self.image.path)
 
@@ -164,7 +164,7 @@ class Pleiades(models.Model):
         super().save()
 
         img = Image.open(self.image.path)
-        output_size = (1280, 720)
+        output_size = (720, 1080)
         img.thumbnail(output_size)
         img.save(self.image.path)
 
@@ -182,7 +182,7 @@ class About(models.Model):
         super().save()
 
         img = Image.open(self.image.path)
-        output_size = (1280, 720)
+        output_size = (720, 1080)
         img.thumbnail(output_size)
         img.save(self.image.path)
 
@@ -200,18 +200,19 @@ class photogallery(models.Model):
         super().save()
 
         img = Image.open(self.image.path)
-        output_size = (1280, 720)
+        output_size = (720, 1080)
         img.thumbnail(output_size)
         img.save(self.image.path)
 
 
 # videogallery
 class videogallery(models.Model):
+    videoname = models.CharField(default="", max_length=50, unique=True)
     link = models.URLField(default="#/", blank=True, null=False)
     description = RichTextField(blank=True, null=True)
-    def __str__(self):
-        return self.link
 
+    def __str__(self):
+        return self.videoname
 
 
 # Alumni
@@ -231,6 +232,15 @@ class Alumni(models.Model):
         super().save()
 
         img = Image.open(self.image.path)
-        output_size = (1280, 720)
+        output_size = (720, 1080)
         img.thumbnail(output_size)
         img.save(self.image.path)
+
+
+# Links to website#
+class Links(models.Model):
+    linkname = models.CharField(max_length=50, unique=True)
+    link = models.CharField(max_length=150, default="#/")
+
+    def __str__(self):
+        return self.linkname

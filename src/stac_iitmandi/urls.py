@@ -8,8 +8,8 @@ urlpatterns = [
     path("utkarsh", views.utkarsh, name="utkarsh"),
     path("about", views.about, name="about"),
     path("alumni", views.alumni, name="alumni"),
-    path("photogallery", views.photogallery, name="photogallery"),
-    path("videogallery", views.videogallery, name="videogallery"),
+    path("photogallery", views.photogallery_, name="photogallery"),
+    path("videogallery", views.videogallery_, name="videogallery"),
     path("team", views.team, name="team"),
     path("pleiades", views.pleiades, name="pleiades"),
 ]

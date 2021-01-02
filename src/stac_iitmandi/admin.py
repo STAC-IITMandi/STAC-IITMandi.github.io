@@ -13,6 +13,7 @@ from .models import (
     Alumni,
     videogallery,
     Pleiades,
+    Links,
 )
 
 # register models
@@ -29,3 +30,4 @@ admin.site.register(videogallery)
 admin.site.register(About)
 admin.site.register(Alumni)
 admin.site.register(Pleiades)
+admin.site.register(Links)

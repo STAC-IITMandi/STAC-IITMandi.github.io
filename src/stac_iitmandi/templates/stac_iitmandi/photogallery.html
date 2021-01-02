@@ -2,21 +2,33 @@
 {% load static %}
 
 {% block content %}
-<div class="container bg-light mt-2 shift-d">
+
+<div class="ach-image size-logo" style="color: #FFFF; padding:4%">
+    <div><img src="{% static 'stac_iitmandi/images/Logowhite.png' %}" alt="Zenith logo" style="height:9rem; padding-right: 15rem;"><p class="title-a text-center"style="padding-left: 15rem; padding-top: 2.5rem; font-size: 3rem;"> |  PHOTOS</p><hr class="titlehr" /></div>
+</div>
+
+<div class="section-bg">
+    <div class="container">
+        <div class="title-box text-center">
+            <h3 class="title-a">
+                Gallery
+            </h3>
+            <hr class="titlehr" />
+            <div class="line-mf"></div>
+            <p>STAC PHOTOS</p>
+        </div>
+    </div>
+</div>
+<div class="container bg-light mt-2">
     <!--Gallery Section-->
-    <section id="gallery" class="gallery">
+    <section id="gallery" class="gallery section-bg">
         <div class="container">
-            <div class="title-a text-center">
-                <h2>Gallery</h2>
-                <div class="line-mf"></div>
-                <p>STAC PHOTOS</p>
-            </div>
             <div class="row no-gutters">
                 {% for photo in photogallery %}
-                <div class="col-lg-3 col-md-4">
+                <div class="col-lg-4 col-md-6">
                     <div class="gallery-item">
-                        <a href="{{photo.image.url}}" class="venobox" data-gall="gallery-item">
-                            <img src="{{photo.image.url}}" alt="" class="img-fluid">
+                        <a href="{{photo.image.url}}" class="venobox" data-gall="gallery-item" title="{{photo.name}}">
+                            <img src="{{photo.image.url}}" alt="{{photo.name}}" class="img-fluid">
                         </a>
                     </div>
                 </div>

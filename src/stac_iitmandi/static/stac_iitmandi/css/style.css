@@ -80,6 +80,36 @@ li {
     max-width: 530px;
 }
 
+.astrax-logo {
+    position: relative;
+    height: 2rem;
+}
+
+.astrax-logo img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    max-width: 20%;
+}
+
+.utkarsh-logo {
+    position: relative;
+    height: 2rem;
+}
+
+.utkarsh-logo img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 30rem;
+}
+
 .section-bg {
     background-color: #f4fbfe;
 }
