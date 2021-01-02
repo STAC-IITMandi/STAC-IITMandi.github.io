@@ -6,7 +6,7 @@
   {% include '_header.html' %}
 {% endblock %}
 
-<div class="section-bg pt-3 pb-5 px-5">
+<div class="section-bg pt-3 pb-5 px-5" id="introduction">
   <div class="container mt-2">
     <h1 class="title-a text-center headingtext">STAC | IIT MANDI</h1>
     <hr class="titlehr" />
@@ -121,7 +121,7 @@
     </div>
     {% for ach in achievements %}
       <h2 class="text-center py-2">
-        <i class="fa fa-star pb-2 px-1" aria-hidden="true" style="font-size: 23px;"></i> {{ ach.achievement }} 
+        <i class="fa fa-star pb-2 px-1" aria-hidden="true" style="font-size: 23px;"></i> {{ ach.achievement }}
         <a href="{{ ach.link }}" target="_blank"><i class="fa fa-hand-pointer-o fa-sm" aria-hidden="true"></i></a>
       </h2>
     {% endfor %}
