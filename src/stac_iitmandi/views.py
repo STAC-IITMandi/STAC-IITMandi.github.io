@@ -101,10 +101,11 @@ def alumni(request):
 
 # rendering About page
 def about(request):
+    about_intro = About.objects.filter(id__in=(1,))
     context_ = {
-        # "about": About.objects.all(),
         "title": "About",
         "about": "active",
+        "about_intro" : about_intro[0].description,
     }
     return render(request, "stac_iitmandi/about.html", context_)
 
