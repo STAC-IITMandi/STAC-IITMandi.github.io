@@ -173,10 +173,10 @@ class Pleiades(models.Model):
 class About(models.Model):
     content = models.CharField(default="", max_length=50, unique=True)
     description = RichTextField(blank=True, null=True)
-    image = models.ImageField(default="default.jpg", upload_to="Astrax")
+    image = models.ImageField(default="default.jpg", upload_to="About")
 
     def __str__(self):
-        return self.name
+        return self.content
 
     def save(self):
         super().save()
