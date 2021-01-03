@@ -7,7 +7,7 @@ from .models import (
     achievements,
     zenithEvents,
     utkarshEvents,
-    Astrax,
+    # Astrax,
     About,
     photogallery,
     videogallery,
@@ -105,7 +105,7 @@ def about(request):
     context_ = {
         "title": "About",
         "about": "active",
-        "about_intro" : about_intro[0].description,
+        "about_intro": about_intro[0].description,
     }
     return render(request, "stac_iitmandi/about.html", context_)
 
