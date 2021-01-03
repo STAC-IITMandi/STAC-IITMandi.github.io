@@ -81,34 +81,90 @@ li {
     max-width: 530px;
 }
 
-.astrax-logo {
-    position: relative;
-    height: 2rem;
+@media (max-width: 768px) {
+    .nav_logo {
+        height: 10%;
+    }
+
+    .top-header {
+        height: 12rem;
+    }
+    .header-pad {
+        padding: 20%;
+    }
+
+    .astrax-logo {
+        position: relative;
+        height: 2rem;
+    }
+
+    .astrax-logo img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        padding-top: 3rem;
+        max-width: 30%;
+    }
+
+    .utkarsh-logo {
+        position: relative;
+        height: 2rem;
+    }
+
+    .utkarsh-logo img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        max-width: 50%;
+        padding-top: 2rem;
+    }
 }
 
-.astrax-logo img {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: auto;
-    max-width: 20%;
-}
+@media (min-width: 1024px) {
+    .nav_logo {
+        height: 100%;
+    }
 
-.utkarsh-logo {
-    position: relative;
-    height: 2rem;
-}
+    .astrax-logo {
+        position: relative;
+        height: 2rem;
+    }
 
-.utkarsh-logo img {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: auto;
-    width: 30rem;
+    .astrax-logo img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        padding-top: 3rem;
+        max-width: 15%;
+    }
+
+    .utkarsh-logo {
+        position: relative;
+        height: 2rem;
+    }
+
+    .utkarsh-logo img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        width: 30rem;
+    }
+
+    .header-pad {
+        padding: 10%;
+    }
 }
 
 .section-bg {
@@ -137,13 +193,26 @@ li {
     color: rgb(251, 245, 245);
 }
 
-.navbar-brand {
-    position: relative;
-    margin-top: auto;
-    margin-bottom: auto;
-    width: 10rem;
-    bottom: 2.3rem;
-    height: 8px;
+@media (min-width: 768px) {
+    .navbar-brand {
+        position: relative;
+        margin-top: auto;
+        margin-bottom: auto;
+        width: 8%;
+        bottom: 2.3rem;
+        height: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-brand {
+        position: relative;
+        margin-top: auto;
+        margin-bottom: auto;
+        width: 40%;
+        bottom: 1.8rem;
+        height: 10px;
+    }
 }
 
 .navbar-b {
@@ -357,9 +426,9 @@ li {
 
 /*----------VideoGallery----------------*/
 .video .video-box {
-    background: url(../images/galaxy_bg.jpg) center center no-repeat;
     background-size: cover;
-    min-height: 500px;
+    min-height: 300px;
+    border-radius: 50%;
 }
 
 @media (min-width: 1200px) {
@@ -368,102 +437,6 @@ li {
         margin-right: -15px;
     }
 }
-
-.video .play-btn {
-    width: 94px;
-    height: 94px;
-    background: radial-gradient(#49b5e7 50%, rgba(73, 181, 231, 0.4) 52%);
-    border-radius: 50%;
-    display: block;
-    position: absolute;
-    left: calc(50% - 47px);
-    top: calc(50% - 47px);
-    overflow: hidden;
-}
-
-.video .play-btn::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translateX(-40%) translateY(-50%);
-    width: 0;
-    height: 0;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-    border-left: 15px solid #fff;
-    z-index: 100;
-    transition: all 400ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
-}
-
-.video .play-btn::before {
-    content: "";
-    position: absolute;
-    width: 120px;
-    height: 120px;
-    -webkit-animation-delay: 0s;
-    animation-delay: 0s;
-    -webkit-animation: pulsate-btn 2s;
-    animation: pulsate-btn 2s;
-    -webkit-animation-direction: forwards;
-    animation-direction: forwards;
-    -webkit-animation-iteration-count: infinite;
-    animation-iteration-count: infinite;
-    -webkit-animation-timing-function: steps;
-    animation-timing-function: steps;
-    opacity: 1;
-    border-radius: 50%;
-    border: 5px solid rgba(73, 181, 231, 0.7);
-    top: -15%;
-    left: -15%;
-    background: rgba(198, 16, 0, 0);
-}
-
-.video .play-btn:hover::after {
-    border-left: 15px solid #49b5e7;
-    transform: scale(20);
-}
-
-.video .play-btn:hover::before {
-    content: "";
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translateX(-40%) translateY(-50%);
-    width: 0;
-    height: 0;
-    border: none;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-    border-left: 15px solid #fff;
-    z-index: 200;
-    -webkit-animation: none;
-    animation: none;
-    border-radius: 0;
-}
-
-@-webkit-keyframes pulsate-btn {
-    0% {
-        transform: scale(0.6, 0.6);
-        opacity: 1;
-    }
-    100% {
-        transform: scale(1, 1);
-        opacity: 0;
-    }
-}
-
-@keyframes pulsate-btn {
-    0% {
-        transform: scale(0.6, 0.6);
-        opacity: 1;
-    }
-    100% {
-        transform: scale(1, 1);
-        opacity: 0;
-    }
-}
-
 /*-------------Image overlay text home page--------------*/
 
 .scroll-down {
