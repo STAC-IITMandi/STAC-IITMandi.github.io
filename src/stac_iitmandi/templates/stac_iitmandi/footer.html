@@ -1,14 +1,27 @@
+{% load static %}
+
 <footer class="section-bg mt-3 pt-3 rounded">
-  <div class="text-dark text-center px-3 footer-links">
-    <a class="p-3 text-dark" target="_blank" href="https://www.facebook.com/stacIITMandi/"><i class="fa fa-facebook-f small"></i></a>
-    <a class="p-3 text-dark" target="_blank" href="https://github.com/STAC-IITMandi"><i class="fa fa-github"></i></a>
-    <a class="p-3 text-dark" target="_blank" href="https://instagram.com/stac_iitmandi"><i class="fa fa-instagram"></i></a>
-    <a class="p-3 text-dark" target="_blank" href="https://www.youtube.com/channel/STACIITMandi"><i class="fa fa-youtube-play"></i></a>
-    <a class="p-3 text-dark" target="_blank" href="https://twitter.com/stac_iitmandi"><i class="fa fa-twitter"></i></a>
-    <a class="p-3 text-dark" href="mailto:stac@students.iitmandi.ac.in"><i class="fa fa-envelope"></i></a>
-  </div>
-  <div class="address text-center py-1">
-    <i class="fa fa-map-marker"></i> Gravity, SAC-001, North Campus, IIT Mandi, Kamand (H.P.) - 175005
+  <div class="row">
+    <div class="col-lg-4 text-center">
+      <img src="{% static 'stac_iitmandi/images/STAClogo.png' %}" class="m-auto" alt="STAC IIT Mandi" style="width: 40%;">
+    </div>
+    <div class="col-lg-4 text-center">
+      <div class="px-3 pt-2 pb-1 text-dark text-center font-weight-bold">Follow us</div>
+      <div class="text-dark text-center px-3 pb-2 footer-links">
+        <a class="p-3 text-dark" target="_blank" href="https://www.facebook.com/stacIITMandi/"><i class="fa fa-facebook-f small"></i></a>
+        <a class="p-3 text-dark" target="_blank" href="https://github.com/STAC-IITMandi"><i class="fa fa-github"></i></a>
+        <a class="p-3 text-dark" target="_blank" href="https://instagram.com/stac_iitmandi"><i class="fa fa-instagram"></i></a>
+        <a class="p-3 text-dark" target="_blank" href="https://www.youtube.com/channel/STACIITMandi"><i class="fa fa-youtube-play"></i></a>
+        <a class="p-3 text-dark" target="_blank" href="https://twitter.com/stac_iitmandi"><i class="fa fa-twitter"></i></a>
+      </div>
+    </div>
+    <div class="col-lg-4 text-dark text-center pb-2">
+      <div class="address text-center py-2">
+        <i class="fa fa-map-marker text-dark p-3"></i> Gravity, SAC-001, North Campus, IIT Mandi, Kamand (H.P.) - 175005
+        <br>
+        <a class="p-3 text-dark" href="mailto:stac@students.iitmandi.ac.in"><i class="fa fa-envelope p-3"></i>stac@students.iitmandi.ac.in</a>
+      </div>
+    </div>
   </div>
   <!-- Copyright -->
   <div class="section-bg copyright text-center py-3"> &copy; <script>
