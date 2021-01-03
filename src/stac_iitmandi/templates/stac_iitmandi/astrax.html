@@ -30,19 +30,18 @@
             </div>
             <div class="row justify-content-md-center">
                 {% for event in events %}
-                <div class="col-lg-4 col-md-6">
-                    <div class="work-box">
-                        <a href="{{event.image.url}}" data-gall="astraxGallery" title="{{event.name}}" class="venobox">
-                            <div class="work-img">
-                                <img src="{{event.image.url}}" alt="{{event.name}}" class="img-fluid">
-                            </div>
-                        </a>
-                        <div class="member-info text-center work-info">
-                            <h4>{{ event.name }}</h4>
-                            <div class="font-italic">{{event.description|safe}}</div>
-                            <!-- <a href="{{event.problem_statement}}" target="_blank">Problem Statement</a> -->
+                <div class="col-lg-4 col-md-6 work-item">
+                    <div class="work-wrap">
+                    <img src="{{event.image.url}}" class="img-fluid" alt="">
+                    <div class="work-info">
+                        <h4>{{event.name}}</h4>
+                        <p class="font-italic">{{event.description|safe}}</p>
+                        <div class="work-links">
+                        <a href="{{event.image.url}}" data-gall="work-Gallery" class="venobox" title="{{event.name}}"><i class="fa fa-plus"></i></a>
                         </div>
                     </div>
+                    </div>
+                    <div class="subtitle-a text-center"><h4 class="subtitle-a">{{event.name}}</h4></div>
                 </div>
                 {% endfor %}
             </div>

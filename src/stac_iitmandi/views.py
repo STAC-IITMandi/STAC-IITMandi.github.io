@@ -41,7 +41,7 @@ def home(request):
 def astrax(request):
     astrax_intro = homepage.objects.filter(id__in=(6,))
     context_ = {
-        # "events": Astrax.objects.all(),
+        # "events": Astrax.objects.all().exclude(id__in=(6,)),
         "title": "Astrax",
         "astrax": "active",
         "events_": "active",
@@ -54,7 +54,7 @@ def astrax(request):
 def utkarsh(request):
     utkarsh_intro = utkarshEvents.objects.filter(id__in=(4,))
     context_ = {
-        "events": utkarshEvents.objects.filter(id__in=(1, 2)),
+        "events": utkarshEvents.objects.all().exclude(id__in=(4,)).order_by("-id"),
         "title": "Utkarsh",
         "utkarsh": "active",
         "events_": "active",
@@ -67,7 +67,7 @@ def utkarsh(request):
 def zenith(request):
     zenith_intro = zenithEvents.objects.filter(id__in=(10,))
     context_ = {
-        "events": zenithEvents.objects.filter(id__in=(4, 5, 6, 7, 8, 9)),
+        "events": zenithEvents.objects.all().exclude(id__in=(10,)).order_by("-id"),
         "title": "Zenith",
         "zenith": "active",
         "events_": "active",
@@ -80,7 +80,7 @@ def zenith(request):
 def pleiades(request):
     pleiades_intro = Pleiades.objects.filter(id__in=(1,))
     context_ = {
-        "events": Pleiades.objects.filter(id__in=(2,)),
+        "events": Pleiades.objects.all().exclude(id__in=(1,)).order_by("-id"),
         "title": "Pleiades",
         "pleiades": "active",
         "events_": "active",
@@ -113,7 +113,7 @@ def about(request):
 # rendering Photogallery page
 def photogallery_(request):
     context_ = {
-        "photogallery": photogallery.objects.all(),
+        "photogallery": photogallery.objects.all().order_by("-id"),
         "title": "Photos",
         "photos": "active",
         "gallery_": "active",
@@ -124,7 +124,7 @@ def photogallery_(request):
 # rendering videogallery page
 def videogallery_(request):
     context_ = {
-        "videogallery": videogallery.objects.all(),
+        "videogallery": videogallery.objects.all().order_by("-id"),
         "title": "Videos",
         "videos": "active",
         "gallery_": "active",
@@ -143,8 +143,54 @@ def team(request):
             id__in=(20, 30, 38, 33, 29, 39, 36, 37, 28, 26, 25, 24, 32, 31, 34, 35)
         ),
         "last": members.objects.filter(id__in=(16, 8, 17, 18, 27)),
+        "new": members.objects.all().exclude(
+            id__in=[
+                40,
+                42,
+                41,
+                3,
+                1,
+                7,
+                4,
+                5,
+                10,
+                6,
+                12,
+                11,
+                9,
+                13,
+                14,
+                15,
+                21,
+                22,
+                20,
+                30,
+                38,
+                33,
+                29,
+                39,
+                36,
+                37,
+                28,
+                26,
+                25,
+                24,
+                32,
+                31,
+                34,
+                35,
+                16,
+                8,
+                17,
+                18,
+                27,
+            ]
+        ),
         "coordinators": coordinators.objects.all().order_by("batch"),
         "title": "Team",
         "team": "active",
     }
     return render(request, "stac_iitmandi/team.html", context_)
+
+
+# "members": members.objects.filter(id__in=[40, 42, 41, 3, 1, 7, 4, 5, 10, 6, 12, 11, 9, 13, 14, 15, 21, 22, 20, 30, 38, 33, 29, 39, 36, 37, 28, 26, 25, 24, 32, 31, 34, 35, 16, 8, 17, 18, 27]),
