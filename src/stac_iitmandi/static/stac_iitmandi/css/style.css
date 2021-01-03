@@ -857,3 +857,8 @@ li {
         transform: rotate(-135deg);
     }
 }
+
+/* --------------------- Zenith -------------------- */
+.work-info p {
+    font-weight: bold;
+}
