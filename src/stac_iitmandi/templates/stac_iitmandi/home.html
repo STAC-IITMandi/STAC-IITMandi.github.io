@@ -2,10 +2,27 @@
 {% block content %}
 {% load static %}
 
-{% block header %}
-  {% include '_header.html' %}
-{% endblock %}
-
+<div id="home" class="intro route bg-image banner-img">
+  <div class="overlay-intro"></div>
+  <div class="intro-content display-table">
+    <div class="table-cell">
+      <div class="container d-flex h-100 head">
+        <div class="d-flex align-items-center">
+          <div class="row">
+            <div class="col-lg-12 text-white d-flex flex-column justify-content-center pt-4 pt-lg-0">
+              <h2 style="font-family: 'JetBrains Mono', monospace; ">Space Technology and Astronomy Cell</h2>
+              <hr class="bg-white w-25" />
+              <h3 class="pt-4" style="font-family: 'JetBrains Mono', monospace;">IIT Mandi</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-down container-fluid text-center">
+        <a href="#introduction" style="color: white">Scroll down to learn more<br><i class="fa fa-angle-down"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
 <div class="section-bg pt-5 pb-5 px-5" id="introduction">
   <div class="container mt-2">
     <h1 class="title-a text-center headingtext">STAC | IIT MANDI</h1>

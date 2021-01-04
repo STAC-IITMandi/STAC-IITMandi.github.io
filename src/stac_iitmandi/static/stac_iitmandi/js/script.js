@@ -22,7 +22,7 @@ $(function () {
     /*--/ Navbar Menu Reduce /--*/
     $(window).trigger("scroll");
     $(window).on("scroll", function() {
-        const pixels = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)
+        const pixels = $(".banner-img").innerHeight();
         if ($(window).scrollTop() > pixels) {
             $(".navbar-expand-md").addClass("bg-light");
             $(".navbar-expand-md").addClass("shadow");
