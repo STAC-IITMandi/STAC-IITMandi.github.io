@@ -7,7 +7,7 @@ from .models import (
     achievements,
     zenithEvents,
     utkarshEvents,
-    # Astrax,
+    Astrax,
     About,
     photogallery,
     videogallery,
@@ -41,7 +41,7 @@ def home(request):
 def astrax(request):
     astrax_intro = homepage.objects.filter(id__in=(6,))
     context_ = {
-        # "events": Astrax.objects.all().exclude(id__in=(6,)),
+        "events": Astrax.objects.all().exclude(id__in=(6,)).order_by("-id"),
         "title": "Astrax",
         "astrax": "active",
         "events_": "active",
