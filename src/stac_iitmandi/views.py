@@ -41,7 +41,8 @@ def home(request):
 def astrax(request):
     astrax_intro = homepage.objects.filter(id__in=(6,))
     context_ = {
-        "events": Astrax.objects.all().exclude(id__in=(6,)).order_by("-id"),
+        "events": Astrax.objects.all().exclude(id__in=(6, 1, 2, 3, 4)).order_by("-id"),
+        "about_astrax": Astrax.objects.filter(id__in=(1, 2, 3, 4)).order_by("-id"),
         "title": "Astrax",
         "astrax": "active",
         "events_": "active",
@@ -189,5 +190,11 @@ def team(request):
         "coordinators": coordinators.objects.all().order_by("batch"),
         "title": "Team",
         "team": "active",
+        # "coordinators": coordinators.objects.all().order_by("batch"),
+        # "team_heads": members.objects.filter(id__in=(40, 42, 41)),
+        # "astrofolks_team": members.objects.filter(id__in=(40, 42, 41)),
+        # "open_souce_team": members.objects.filter(id__in=(40, 42, 41)),
+        # "web_dev_team": members.objects.filter(id__in=(40, 42, 41)),
+        # "social_media_team": members.objects.filter(id__in=(40, 42, 41)),
     }
     return render(request, "stac_iitmandi/team.html", context_)
