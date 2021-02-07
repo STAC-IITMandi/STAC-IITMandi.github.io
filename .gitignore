@@ -1,3 +1,6 @@
+# images
+images
+
 *venv/*
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -106,7 +109,7 @@ media/
 *.pyc
 *.db
 *.pid
-
+*.sqlite3
 # Ignore Django Migrations in Development if you are working on team
 
 # Only for Development only
