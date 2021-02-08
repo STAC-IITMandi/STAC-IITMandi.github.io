@@ -24,13 +24,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 try:
     import secret
     SECRET_KEY = secret.SECRET_KEY
+    DEBUG = True
 except ImportError:
     SECRET_KEY = os.environ.get("SECRET_KEY")
+    DEBUG = True
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['stac.iitmandi.co.in', '127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -130,6 +129,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = "/static/"
+STATIC_ROOT = os.path.join(str(BASE_DIR), 'static')
 
 MEDIA_ROOT = os.path.join(str(BASE_DIR), "stac_iitmandi/static/stac_iitmandi/images/")
 
