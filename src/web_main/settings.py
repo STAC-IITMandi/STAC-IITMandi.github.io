@@ -21,7 +21,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get("SECRET_KEY")
+try:
+    import secret
+    SECRET_KEY = secret.SECRET_KEY
+except ImportError:
+    SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -54,7 +58,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = "web_main.urls"
 
-TEMPLATE_DIR = os.path.join(BASE_DIR, "stac_iitmandi", "templates", "stac_iitmandi/")
+TEMPLATE_DIR = os.path.join(str(BASE_DIR), "stac_iitmandi", "templates", "stac_iitmandi/")
 
 TEMPLATES = [
     {
@@ -83,7 +87,7 @@ WSGI_APPLICATION = "web_main.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
-        "NAME": os.path.join(BASE_DIR, "db.sqlite3"),
+        "NAME": os.path.join(str(BASE_DIR), "db.sqlite3"),
     }
 }
 
@@ -127,6 +131,6 @@ USE_TZ = True
 
 STATIC_URL = "/static/"
 
-MEDIA_ROOT = os.path.join(BASE_DIR, "stac_iitmandi/static/stac_iitmandi/images/")
+MEDIA_ROOT = os.path.join(str(BASE_DIR), "stac_iitmandi/static/stac_iitmandi/images/")
 
 MEDIA_URL = "/stac_iitmandi/static/stac_iitmandi/images/"

@@ -116,3 +116,8 @@ media/
 # **/migrations/**
 # !**/migrations
 # !**/migrations/__init__.py
+*passenger_wsgi.py
+*src/secret.py
+*src/web_main/secret.py
+*src/stac_iitmandi/static/stac_iitmandi/images
+src/static/
