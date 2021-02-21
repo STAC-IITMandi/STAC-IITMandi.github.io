@@ -8,7 +8,7 @@ urlpatterns = [
     path("", include("stac_iitmandi.urls")),
 ]
 
-urlpatterns += static( # only works in DEBUG mode
+urlpatterns += static(  # only works in DEBUG mode
     settings.MEDIA_URL,
     document_root=settings.MEDIA_ROOT
 )
