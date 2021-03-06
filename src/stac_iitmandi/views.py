@@ -130,65 +130,18 @@ def videogallery_(request):
 # rendering team page
 def team(request):
     context_ = {
-        "first": members.objects.filter(id__in=(40, 42, 41)),
-        "second": members.objects.filter(
-            id__in=(3, 1, 7, 4, 5, 10, 6, 12, 11, 9, 13, 14, 15, 21, 22)
+        "opensource_and_webdev_head": members.objects.get(id__in=(21,)),
+        "opensource_and_webdev": members.objects.all().filter(id__in=(20, 22, 37)),
+        "astrophotography_and_equipment_head": members.objects.get(id__in=(25,)),
+        "astrophotography_and_equipment": members.objects.all().filter(id__in=(26, 7)),
+        "sciencecommunication_and_outreach_head": members.objects.get(id__in=(38,)),
+        "sciencecommunication_and_outreach": members.objects.all().filter(
+            id__in=(28, 29, 24, 32)
         ),
-        "third": members.objects.filter(
-            id__in=(20, 30, 38, 33, 29, 39, 36, 37, 28, 26, 25, 24, 32, 31, 34, 35)
-        ),
-        "last": members.objects.filter(id__in=(16, 8, 17, 18, 27)),
-        "new": members.objects.all().exclude(
-            id__in=[
-                40,
-                42,
-                41,
-                3,
-                1,
-                7,
-                4,
-                5,
-                10,
-                6,
-                12,
-                11,
-                9,
-                13,
-                14,
-                15,
-                21,
-                22,
-                20,
-                30,
-                38,
-                33,
-                29,
-                39,
-                36,
-                37,
-                28,
-                26,
-                25,
-                24,
-                32,
-                31,
-                34,
-                35,
-                16,
-                8,
-                17,
-                18,
-                27,
-            ]
-        ),
+        "media_head": members.objects.get(id__in=(26,)),
+        "media": members.objects.all().filter(id__in=(39, 31)),
         "coordinators": coordinators.objects.all().order_by("batch"),
         "title": "Team",
         "team": "active",
-        # "coordinators": coordinators.objects.all().order_by("batch"),
-        # "team_heads": members.objects.filter(id__in=(40, 42, 41)),
-        # "astrofolks_team": members.objects.filter(id__in=(40, 42, 41)),
-        # "open_souce_team": members.objects.filter(id__in=(40, 42, 41)),
-        # "web_dev_team": members.objects.filter(id__in=(40, 42, 41)),
-        # "social_media_team": members.objects.filter(id__in=(40, 42, 41)),
     }
     return render(request, "stac_iitmandi/team.html", context_)
