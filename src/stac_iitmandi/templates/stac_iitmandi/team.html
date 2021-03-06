@@ -1,153 +1,225 @@
-{% extends 'stac_iitmandi/base.html' %}
-{% load static %}
-{% block content %}
+{% extends 'stac_iitmandi/base.html' %} {% load static %} {% block content %}
 <!-- ======= Team Section ======= -->
-<div class="ach-image size-logo banner-img" style="color: #FFFF; padding:7%">
-  <div><img src="{% static 'stac_iitmandi/images/Logowhite.png' %}" alt="Zenith logo" style="height:4.5rem; padding-right:6rem;"><p class="title-a text-center"style="padding-left: 7rem; color: #1de9b6; padding-top: 2.5rem; font-size: 180%;"> | TEAM</p><hr class="titlehr" /></div>
+<div class="ach-image size-logo banner-img" style="color: #ffff; padding: 7%;">
+    <div>
+        <img src="{% static 'stac_iitmandi/images/Logowhite.png' %}" alt="Zenith logo" style="height: 4.5rem; padding-right: 6rem;" />
+        <p class="title-a text-center" style="padding-left: 7rem; color: #1de9b6; padding-top: 2.5rem; font-size: 180%;">| TEAM</p>
+        <hr class="titlehr" />
+    </div>
 </div>
 
 <div class="section-bg title-box">
-  <div class="container">
-      <div class="title-box text-center">
-        <h3 class="text-center mb-4 title-a">Co-ordinators</h3>
-        <hr class="titlehr" />
-        <h5 class="text-center">People who lead the Team!</h5>
-        <div class="line-mf"></div>
-      </div>
-  </div>
+    <div class="container">
+        <div class="title-box text-center">
+            <h3 class="text-center mb-4 title-a">Co-ordinators</h3>
+            <hr class="titlehr" />
+            <h5 class="text-center">People who lead the Team!</h5>
+            <div class="line-mf"></div>
+        </div>
+    </div>
 </div>
-  <section id="team" class="team">
-      <div class="container">
+<section id="team" class="team">
+    <div class="container">
         <!-- ======= Coordinators ======= -->
         <div class="row justify-content-md-center">
-          {% for coordi in coordinators %}
+            {% for coordi in coordinators %}
             <div class="col-lg-3 col-md-6 d-flex">
-              <div class="member ">
-                <div class="member-img ">
-                  <img src="{{ coordi.image.url}}" class="img-fluid " alt="">
-                  <div class="social">
-                    <a href="{{coordi.fb}}"><i class="fa fa-facebook-f "></i></a>
-                    <a href="{{coordi.insta}}"><i class="fa fa-instagram"></i></a>
-                    <a href="{{coordi.git}}"><i class="fa fa-github"></i></a>
-                    <a href="{{coordi.linkedin}}"><i class="fa fa-linkedin"></i></a>
-                  </div>
+                <div class="member">
+                    <div class="member-img">
+                        <img src="{{ coordi.image.url}}" class="img-fluid" alt="" />
+                        <div class="social">
+                            <a href="{{coordi.fb}}"><i class="fa fa-facebook-f"></i></a>
+                            <a href="{{coordi.insta}}"><i class="fa fa-instagram"></i></a>
+                            <a href="{{coordi.git}}"><i class="fa fa-github"></i></a>
+                            <a href="{{coordi.linkedin}}"><i class="fa fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h4>{{ coordi.name }}</h4>
+                    </div>
                 </div>
-                <div class="member-info">
-                  <h4>{{ coordi.name }}</h4>
-                </div>
-              </div>
             </div>
-          {% endfor %}
+            {% endfor %}
         </div>
-      </div>
-  </section>
+    </div>
+</section>
 
 <!-- ======= Core Team  ======= -->
 <div class="section-bg title-box">
-  <div class="container">
-      <div class="title-box text-center">
-        <h3 class="text-center title-a">Core Team</h3>
-        <hr class="titlehr" />
-        <h5 class="text-center">People who make things happen!</h5>
-        <div class="line-mf"></div>
-      </div>
-  </div>
+    <div class="container">
+        <div class="title-box text-center">
+            <h3 class="text-center title-a">Core Team</h3>
+            <hr class="titlehr" />
+            <h5 class="text-center">People who make things happen!</h5>
+            <div class="line-mf"></div>
+        </div>
+    </div>
 </div>
-  <section id="team" class="team">
-      <div class="container">
+<section id="team" class="team">
+    <div class="container text-center">
+        <div class="title-box">
+            <h3 class="title-a">Science Communication and Outreach</h3>
+            <hr class="titlehr" />
+        </div>
         <div class="row justify-content-md-center">
-          {% for member in first %}
             <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-              <div class="member" >
-                <div class="member-img">
-                  <img src="{{ member.image.url}}" class="img-fluid" alt="">
-                  <div class="social">
-                    <a href="{{member.fb}}"><i class="fa fa-facebook-f "></i></a>
-                    <a href="{{member.insta}}"><i class="fa fa-instagram"></i></a>
-                    <a href="{{member.git}}"><i class="fa fa-github"></i></a>
-                    <a href="{{member.linkedin}}"><i class="fa fa-linkedin"></i></a>
-                  </div>
+                <div class="member">
+                    <div class="member-img">
+                        <img src="{{ sciencecommunication_and_outreach_head.image.url}}" class="img-fluid" alt="" />
+                        <div class="social">
+                            <a href="{{sciencecommunication_and_outreach_head.fb}}"><i class="fa fa-facebook-f"></i></a>
+                            <a href="{{sciencecommunication_and_outreach_head.insta}}"><i class="fa fa-instagram"></i></a>
+                            <a href="{{sciencecommunication_and_outreach_head.git}}"><i class="fa fa-github"></i></a>
+                            <a href="{{sciencecommunication_and_outreach_head.linkedin}}"><i class="fa fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h4>{{ sciencecommunication_and_outreach_head.name }} <small>| Team Head</small></h4>
+                    </div>
                 </div>
-                <div class="member-info">
-                  <h4>{{ member.name }}</h4>
+            </div>
+            {% for member in sciencecommunication_and_outreach %}
+            <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                <div class="member">
+                    <div class="member-img">
+                        <img src="{{ member.image.url}}" class="img-fluid" alt="" />
+                        <div class="social">
+                            <a href="{{member.fb}}"><i class="fa fa-facebook-f"></i></a>
+                            <a href="{{member.insta}}"><i class="fa fa-instagram"></i></a>
+                            <a href="{{member.git}}"><i class="fa fa-github"></i></a>
+                            <a href="{{member.linkedin}}"><i class="fa fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h4>{{ member.name }}</h4>
+                    </div>
                 </div>
-              </div>
             </div>
-          {% endfor %}
-          {% for member in second %}
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-            <div class="member" >
-              <div class="member-img">
-                <img src="{{ member.image.url}}" class="img-fluid" alt="">
-                <div class="social">
-                  <a href="{{member.fb}}"><i class="fa fa-facebook-f "></i></a>
-                  <a href="{{member.insta}}"><i class="fa fa-instagram"></i></a>
-                  <a href="{{member.git}}"><i class="fa fa-github"></i></a>
-                  <a href="{{member.linkedin}}"><i class="fa fa-linkedin"></i></a>
+            {% endfor %}
+        </div>
+        <div class="title-box text-center">
+            <h3 class="text-center title-a">Astrophotography & Equipment</h3>
+            <hr class="titlehr" />
+        </div>
+        <div class="row justify-content-md-center">
+            <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                <div class="member">
+                    <div class="member-img">
+                        <img src="{{ astrophotography_and_equipment_head.image.url}}" class="img-fluid" alt="" />
+                        <div class="social">
+                            <a href="{{astrophotography_and_equipment_head.fb}}"><i class="fa fa-facebook-f"></i></a>
+                            <a href="{{astrophotography_and_equipment_head.insta}}"><i class="fa fa-instagram"></i></a>
+                            <a href="{{astrophotography_and_equipment_head.git}}"><i class="fa fa-github"></i></a>
+                            <a href="{{astrophotography_and_equipment_head.linkedin}}"><i class="fa fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h4>{{ astrophotography_and_equipment_head.name }} <small>| Team Head</small></h4>
+                    </div>
                 </div>
-              </div>
-              <div class="member-info">
-                <h4>{{ member.name }}</h4>
-              </div>
             </div>
-          </div>
-        {% endfor %}
-        {% for member in third %}
-        <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-          <div class="member" >
-            <div class="member-img">
-              <img src="{{ member.image.url}}" class="img-fluid" alt="">
-              <div class="social">
-                <a href="{{member.fb}}"><i class="fa fa-facebook-f "></i></a>
-                <a href="{{member.insta}}"><i class="fa fa-instagram"></i></a>
-                <a href="{{member.git}}"><i class="fa fa-github"></i></a>
-                <a href="{{member.linkedin}}"><i class="fa fa-linkedin"></i></a>
-              </div>
+            {% for member in astrophotography_and_equipment %}
+            <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                <div class="member">
+                    <div class="member-img">
+                        <img src="{{ member.image.url}}" class="img-fluid" alt="" />
+                        <div class="social">
+                            <a href="{{member.fb}}"><i class="fa fa-facebook-f"></i></a>
+                            <a href="{{member.insta}}"><i class="fa fa-instagram"></i></a>
+                            <a href="{{member.git}}"><i class="fa fa-github"></i></a>
+                            <a href="{{member.linkedin}}"><i class="fa fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h4>{{ member.name }}</h4>
+                    </div>
+                </div>
             </div>
-            <div class="member-info">
-              <h4>{{ member.name }}</h4>
-            </div>
-          </div>
+            {% endfor %}
         </div>
-        {% endfor %}
-        {% for member in last %}
-        <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-          <div class="member" >
-            <div class="member-img">
-              <img src="{{ member.image.url}}" class="img-fluid" alt="">
-              <div class="social">
-                <a href="{{member.fb}}"><i class="fa fa-facebook-f "></i></a>
-                <a href="{{member.insta}}"><i class="fa fa-instagram"></i></a>
-                <a href="{{member.git}}"><i class="fa fa-github"></i></a>
-                <a href="{{member.linkedin}}"><i class="fa fa-linkedin"></i></a>
-              </div>
-            </div>
-            <div class="member-info">
-              <h4>{{ member.name }}</h4>
-            </div>
-          </div>
+        <div class="title-box text-center">
+            <h3 class="text-center title-a">Media</h3>
+            <hr class="titlehr" />
         </div>
-        {% endfor %}
-        {% for member in new %}
-        <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-          <div class="member" >
-            <div class="member-img">
-              <img src="{{ member.image.url}}" class="img-fluid" alt="">
-              <div class="social">
-                <a href="{{member.fb}}"><i class="fa fa-facebook-f "></i></a>
-                <a href="{{member.insta}}"><i class="fa fa-instagram"></i></a>
-                <a href="{{member.git}}"><i class="fa fa-github"></i></a>
-                <a href="{{member.linkedin}}"><i class="fa fa-linkedin"></i></a>
-              </div>
+        <div class="row justify-content-md-center">
+            <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                <div class="member">
+                    <div class="member-img">
+                        <img src="{{ media_head.image.url}}" class="img-fluid" alt="" />
+                        <div class="social">
+                            <a href="{{media_head.fb}}"><i class="fa fa-facebook-f"></i></a>
+                            <a href="{{media_head.insta}}"><i class="fa fa-instagram"></i></a>
+                            <a href="{{media_head.git}}"><i class="fa fa-github"></i></a>
+                            <a href="{{media_head.linkedin}}"><i class="fa fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h4>{{ media_head.name }} <small>| Team Head</small></h4>
+                    </div>
+                </div>
             </div>
-            <div class="member-info">
-              <h4>{{ member.name }}</h4>
+            {% for member in media %}
+            <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                <div class="member">
+                    <div class="member-img">
+                        <img src="{{ member.image.url}}" class="img-fluid" alt="" />
+                        <div class="social">
+                            <a href="{{member.fb}}"><i class="fa fa-facebook-f"></i></a>
+                            <a href="{{member.insta}}"><i class="fa fa-instagram"></i></a>
+                            <a href="{{member.git}}"><i class="fa fa-github"></i></a>
+                            <a href="{{member.linkedin}}"><i class="fa fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h4>{{ member.name }}</h4>
+                    </div>
+                </div>
             </div>
-          </div>
+            {% endfor %}
         </div>
-        {% endfor %}
+        <div class="title-box text-center">
+            <h3 class="text-center title-a">Opensource & Web development</h3>
+            <hr class="titlehr" />
+            <div class="line-mf"></div>
         </div>
-      </div>
-  </section><!-- End Team Section -->
+        <div class="row justify-content-md-center">
+            <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                <div class="member">
+                    <div class="member-img">
+                        <img src="{{ opensource_and_webdev_head.image.url}}" class="img-fluid" alt="" />
+                        <div class="social">
+                            <a href="{{opensource_and_webdev_head.fb}}"><i class="fa fa-facebook-f"></i></a>
+                            <a href="{{opensource_and_webdev_head.insta}}"><i class="fa fa-instagram"></i></a>
+                            <a href="{{opensource_and_webdev_head.git}}"><i class="fa fa-github"></i></a>
+                            <a href="{{opensource_and_webdev_head.linkedin}}"><i class="fa fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h4>{{ opensource_and_webdev_head.name }} <small>| Team Head</small></h4>
+                    </div>
+                </div>
+            </div>
+            {% for member in opensource_and_webdev %}
+            <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                <div class="member">
+                    <div class="member-img">
+                        <img src="{{ member.image.url}}" class="img-fluid" alt="" />
+                        <div class="social">
+                            <a href="{{member.fb}}"><i class="fa fa-facebook-f"></i></a>
+                            <a href="{{member.insta}}"><i class="fa fa-instagram"></i></a>
+                            <a href="{{member.git}}"><i class="fa fa-github"></i></a>
+                            <a href="{{member.linkedin}}"><i class="fa fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h4>{{ member.name }}</h4>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+<!-- End Team Section -->
 
 {% endblock %}
