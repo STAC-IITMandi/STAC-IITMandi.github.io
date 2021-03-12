@@ -22,7 +22,7 @@ class core_team(models.Model):
         if img.height > 240 or img.width > 240:
             output_size = (240, 240)
             img.thumbnail(output_size)
-            img.save(self.image.path)
+            img.save(self.image.path, optimize=True, quality=90)
 
 
 class coordinators(models.Model):
@@ -44,7 +44,7 @@ class coordinators(models.Model):
         if img.height > 240 or img.width > 240:
             output_size = (240, 240)
             img.thumbnail(output_size)
-            img.save(self.image.path)
+            img.save(self.image.path, optimize=True, quality=90)
 
 
 # For Homepage
@@ -63,7 +63,7 @@ class club_activity(models.Model):
         if img.height > 720 or img.width > 1080:
             output_size = (720, 1080)
             img.thumbnail(output_size)
-            img.save(self.image.path)
+            img.save(self.image.path, optimize=True, quality=90)
 
 
 # Zenith
@@ -82,7 +82,7 @@ class zenithEvents(models.Model):
         img = Image.open(self.image.path)
         output_size = (720, 1080)
         img.thumbnail(output_size)
-        img.save(self.image.path)
+        img.save(self.image.path, optimize=True, quality=90)
 
 
 # Utkarsh
@@ -101,7 +101,7 @@ class utkarshEvents(models.Model):
         img = Image.open(self.image.path)
         output_size = (720, 1080)
         img.thumbnail(output_size)
-        img.save(self.image.path)
+        img.save(self.image.path, optimize=True, quality=90)
 
 
 # future projects, competetions and events_intro on homepage in one table #
@@ -120,7 +120,7 @@ class homepage(models.Model):
         if img.height > 720 or img.width > 1080:
             output_size = (720, 1080)
             img.thumbnail(output_size)
-            img.save(self.image.path)
+            img.save(self.image.path, optimize=True, quality=90)
 
 
 # Achievements #
@@ -147,7 +147,7 @@ class Astrax(models.Model):
         img = Image.open(self.image.path)
         output_size = (720, 1080)
         img.thumbnail(output_size)
-        img.save(self.image.path)
+        img.save(self.image.path, optimize=True, quality=90)
 
 
 # Pleiades
@@ -166,7 +166,7 @@ class Pleiades(models.Model):
         img = Image.open(self.image.path)
         output_size = (720, 1080)
         img.thumbnail(output_size)
-        img.save(self.image.path)
+        img.save(self.image.path, optimize=True, quality=90)
 
 
 # about
@@ -184,7 +184,7 @@ class About(models.Model):
         img = Image.open(self.image.path)
         output_size = (720, 1080)
         img.thumbnail(output_size)
-        img.save(self.image.path)
+        img.save(self.image.path, optimize=True, quality=90)
 
 
 # photogallery
@@ -202,7 +202,7 @@ class photogallery(models.Model):
         img = Image.open(self.image.path)
         output_size = (720, 1080)
         img.thumbnail(output_size)
-        img.save(self.image.path)
+        img.save(self.image.path, optimize=True, quality=90)
 
 
 # videogallery
@@ -234,7 +234,7 @@ class Alumni(models.Model):
         img = Image.open(self.image.path)
         output_size = (720, 1080)
         img.thumbnail(output_size)
-        img.save(self.image.path)
+        img.save(self.image.path, optimize=True, quality=90)
 
 
 # Links to website#
