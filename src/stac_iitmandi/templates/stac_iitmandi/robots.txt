@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: http://stac.iitmandi.co.in/sitemap.xml
