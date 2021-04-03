@@ -30,8 +30,10 @@ except ImportError:
 
 ALLOWED_HOSTS = ["stac.iitmandi.co.in", "127.0.0.1", "localhost"]
 
-DEBUG = True
-
+try:
+    DEBUG = os.environ.get("DEBUG")
+except:
+    DEBUG = False
 
 # Application definition
 
