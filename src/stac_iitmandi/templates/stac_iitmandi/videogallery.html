@@ -1,9 +1,11 @@
-{% extends 'stac_iitmandi/base.html' %}
-{% load static %}
-{% block content %}
+{% extends 'stac_iitmandi/base.html' %} {% load static %} {% block content %}
 
-<div class="ach-image size-logo banner-img" style="color: #FFFF; padding:7%">
-    <div><img src="{% static 'stac_iitmandi/images/Logowhite.png' %}" alt="Zenith logo" style="height:4.5rem; padding-right:8rem;"><p class="title-a text-center"style="padding-left: 8rem; color: #1de9b6; padding-top: 2.5rem; font-size: 180%;"> | VIDEOS</p><hr class="titlehr" /></div>
+<div class="ach-image size-logo banner-img" style="color: #ffff; padding: 7%;">
+    <div>
+        <img src="{% static 'stac_iitmandi/images/Logowhite.png' %}" alt="Zenith logo" style="height: 4.5rem; padding-right: 8rem;" />
+        <p class="title-a text-center" style="padding-left: 8rem; color: #1de9b6; padding-top: 2.5rem; font-size: 180%;">| VIDEOS</p>
+        <hr class="titlehr" />
+    </div>
 </div>
 
 <div class="section-bg">
@@ -23,13 +25,21 @@
                 <div class="row justify-content-center">
                     {% for video in videogallery %}
                     <div class="col-xs-4 p-2 videowrap">
-                        <iframe width="560" height="315" src="{{ video.link }}" alt="{{video.videoname}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe
+                            width="560"
+                            height="315"
+                            src="{{ video.link }}"
+                            alt="{{video.videoname}}"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen
+                        ></iframe>
                     </div>
                     {% endfor %}
                 </div>
             </div>
         </div>
-    </section><!-- End About Section -->
-
+    </section>
+    <!-- End About Section -->
 </div>
 {% endblock %}
