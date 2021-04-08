@@ -23,17 +23,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 try:
     import secret
-
     SECRET_KEY = secret.SECRET_KEY
+    DEBUG = False
 except ImportError:
     SECRET_KEY = os.environ.get("SECRET_KEY")
+    DEBUG = True
 
 ALLOWED_HOSTS = ["stac.iitmandi.co.in", "127.0.0.1", "localhost"]
-
-try:
-    DEBUG = os.environ.get("DEBUG")
-except:
-    DEBUG = False
 
 # Application definition
 
