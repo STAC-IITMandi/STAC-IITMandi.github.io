@@ -145,3 +145,13 @@ def team(request):
         "team": "active",
     }
     return render(request, "stac_iitmandi/team.html", context_)
+
+
+# rendering IAU page
+def iau(request):
+    context_ = {
+        "title": "IAU",
+        "about": "active",
+        # "IAU_intro": IAU.objects.get(id__in=(1,)),
+    }
+    return render(request, "stac_iitmandi/iau.html", context_)
