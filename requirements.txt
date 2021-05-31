@@ -1,7 +1,7 @@
 appdirs==1.4.4
 asgiref==3.3.4
 Django==3.2.1
-django-ckeditor==6.0.0
+django-ckeditor==6.1.0
 django-js-asset==1.2.2
 Pillow==8.2.0
 python-decouple==3.4
