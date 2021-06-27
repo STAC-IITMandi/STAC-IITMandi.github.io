@@ -156,5 +156,6 @@ def iau(request):
     }
     return render(request, "stac_iitmandi/iau.html", context_)
 
+
 def farewell(request):
     return render(request, "stac_iitmandi/farewell.html")
