@@ -22,4 +22,5 @@ urlpatterns = [
         TemplateView.as_view(template_name="sitemap.xml", content_type="text/xml")
     ),
     path("iau", views.iau, name="iau"),
+    path("farewell", views.farewell, name="farewell")
 ]
