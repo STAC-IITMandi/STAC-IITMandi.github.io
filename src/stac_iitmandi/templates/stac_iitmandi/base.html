@@ -12,7 +12,14 @@
   <!-- <meta name="description" content="{{ description }}"> -->
   <meta name="author" content="STAC Web Development Team"/>
   <!--Favicon -->
-  <link rel="icon" type="image/png" href="" />
+  <link rel="icon" href="{% static '/stac_iitmandi/favicon/favicon.ico' %}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{% static '/stac_iitmandi/favicon/apple-touch-icon.png' %}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{% static '/stac_iitmandi/favicon/favicon-32x32.png' %}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{% static '/stac_iitmandi/favicon/favicon-16x16.png' %}">
+  <link rel="manifest" href="{% static '/stac_iitmandi/favicon/site.webmanifest' %}">
+  <link rel="mask-icon" href="{% static '/stac_iitmandi/favicon/safari-pinned-tab.svg' %}" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
   <!-- Title of Page -->
   {% if title %}
   <title>{{title}} | STAC | IIT Mandi</title>
@@ -34,9 +41,9 @@
   <link rel="stylesheet" type="text/css" href="{% static 'stac_iitmandi/css/team_style.css' %}">
   <!-- Custom fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet"> 
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet"> 
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
 </head>
 <body>
   {% block navbar %}
