@@ -1,13 +1,13 @@
 from django.shortcuts import render, redirect
 from .models import core_team as members
 from .models import (
-    coordinators,
+    # coordinators,
     club_activity,
     homepage,
     achievements,
     zenithEvents,
     utkarshEvents,
-    Astrax,
+    # Astrax,
     About,
     photogallery,
     videogallery,
