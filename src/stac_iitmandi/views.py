@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import core_team as members
 from .models import (
     coordinators,
@@ -38,7 +38,7 @@ def home(request):
 
 # rendering ASTRAX page
 def astrax(request):
-    context_ = {
+    """ context_ = {
         "events": Astrax.objects.all().exclude(id__in=(6, 1, 2, 3, 4)).order_by("-id"),
         "about_astrax": Astrax.objects.filter(id__in=(1, 2, 3, 4)).order_by("-id"),
         "title": "Astrax",
@@ -46,7 +46,8 @@ def astrax(request):
         "events_": "active",
         "astrax_intro": homepage.objects.get(id__in=(6,)),
     }
-    return render(request, "stac_iitmandi/astrax.html", context_)
+    return render(request, "stac_iitmandi/astrax.html", context_) """
+    return redirect('https://astrax.in/')
 
 
 # rendering Utkarsh page
@@ -130,17 +131,16 @@ def videogallery_(request):
 # rendering team page
 def team(request):
     context_ = {
-        "opensource_and_webdev_head": members.objects.get(id__in=(21,)),
-        "opensource_and_webdev": members.objects.all().filter(id__in=(20, 22, 37)),
-        "astrophotography_and_equipment_head": members.objects.get(id__in=(25,)),
-        "astrophotography_and_equipment": members.objects.all().filter(id__in=(26, 7)),
-        "sciencecommunication_and_outreach_head": members.objects.get(id__in=(38,)),
+        "lead": members.objects.all().filter(
+            id__in=(53, 51)),
+        "opensource_and_webdev": members.objects.all().filter(
+            id__in=(43, 45, 47, 52)),
+        "astrophotography_and_equipment": members.objects.all().filter(
+            id__in=(56, 46, 54, 43)),
         "sciencecommunication_and_outreach": members.objects.all().filter(
-            id__in=(28, 29, 24, 32)
-        ),
-        "media_head": members.objects.get(id__in=(26,)),
-        "media": members.objects.all().filter(id__in=(39, 31)),
-        "coordinators": coordinators.objects.all().order_by("batch"),
+            id__in=(48, 49, 50, 51, 52, 54, 56)),
+        "media": members.objects.all().filter(
+            id__in=(44, 45, 46, 49, 47, 55)),
         "title": "Team",
         "team": "active",
     }
