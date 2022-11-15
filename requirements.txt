@@ -4,7 +4,7 @@ backports.zoneinfo==0.2.1
 Django==4.1.1
 django-ckeditor==6.3.0
 django-js-asset==2.0.0
-Pillow==9.2.0
+Pillow==9.3.0
 python-decouple==3.6
 pytz==2022.1
 sqlparse==0.4.2
