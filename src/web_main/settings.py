@@ -31,6 +31,8 @@ except ImportError:
 
 ALLOWED_HOSTS = ["stac.iitmandi.co.in", "127.0.0.1", "localhost"]
 
+CSRF_TRUSTED_ORIGINS = ["http://localhost", "https://stac.iitmandi.co.in"]
+
 # Application definition
 
 INSTALLED_APPS = [
