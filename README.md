@@ -18,4 +18,4 @@ The pages on the website are as follows:
  * A page dedicated to the collaboration of STAC and OAD of International Astronomical Union.
  * There is a page about the club's alumni needs to be added.
 
-For contributor instructions, please see CONTRIBUTING.md. Visit the website at https://stac.iitmandi.ac.in.
+For contributor instructions, please see CONTRIBUTING.md. Visit the website at https://stac.iitmandi.co.in.
