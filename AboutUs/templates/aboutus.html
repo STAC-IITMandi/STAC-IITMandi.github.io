@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block stylesheet %}
+<link rel="stylesheet" type="text/css" href="{% static 'styles_aboutUs.css' %}">
+{% endblock stylesheet %}
+
+{% block content %}
+<div class="about-image size-logo banner-img" style="color: #FFFF; padding:7%">
+    <div><img src="{% static 'images/Logowhite.png' %}" alt="Stac logo" style="height:4.5rem; padding-right:8rem;"><p class="title-a text-center"style="padding-left:9rem; color: #1de9b6; padding-top: 2.5rem; font-size: 180%;"> | ABOUT US</p><hr class="titlehr" /></div>
+</div>
+
+<div class="section-bg title-box">
+    <div class="container">
+        <div class="title-box">
+            <h3 class="title-a text-center">
+                ABOUT US
+            </h3>
+            <hr class="titlehr" />
+            <p class="font-italic text-left"><br>{{aboutus.description|safe}}</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

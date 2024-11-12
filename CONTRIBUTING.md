@@ -25,7 +25,7 @@
     To learn how to generate a secret key click [here](https://stackoverflow.com/a/16630719/12350727).
     Remember to restart your virtual environment if you get an error after doing this.
 
-5.  Change directory to src using `cd src`.
+5.  Change directory to src using `cd STAC-IIT-Mandi`.
 6.  Check your changes before running `python manage.py check`.
 7.  Run the server on your machine using `python manage.py runserver` and then open [localhost:8000](http://localhost:8000) in your browser.
 8.  Switch to a new branch before making changes `git checkout -b NewBranchName`.

@@ -1,0 +1,56 @@
+{% extends 'layout.html' %} {% load static %}
+
+{% block stylesheet %}
+<link rel="stylesheet" type="text/css" href="{% static 'styles_events.css' %}">
+{% endblock stylesheet %}
+
+{% block content %}
+<div class="ach-image utkarsh-logo header-pad banner-img" style="color: #ffff;">
+    <img src="{% static 'images/utkarsh1.png' %}" alt="Utkarsh-logo" />
+</div>
+
+<div class="section-bg title-box">
+    <div class="container">
+        <div class="title-box">
+            <h3 class="title-a text-center">
+                Utkarsh - The Intra-College Technical Fest
+            </h3>
+            <hr class="titlehr" />
+            <div class="line-mf"></div>
+            <p class=""><br />Utkarsh is the intra-college technical fest of IIT Mandi. STAC organizes some events in the fest every year.</p>
+
+        </div>
+    </div>
+</div>
+
+<div class="container bg-light mt-2">
+    <!--Club Activities-->
+    <section id="work" class="work">
+        <div class="container">
+            <div class="title-box text-center">
+                <h3 class="title-a">
+                    Competitions in Utkarsh
+                </h3>
+                <hr class="titlehr" />
+            </div>
+            <div class="row justify-content-md-center">
+                {% for event in utkarsh %}
+                <div class="col-lg-4 col-md-6 work-item">
+                    <div class="work-wrap">
+                        <img src="{{event.image.url}}" class="img-fluid" alt="" />
+                        <div class="work-info">
+                            <h4>{{event.name}}</h4>
+                            <p class="font-italic"><br />{{event.description|safe}}</p>
+                            <div class="work-links">
+                                <a href="{{event.image.url}}" data-gall="work-Gallery" class="venobox" title="{{event.name}}"><i class="fa fa-plus"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="subtitle-a text-center"><h4 class="subtitle-a">{{event.name}}</h4></div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock %}

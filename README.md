@@ -17,5 +17,7 @@ The pages on the website are as follows:
  * The achievements and projects done by members of STAC.
  * A page dedicated to the collaboration of STAC and OAD of International Astronomical Union.
  * There is a page about the club's alumni needs to be added.
+ * There is a page about the club's Core Team
+
 
 For contributor instructions, please see CONTRIBUTING.md. Visit the website at https://stac.iitmandi.ac.in.

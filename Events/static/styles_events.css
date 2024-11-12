@@ -1,0 +1,92 @@
+main {
+    font-family: 'Roboto', sans-serif;
+    color: #f0f0f0;
+    margin-top: 110px;
+    justify-content: center;
+    align-items: center;
+}
+.event-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.event-section {
+    display: flex;
+    flex-direction: row;
+    background-color: #333;
+    border-radius: 8px;
+    color: #fff;
+    overflow: hidden;
+    width: 95%;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.event-image {
+    flex: 1;
+    border-right: 1px solid #444;
+}
+
+.event-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.event-content {
+    flex: 2;
+    padding: 15px;
+}
+
+.event-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.event-description {
+    font-size: 1em;
+    margin-bottom: 15px;
+}
+
+.event-info {
+    font-size: 0.9em;
+    margin-bottom: 15px;
+}
+
+.event-info span {
+    display: block;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.event-info svg {
+    margin-right: 8px;
+}
+
+.event-register button {
+    background-color: #1e90ff;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.event-register button:hover {
+    background-color: #0b78d4;
+}
+
+.show-more {
+    color: #1e90ff;
+    cursor: pointer;
+    text-decoration: underline;
+}
