@@ -20,4 +20,4 @@ The pages on the website are as follows:
  * There is a page about the club's Core Team
 
 
-For contributor instructions, please see CONTRIBUTING.md. Visit the website at https://stac.iitmandi.ac.in.
+For contributor instructions, please see CONTRIBUTING.md. Visit the website at https://stac.iitmandi.co.in.
