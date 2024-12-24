@@ -21,7 +21,7 @@ Flask-Cors==5.0.0
 folium==0.17.0
 idna==3.8
 itsdangerous==2.2.0
-Jinja2==3.1.4
+Jinja2==3.1.5
 markdown-it-py==3.0.0
 MarkupSafe==2.1.5
 mdurl==0.1.2
